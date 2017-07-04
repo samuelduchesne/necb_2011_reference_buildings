@@ -1,0 +1,1195 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>View Model</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r71/three.min.js"></script>
+<script src="https://cdn.rawgit.com/mrdoob/three.js/r71/examples/js/controls/OrbitControls.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.5/dat.gui.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenLite.min.js"></script>
+</head>
+<body>
+<style type="text/css">
+#heads-up {
+  background-color:#ddd;
+  border-radius:8px;
+  display:none;
+  padding:0 5px 10px;
+  opacity:0.85;
+  position:absolute;
+  left:50px;
+  text-align:left;
+  z-index:10;
+}
+#color-bar {
+  border:1px solid #777;
+  position:absolute;
+  bottom:20px;
+  left:20px;
+  pointer-events:all;
+}
+#color-bar-container {
+  display:none;
+  pointer-events:none;
+  position:absolute;
+  transition:height 0.5s ease, transform 0.5s ease, top 0.5s ease, left 0.5s ease;
+}
+.ignore-transition {
+  transition:height 0.5s ease, transform 0.5s ease !important;
+}
+.color-bar-tick {
+  background-color:#777;
+  height:15px;
+  width:2px;
+  position:absolute;
+}
+.color-bar-text {
+  transform:rotate(300deg);
+  transform-origin:top left;
+  display:inline-block;
+  position:absolute;
+  color:#777;
+  transition: transform 0.5s ease;
+}
+.rotate {
+  height:1px !important; /* Fix for dragging when rotated */
+  transform:rotate(90deg);
+}
+.rotate .color-bar-text {
+  transform:rotate(270deg);
+}
+</style>
+<script>
+
+var os_data = {"metadata":{"version":4.3,"type":"Object","generator":"OpenStudio","buildingStoryNames":["Building Story 1","Building Story 2"],"boundingBox":{"minX":0.0,"minY":-5.70727828200584e-17,"minZ":0.0,"maxX":15.2428,"maxY":15.2428,"maxZ":5.5893,"lookAtX":0,"lookAtY":0,"lookAtZ":0,"lookAtR":11.134700020319363}},"geometries":[{"uuid":"0ce33173-4d99-4659-a3cf-f4e2f4507992","type":"Geometry","data":{"vertices":[15.243,0.0,-7.621,15.243,3.049,-7.621,15.243,1.982,-7.367,15.243,1.067,-7.367,15.243,0.0,-0.0,15.243,1.067,-0.254,15.243,3.049,-0.0,15.243,1.982,-0.254],"normals":[],"uvs":[],"faces":[0,0,1,2,0,0,2,3,0,4,0,3,0,4,3,5,0,6,4,5,0,6,5,7,0,2,1,6,0,2,6,7],"scale":1,"visible":true,"castShadow":true,"receiveShadow":false,"doubleSided":true}},{"uuid":"d143d736-245a-42f7-8084-9f92d4c6b4f4","type":"Geometry","data":{"vertices":[15.243,1.982,-7.367,15.243,1.982,-0.254,15.243,1.067,-0.254,15.243,1.067,-7.367],"normals":[],"uvs":[],"faces":[0,0,1,2,0,0,2,3],"scale":1,"visible":true,"castShadow":true,"receiveShadow":false,"doubleSided":true}},{"uuid":"1f56496f-7c9c-4b39-8d4b-bc0ec99baa9c","type":"Geometry","data":{"vertices":[0.0,0.0,-7.621,15.243,0.0,-7.621,15.243,0.0,-0.0,0.0,0.0,-0.0],"normals":[],"uvs":[],"faces":[0,0,1,2,0,0,2,3],"scale":1,"visible":true,"castShadow":true,"receiveShadow":false,"doubleSided":true}},{"uuid":"23285ff9-2c6a-4cb5-9097-93028196dae1","type":"Geometry","data":{"vertices":[12.702,5.589,-7.621,15.243,3.049,-15.243,0.0,3.049,-15.243,2.54,5.589,-7.621],"normals":[],"uvs":[],"faces":[0,0,1,2,0,3,0,2],"scale":1,"visible":true,"castShadow":true,"receiveShadow":false,"doubleSided":true}},{"uuid":"239e359d-98c3-4ad3-909e-507d9cdc12fd","type":"Geometry","data":{"vertices":[0.0,3.049,-0.0,15.243,3.049,-0.0,15.243,3.049,-7.621,0.0,3.049,-7.621],"normals":[],"uvs":[],"faces":[0,0,1,2,0,0,2,3],"scale":1,"visible":true,"castShadow":true,"receiveShadow":false,"doubleSided":true}},{"uuid":"2636ff31-c556-495c-b12e-5d6feddbc9cf","type":"Geometry","data":{"vertices":[15.243,3.049,-7.621,0.0,3.049,-7.621,0.0,0.0,-7.621,15.243,0.0,-7.621],"normals":[],"uvs":[],"faces":[0,0,1,2,0,0,2,3],"scale":1,"visible":true,"castShadow":true,"receiveShadow":false,"doubleSided":true}},{"uuid":"29502d46-e7f0-4ace-80f2-bf8c5f22399e","type":"Geometry","data":{"vertices":[0.0,3.049,-15.243,15.243,3.049,-15.243,15.243,0.0,-15.243,0.0,0.0,-15.243],"normals":[],"uvs":[],"faces":[0,0,1,2,0,0,2,3],"scale":1,"visible":true,"castShadow":true,"receiveShadow":false,"doubleSided":true}},{"uuid":"39f6e2e0-5e68-4d9f-a51b-93c992967b4d","type":"Geometry","data":{"vertices":[0.0,3.049,-7.621,15.243,3.049,-7.621,15.243,3.049,-15.243,0.0,3.049,-15.243],"normals":[],"uvs":[],"faces":[0,0,1,2,0,0,2,3],"scale":1,"visible":true,"castShadow":true,"receiveShadow":false,"doubleSided":true}},{"uuid":"4586d3be-ec21-4c3f-bdb8-2e7cc621e90a","type":"Geometry","data":{"vertices":[0.0,3.049,-15.243,15.243,3.049,-15.243,15.243,3.049,-7.621,0.0,3.049,-7.621],"normals":[],"uvs":[],"faces":[0,0,1,2,0,0,2,3],"scale":1,"visible":true,"castShadow":true,"receiveShadow":false,"doubleSided":true}},{"uuid":"75eb92db-8917-4314-8e60-e78636e3d97c","type":"Geometry","data":{"vertices":[0.0,3.049,-0.0,15.243,3.049,-0.0,12.702,5.589,-7.621,2.541,5.589,-7.621],"normals":[],"uvs":[],"faces":[0,0,1,2,0,2,3,0],"scale":1,"visible":true,"castShadow":true,"receiveShadow":false,"doubleSided":true}},{"uuid":"7ae35256-3ec9-4852-b5d2-007b50623dbd","type":"Geometry","data":{"vertices":[0.0,0.0,-15.243,15.243,0.0,-15.243,15.243,0.0,-7.621,0.0,0.0,-7.621],"normals":[],"uvs":[],"faces":[0,0,1,2,0,0,2,3],"scale":1,"visible":true,"castShadow":true,"receiveShadow":false,"doubleSided":true}},{"uuid":"95c0bfd9-6c14-4700-b916-3da2bdc3ec3d","type":"Geometry","data":{"vertices":[2.541,5.589,-7.621,0.0,3.049,-15.243,0.0,3.049,-0.0],"normals":[],"uvs":[],"faces":[0,0,1,2],"scale":1,"visible":true,"castShadow":true,"receiveShadow":false,"doubleSided":true}},{"uuid":"98c3e342-d789-4d0e-9013-b5820ea58e80","type":"Geometry","data":{"vertices":[0.0,3.049,-7.621,0.0,3.049,-15.243,0.0,0.0,-15.243,0.0,0.0,-7.621],"normals":[],"uvs":[],"faces":[0,0,1,2,0,0,2,3],"scale":1,"visible":true,"castShadow":true,"receiveShadow":false,"doubleSided":true}},{"uuid":"a6bad208-b799-49a9-ac94-60afc3e2348c","type":"Geometry","data":{"vertices":[12.702,5.589,-7.621,15.243,3.049,-0.0,15.243,3.049,-15.243],"normals":[],"uvs":[],"faces":[0,0,1,2],"scale":1,"visible":true,"castShadow":true,"receiveShadow":false,"doubleSided":true}},{"uuid":"aeca9f74-baf7-4879-9ec6-6b786bd73254","type":"Geometry","data":{"vertices":[0.0,3.049,-7.621,15.243,3.049,-7.621,15.243,0.0,-7.621,0.0,0.0,-7.621],"normals":[],"uvs":[],"faces":[0,0,1,2,0,0,2,3],"scale":1,"visible":true,"castShadow":true,"receiveShadow":false,"doubleSided":true}},{"uuid":"ca26efc0-2f1e-498e-99e2-2fc5e3f319dd","type":"Geometry","data":{"vertices":[0.0,0.0,-0.0,0.0,3.049,-0.0,0.0,1.982,-0.254,0.0,1.067,-0.254,0.0,0.0,-7.621,0.0,1.067,-7.367,0.0,3.049,-7.621,0.0,1.982,-7.367],"normals":[],"uvs":[],"faces":[0,0,1,2,0,0,2,3,0,4,0,3,0,4,3,5,0,6,4,5,0,6,5,7,0,1,6,7,0,1,7,2],"scale":1,"visible":true,"castShadow":true,"receiveShadow":false,"doubleSided":true}},{"uuid":"f744d345-23bf-4a04-a9c7-9534f2277765","type":"Geometry","data":{"vertices":[0.0,1.982,-0.254,0.0,1.982,-7.367,0.0,1.067,-7.367,0.0,1.067,-0.254],"normals":[],"uvs":[],"faces":[0,0,1,2,0,0,2,3],"scale":1,"visible":true,"castShadow":true,"receiveShadow":false,"doubleSided":true}},{"uuid":"dbb61c21-e373-4c96-b80c-9293e6b4e972","type":"Geometry","data":{"vertices":[0.0,3.049,-7.621,15.243,3.049,-7.621,15.243,3.049,-0.0,0.0,3.049,-0.0],"normals":[],"uvs":[],"faces":[0,0,1,2,0,0,2,3],"scale":1,"visible":true,"castShadow":true,"receiveShadow":false,"doubleSided":true}},{"uuid":"e6173982-c332-4cd4-8e85-d9c6d4cb0930","type":"Geometry","data":{"vertices":[15.243,3.049,-15.243,15.243,3.049,-7.621,15.243,0.0,-7.621,15.243,0.0,-15.243],"normals":[],"uvs":[],"faces":[0,0,1,2,0,0,2,3],"scale":1,"visible":true,"castShadow":true,"receiveShadow":false,"doubleSided":true}},{"uuid":"ea2e6ce6-6128-4151-b661-73815c44ea06","type":"Geometry","data":{"vertices":[15.243,0.0,-0.0,15.243,3.049,-0.0,14.735,1.982,-0.0,14.735,1.067,-0.0,0.0,0.0,-0.0,0.508,1.067,-0.0,0.0,3.049,-0.0,0.508,1.982,-0.0],"normals":[],"uvs":[],"faces":[0,0,1,2,0,0,2,3,0,4,0,3,0,4,3,5,0,6,4,5,0,6,5,7,0,1,6,7,0,1,7,2],"scale":1,"visible":true,"castShadow":true,"receiveShadow":false,"doubleSided":true}},{"uuid":"4d770958-e1ac-42ab-ac14-5c96cf821de6","type":"Geometry","data":{"vertices":[14.735,1.982,-0.0,0.508,1.982,-0.0,0.508,1.067,-0.0,14.735,1.067,-0.0],"normals":[],"uvs":[],"faces":[0,0,1,2,0,0,2,3],"scale":1,"visible":true,"castShadow":true,"receiveShadow":false,"doubleSided":true}}],"materials":[{"uuid":"20643b02-115c-48a6-997c-f50b50a88f94","name":"Undefined","type":"MeshBasicMaterial","color":16777215,"side":2},{"uuid":"60e2580c-542a-4938-ad27-5c821fb629c9","name":"NormalMaterial","type":"MeshPhongMaterial","color":16777215,"ambient":16777215,"emissive":0,"specular":16777215,"shininess":50,"opacity":1,"transparent":false,"wireframe":false,"side":2},{"uuid":"c9c4146d-d6a6-4d62-a7b0-a293bebbc39b","name":"NormalMaterial_Ext","type":"MeshBasicMaterial","color":16777215,"side":0},{"uuid":"e0a30015-bdb6-4459-84d9-7a6414ed3696","name":"NormalMaterial_Int","type":"MeshPhongMaterial","color":16711680,"ambient":16711680,"emissive":0,"specular":16711680,"shininess":50,"opacity":1,"transparent":false,"wireframe":false,"side":1},{"uuid":"9d1ba0db-7c71-4e64-bd60-01a2ba61cca3","name":"Floor","type":"MeshPhongMaterial","color":8421504,"ambient":8421504,"emissive":0,"specular":8421504,"shininess":50,"opacity":1,"transparent":false,"wireframe":false,"side":2},{"uuid":"6ec52bee-559d-4a4b-baa6-69c257dcfcfe","name":"Floor_Ext","type":"MeshPhongMaterial","color":8421504,"ambient":8421504,"emissive":0,"specular":8421504,"shininess":50,"opacity":1,"transparent":false,"wireframe":false,"side":0},{"uuid":"fded69ce-ed0c-430b-a455-027e97a05a16","name":"Floor_Int","type":"MeshPhongMaterial","color":12566463,"ambient":12566463,"emissive":0,"specular":12566463,"shininess":50,"opacity":1,"transparent":false,"wireframe":false,"side":1},{"uuid":"64de3e86-c6eb-4dd5-bfcc-edf34a15e841","name":"Wall","type":"MeshPhongMaterial","color":13415014,"ambient":13415014,"emissive":0,"specular":13415014,"shininess":50,"opacity":1,"transparent":false,"wireframe":false,"side":2},{"uuid":"7d272f0c-b0e0-47a5-b5bd-6b9a29031e65","name":"Wall_Ext","type":"MeshPhongMaterial","color":13415014,"ambient":13415014,"emissive":0,"specular":13415014,"shininess":50,"opacity":1,"transparent":false,"wireframe":false,"side":0},{"uuid":"1f4ff720-b4cb-4623-bfb2-695676726081","name":"Wall_Int","type":"MeshPhongMaterial","color":15459013,"ambient":15459013,"emissive":0,"specular":15459013,"shininess":50,"opacity":1,"transparent":false,"wireframe":false,"side":1},{"uuid":"d88eaf10-6a0e-4561-b205-204e7e27696a","name":"RoofCeiling","type":"MeshPhongMaterial","color":10046540,"ambient":10046540,"emissive":0,"specular":10046540,"shininess":50,"opacity":1,"transparent":false,"wireframe":false,"side":2},{"uuid":"ffbe1288-f751-4925-b886-bb07e87d0e14","name":"RoofCeiling_Ext","type":"MeshPhongMaterial","color":10046540,"ambient":10046540,"emissive":0,"specular":10046540,"shininess":50,"opacity":1,"transparent":false,"wireframe":false,"side":0},{"uuid":"a9cde621-0643-4f51-bf0f-498a5ccea263","name":"RoofCeiling_Int","type":"MeshPhongMaterial","color":13276565,"ambient":13276565,"emissive":0,"specular":13276565,"shininess":50,"opacity":1,"transparent":false,"wireframe":false,"side":1},{"uuid":"6a9276dc-e570-4b24-ae2b-62654737355a","name":"Window","type":"MeshPhongMaterial","color":6730444,"ambient":6730444,"emissive":0,"specular":6730444,"shininess":50,"opacity":0.6,"transparent":true,"wireframe":false,"side":2},{"uuid":"2284e10e-a64f-4c54-a0c1-42bbf6e0484c","name":"Window_Ext","type":"MeshPhongMaterial","color":6730444,"ambient":6730444,"emissive":0,"specular":6730444,"shininess":50,"opacity":0.6,"transparent":true,"wireframe":false,"side":0},{"uuid":"6114385e-0a62-490c-98ee-a12644ad3f26","name":"Window_Int","type":"MeshPhongMaterial","color":12641003,"ambient":12641003,"emissive":0,"specular":12641003,"shininess":50,"opacity":0.6,"transparent":true,"wireframe":false,"side":1},{"uuid":"92b15f11-9ec7-459a-86ed-3e408bb590b1","name":"Door","type":"MeshPhongMaterial","color":10061132,"ambient":10061132,"emissive":0,"specular":10061132,"shininess":50,"opacity":1,"transparent":false,"wireframe":false,"side":2},{"uuid":"093b7bb4-f8a4-4f2a-a98d-2fd43e2a005a","name":"Door_Ext","type":"MeshPhongMaterial","color":10061132,"ambient":10061132,"emissive":0,"specular":10061132,"shininess":50,"opacity":1,"transparent":false,"wireframe":false,"side":0},{"uuid":"7bd88127-dab2-43c2-90b3-09c32d472330","name":"Door_Int","type":"MeshPhongMaterial","color":13286549,"ambient":13286549,"emissive":0,"specular":13286549,"shininess":50,"opacity":1,"transparent":false,"wireframe":false,"side":1},{"uuid":"ea8e5afe-40cb-4a2c-af16-02fbeb3cc356","name":"SiteShading","type":"MeshPhongMaterial","color":4947093,"ambient":4947093,"emissive":0,"specular":4947093,"shininess":50,"opacity":1,"transparent":false,"wireframe":false,"side":2},{"uuid":"1134f9f7-ac37-46ab-aeaf-0907c24f9353","name":"SiteShading_Ext","type":"MeshPhongMaterial","color":4947093,"ambient":4947093,"emissive":0,"specular":4947093,"shininess":50,"opacity":1,"transparent":false,"wireframe":false,"side":0},{"uuid":"b864d987-70f6-4e75-a264-886327b33834","name":"SiteShading_Int","type":"MeshPhongMaterial","color":12308956,"ambient":12308956,"emissive":0,"specular":12308956,"shininess":50,"opacity":1,"transparent":false,"wireframe":false,"side":1},{"uuid":"86c6021e-44d2-4d1d-89c3-49ce38480cea","name":"BuildingShading","type":"MeshPhongMaterial","color":7425177,"ambient":7425177,"emissive":0,"specular":7425177,"shininess":50,"opacity":1,"transparent":false,"wireframe":false,"side":2},{"uuid":"8cc6016f-ea78-4838-b3aa-1fe4d32147ea","name":"BuildingShading_Ext","type":"MeshPhongMaterial","color":7425177,"ambient":7425177,"emissive":0,"specular":7425177,"shininess":50,"opacity":1,"transparent":false,"wireframe":false,"side":0},{"uuid":"22df2c56-a0a1-4881-920e-4ec229521e54","name":"BuildingShading_Int","type":"MeshPhongMaterial","color":14207973,"ambient":14207973,"emissive":0,"specular":14207973,"shininess":50,"opacity":1,"transparent":false,"wireframe":false,"side":1},{"uuid":"e009ce1b-999a-4c9c-9444-c1a7be47ecb1","name":"SpaceShading","type":"MeshPhongMaterial","color":5009074,"ambient":5009074,"emissive":0,"specular":5009074,"shininess":50,"opacity":1,"transparent":false,"wireframe":false,"side":2},{"uuid":"64dcd143-ce54-4408-a94c-4e6f33d68081","name":"SpaceShading_Ext","type":"MeshPhongMaterial","color":5009074,"ambient":5009074,"emissive":0,"specular":5009074,"shininess":50,"opacity":1,"transparent":false,"wireframe":false,"side":0},{"uuid":"ee1659a0-6ff9-43ea-bf1e-40df3c42cb17","name":"SpaceShading_Int","type":"MeshPhongMaterial","color":12043744,"ambient":12043744,"emissive":0,"specular":12043744,"shininess":50,"opacity":1,"transparent":false,"wireframe":false,"side":1},{"uuid":"a60d464f-551d-4b7b-9d0b-adf664ffc64f","name":"InteriorPartitionSurface","type":"MeshPhongMaterial","color":10402959,"ambient":10402959,"emissive":0,"specular":10402959,"shininess":50,"opacity":1,"transparent":false,"wireframe":false,"side":2},{"uuid":"14db5f52-77fa-4ebf-b6b5-246414841890","name":"InteriorPartitionSurface_Ext","type":"MeshPhongMaterial","color":10402959,"ambient":10402959,"emissive":0,"specular":10402959,"shininess":50,"opacity":1,"transparent":false,"wireframe":false,"side":0},{"uuid":"55497973-365c-4836-8123-3255479b8ca5","name":"InteriorPartitionSurface_Int","type":"MeshPhongMaterial","color":14017231,"ambient":14017231,"emissive":0,"specular":14017231,"shininess":50,"opacity":1,"transparent":false,"wireframe":false,"side":1},{"uuid":"6ac14c42-242a-4407-93c8-62c81b1cbf89","name":"Boundary_Surface","type":"MeshPhongMaterial","color":39168,"ambient":39168,"emissive":0,"specular":39168,"shininess":50,"opacity":1,"transparent":false,"wireframe":false,"side":2},{"uuid":"6613a362-fb3d-4879-9bf6-b3a0042dd0e6","name":"Boundary_Adiabatic","type":"MeshPhongMaterial","color":16737714,"ambient":16737714,"emissive":0,"specular":16737714,"shininess":50,"opacity":1,"transparent":false,"wireframe":false,"side":2},{"uuid":"78db6ba7-babf-491d-b06f-a0989be0f756","name":"Boundary_Space","type":"MeshPhongMaterial","color":16711680,"ambient":16711680,"emissive":0,"specular":16711680,"shininess":50,"opacity":1,"transparent":false,"wireframe":false,"side":2},{"uuid":"e8b9eb6e-def2-4247-b55c-9e113bab8b27","name":"Boundary_Outdoors","type":"MeshPhongMaterial","color":10734796,"ambient":10734796,"emissive":0,"specular":10734796,"shininess":50,"opacity":1,"transparent":false,"wireframe":false,"side":2},{"uuid":"22bc80cc-936e-4741-998a-65a5eb08986d","name":"Boundary_Outdoors_Sun","type":"MeshPhongMaterial","color":2673868,"ambient":2673868,"emissive":0,"specular":2673868,"shininess":50,"opacity":1,"transparent":false,"wireframe":false,"side":2},{"uuid":"26dfd802-b903-4e14-b3b3-281cfbc3fd8d","name":"Boundary_Outdoors_Wind","type":"MeshPhongMaterial","color":630690,"ambient":630690,"emissive":0,"specular":630690,"shininess":50,"opacity":1,"transparent":false,"wireframe":false,"side":2},{"uuid":"1f122a3f-7d26-40b7-aa2c-67d06d2ca523","name":"Boundary_Outdoors_SunWind","type":"MeshPhongMaterial","color":4487073,"ambient":4487073,"emissive":0,"specular":4487073,"shininess":50,"opacity":1,"transparent":false,"wireframe":false,"side":2},{"uuid":"6a06acd9-690d-4726-bae6-ef57e0507115","name":"Boundary_Ground","type":"MeshPhongMaterial","color":13416314,"ambient":13416314,"emissive":0,"specular":13416314,"shininess":50,"opacity":1,"transparent":false,"wireframe":false,"side":2},{"uuid":"2d0c6682-7d08-4935-83ca-385065513dc7","name":"Boundary_Groundfcfactormethod","type":"MeshPhongMaterial","color":10058270,"ambient":10058270,"emissive":0,"specular":10058270,"shininess":50,"opacity":1,"transparent":false,"wireframe":false,"side":2},{"uuid":"75ae2173-abd0-4bd6-9f4c-627c48e1db88","name":"Boundary_Groundslabpreprocessoraverage","type":"MeshPhongMaterial","color":16760576,"ambient":16760576,"emissive":0,"specular":16760576,"shininess":50,"opacity":1,"transparent":false,"wireframe":false,"side":2},{"uuid":"9fead49b-08d6-4de1-aeea-9901d8750740","name":"Boundary_Groundslabpreprocessorcore","type":"MeshPhongMaterial","color":16758322,"ambient":16758322,"emissive":0,"specular":16758322,"shininess":50,"opacity":1,"transparent":false,"wireframe":false,"side":2},{"uuid":"83105620-16bf-41ed-9e04-a67b1f1ee249","name":"Boundary_Groundslabpreprocessorperimeter","type":"MeshPhongMaterial","color":16757349,"ambient":16757349,"emissive":0,"specular":16757349,"shininess":50,"opacity":1,"transparent":false,"wireframe":false,"side":2},{"uuid":"34477afc-a59f-4190-b0d8-632431728a68","name":"Boundary_Groundbasementpreprocessoraveragewall","type":"MeshPhongMaterial","color":13382400,"ambient":13382400,"emissive":0,"specular":13382400,"shininess":50,"opacity":1,"transparent":false,"wireframe":false,"side":2},{"uuid":"c5299c51-b584-4019-aa8b-fe822dd7dee0","name":"Boundary_Groundbasementpreprocessoraveragefloor","type":"MeshPhongMaterial","color":13390120,"ambient":13390120,"emissive":0,"specular":13390120,"shininess":50,"opacity":1,"transparent":false,"wireframe":false,"side":2},{"uuid":"9487b9e6-988d-48cb-8107-4217b782e46e","name":"Boundary_Groundbasementpreprocessorupperwall","type":"MeshPhongMaterial","color":13398097,"ambient":13398097,"emissive":0,"specular":13398097,"shininess":50,"opacity":1,"transparent":false,"wireframe":false,"side":2},{"uuid":"5731a3e0-0bc8-4987-8ec6-64723fe01dd0","name":"Boundary_Groundbasementpreprocessorlowerwall","type":"MeshPhongMaterial","color":13413795,"ambient":13413795,"emissive":0,"specular":13413795,"shininess":50,"opacity":1,"transparent":false,"wireframe":false,"side":2},{"uuid":"c287227a-be54-4966-9f98-051e4a5c8f10","name":"Boundary_Othersidecoefficients","type":"MeshPhongMaterial","color":4144959,"ambient":4144959,"emissive":0,"specular":4144959,"shininess":50,"opacity":1,"transparent":false,"wireframe":false,"side":2},{"uuid":"6f15f26a-f7fd-4542-8ecb-f8f81ad35c7b","name":"Boundary_Othersideconditionsmodel","type":"MeshPhongMaterial","color":10027084,"ambient":10027084,"emissive":0,"specular":10027084,"shininess":50,"opacity":1,"transparent":false,"wireframe":false,"side":2},{"uuid":"c4011856-8ca7-451e-8905-bb93a192dfc4","name":"Construction_U 0.55 SHGC 0.31 Dbl Ref-D Tint 6mm/6mm Air","type":"MeshPhongMaterial","color":12211667,"ambient":12211667,"emissive":0,"specular":12211667,"shininess":50,"opacity":1.0,"transparent":false,"wireframe":false,"side":2},{"uuid":"413b72a1-9974-49e4-a698-8158afba4206","name":"Construction_Basement Wall construction","type":"MeshPhongMaterial","color":10145074,"ambient":10145074,"emissive":0,"specular":10145074,"shininess":50,"opacity":1.0,"transparent":false,"wireframe":false,"side":2},{"uuid":"aaf20eba-bf70-422d-9456-6735a472bee1","name":"Construction_Customized opaque construction {39fe92a3-7fa9-4f59-bf5e-19b1adb7111a} to conductance of 0.247","type":"MeshPhongMaterial","color":205,"ambient":205,"emissive":0,"specular":205,"shininess":50,"opacity":1.0,"transparent":false,"wireframe":false,"side":2},{"uuid":"d046aa4d-ca86-4b41-8bb3-db9f61700db0","name":"Construction_Customized opaque construction {f4461738-76a2-4518-8359-936579ff8502} to conductance of 0.183","type":"MeshPhongMaterial","color":8190976,"ambient":8190976,"emissive":0,"specular":8190976,"shininess":50,"opacity":1.0,"transparent":false,"wireframe":false,"side":2},{"uuid":"e403e01f-a70e-44cc-949c-963434569dda","name":"Construction_Typical Interior Floor","type":"MeshPhongMaterial","color":15657130,"ambient":15657130,"emissive":0,"specular":15657130,"shininess":50,"opacity":1.0,"transparent":false,"wireframe":false,"side":2},{"uuid":"e083e816-3a39-4437-ae9f-33fa915ad264","name":"Construction_Customized Fenestration: cond=0.220 tvis=0.898 tsol=0.837","type":"MeshPhongMaterial","color":16729344,"ambient":16729344,"emissive":0,"specular":16729344,"shininess":50,"opacity":1.0,"transparent":false,"wireframe":false,"side":2},{"uuid":"9000bcc7-8457-4cc9-8cc5-76915fd255f0","name":"Construction_Typical Insulated Carpeted 6in Slab Floor","type":"MeshPhongMaterial","color":9662683,"ambient":9662683,"emissive":0,"specular":9662683,"shininess":50,"opacity":1.0,"transparent":false,"wireframe":false,"side":2},{"uuid":"5ff13fd4-4271-4a4f-a25d-6ff2fafc1acf","name":"Construction_Customized opaque construction {e8255afa-e848-45cb-8ecb-b062ce9f2c6e} to conductance of 2.2","type":"MeshPhongMaterial","color":9662683,"ambient":9662683,"emissive":0,"specular":9662683,"shininess":50,"opacity":1.0,"transparent":false,"wireframe":false,"side":2},{"uuid":"f1b09b73-b76b-4d50-ad56-b1c90f2a61a7","name":"Construction_Typical Insulated Metal Door R-1.43","type":"MeshPhongMaterial","color":15794160,"ambient":15794160,"emissive":0,"specular":15794160,"shininess":50,"opacity":1.0,"transparent":false,"wireframe":false,"side":2},{"uuid":"55371878-9a50-4718-8c6b-c82b577fc60d","name":"Construction_Typical Interior Door","type":"MeshPhongMaterial","color":10506797,"ambient":10506797,"emissive":0,"specular":10506797,"shininess":50,"opacity":1.0,"transparent":false,"wireframe":false,"side":2},{"uuid":"6932b0b1-9bba-4a70-b9df-1fc461899a7f","name":"Construction_Typical Insulated Exterior Mass Wall R-12.5","type":"MeshPhongMaterial","color":65407,"ambient":65407,"emissive":0,"specular":65407,"shininess":50,"opacity":1.0,"transparent":false,"wireframe":false,"side":2},{"uuid":"3c356695-0ca3-4bf3-911b-9b3ce7d24b69","name":"Construction_Typical Interior Partition","type":"MeshPhongMaterial","color":6908265,"ambient":6908265,"emissive":0,"specular":6908265,"shininess":50,"opacity":1.0,"transparent":false,"wireframe":false,"side":2},{"uuid":"a296887c-a951-449c-b7d0-485a3e11285e","name":"Construction_Typical Interior Ceiling","type":"MeshPhongMaterial","color":9699539,"ambient":9699539,"emissive":0,"specular":9699539,"shininess":50,"opacity":1.0,"transparent":false,"wireframe":false,"side":2},{"uuid":"09469f06-e40b-46fe-811a-54af933abb1f","name":"Construction_InteriorFurnishings","type":"MeshPhongMaterial","color":16773365,"ambient":16773365,"emissive":0,"specular":16773365,"shininess":50,"opacity":1.0,"transparent":false,"wireframe":false,"side":2},{"uuid":"c382dfa3-bb7c-409b-b9cb-49748ca504fa","name":"Construction_Typical Interior Wall","type":"MeshPhongMaterial","color":15631086,"ambient":15631086,"emissive":0,"specular":15631086,"shininess":50,"opacity":1.0,"transparent":false,"wireframe":false,"side":2},{"uuid":"a6e4124d-a12c-49db-8baa-700009e3b9d0","name":"Construction_U 0.35 SHGC 0.35 Dbl LoE (e2-.1) Tint 6mm/13mm Air","type":"MeshPhongMaterial","color":16121850,"ambient":16121850,"emissive":0,"specular":16121850,"shininess":50,"opacity":1.0,"transparent":false,"wireframe":false,"side":2},{"uuid":"330d6f8f-3c7a-48f0-b0c6-5ae7bbf931fb","name":"Construction_Wall Adiabatic construction","type":"MeshPhongMaterial","color":2263842,"ambient":2263842,"emissive":0,"specular":2263842,"shininess":50,"opacity":1.0,"transparent":false,"wireframe":false,"side":2},{"uuid":"a0f66c84-c8da-488a-84d8-8d8653676472","name":"Construction_Typical Insulated Metal Building Roof R-20.41","type":"MeshPhongMaterial","color":16770273,"ambient":16770273,"emissive":0,"specular":16770273,"shininess":50,"opacity":1.0,"transparent":false,"wireframe":false,"side":2},{"uuid":"67be9b33-83be-4f39-9758-bf32c3abddc3","name":"Construction_Typical Interior Window","type":"MeshPhongMaterial","color":11403055,"ambient":11403055,"emissive":0,"specular":11403055,"shininess":50,"opacity":1.0,"transparent":false,"wireframe":false,"side":2},{"uuid":"8c7ea335-58d3-44c7-a7f8-8faac4fa5529","name":"Construction_Customized Fenestration: cond=0.220 tvis=0.220 tsol=0.232","type":"MeshPhongMaterial","color":16773365,"ambient":16773365,"emissive":0,"specular":16773365,"shininess":50,"opacity":1.0,"transparent":false,"wireframe":false,"side":2},{"uuid":"c9711083-3323-416f-9a5d-c367feb61a7e","name":"Construction_Customized opaque construction {73f8f82b-2415-47e3-baf9-63442baf781d} to conductance of 0.183","type":"MeshPhongMaterial","color":16768685,"ambient":16768685,"emissive":0,"specular":16768685,"shininess":50,"opacity":1.0,"transparent":false,"wireframe":false,"side":2},{"uuid":"675e8fe6-9f27-48ba-b1ba-a1c9d6f73935","name":"Construction_Customized opaque construction {2633b153-c836-4be9-b709-81c5e3e30456} to conductance of 2.2","type":"MeshPhongMaterial","color":11119017,"ambient":11119017,"emissive":0,"specular":11119017,"shininess":50,"opacity":1.0,"transparent":false,"wireframe":false,"side":2},{"uuid":"8e8d04fa-913f-4c42-a67c-27194965828a","name":"Construction_Customized Fenestration: cond=0.220 tvis=0.441 tsol=0.279","type":"MeshPhongMaterial","color":16776960,"ambient":16776960,"emissive":0,"specular":16776960,"shininess":50,"opacity":1.0,"transparent":false,"wireframe":false,"side":2},{"uuid":"98678cd9-0081-4194-b72b-f675a4c4942d","name":"Construction_Floor Adiabatic construction","type":"MeshPhongMaterial","color":12092939,"ambient":12092939,"emissive":0,"specular":12092939,"shininess":50,"opacity":1.0,"transparent":false,"wireframe":false,"side":2},{"uuid":"a3b8ff9a-d2a3-40f5-bfd3-0b03228b760b","name":"Construction_Customized opaque construction {2470b35b-34c2-464d-bf39-4e783c0d3bdd} to conductance of 0.284","type":"MeshPhongMaterial","color":16773365,"ambient":16773365,"emissive":0,"specular":16773365,"shininess":50,"opacity":1.0,"transparent":false,"wireframe":false,"side":2},{"uuid":"c78e0ff4-36fb-49fb-9d6d-2bfd37b50c33","name":"Construction_Basement Floor construction","type":"MeshPhongMaterial","color":16444375,"ambient":16444375,"emissive":0,"specular":16444375,"shininess":50,"opacity":1.0,"transparent":false,"wireframe":false,"side":2},{"uuid":"50841a19-5bf0-4e9a-9f37-1d1fd4e30c01","name":"Construction_Customized Fenestration: cond=0.220 tvis=0.294 tsol=0.332","type":"MeshPhongMaterial","color":14423100,"ambient":14423100,"emissive":0,"specular":14423100,"shininess":50,"opacity":1.0,"transparent":false,"wireframe":false,"side":2},{"uuid":"4484dfc7-3e30-4d52-a552-e9b8a943006d","name":"Construction_Customized opaque construction {2470b35b-34c2-464d-bf39-4e783c0d3bdd} to conductance of 0.757","type":"MeshPhongMaterial","color":15787660,"ambient":15787660,"emissive":0,"specular":15787660,"shininess":50,"opacity":1.0,"transparent":false,"wireframe":false,"side":2},{"uuid":"8f5d82d8-0f91-4db6-bc45-0829e3c9d25e","name":"Construction_U 0.48 SHGC 0.40 Dbl Ref-D Clr 6mm/13mm","type":"MeshPhongMaterial","color":9055202,"ambient":9055202,"emissive":0,"specular":9055202,"shininess":50,"opacity":1.0,"transparent":false,"wireframe":false,"side":2},{"uuid":"83153691-b2ff-4fd6-97f4-336abb968882","name":"Construction_Typical Overhead Door R-2.0","type":"MeshPhongMaterial","color":16773077,"ambient":16773077,"emissive":0,"specular":16773077,"shininess":50,"opacity":1.0,"transparent":false,"wireframe":false,"side":2},{"uuid":"d002cebe-493f-4e4e-8702-9a643fdaa19c","name":"Construction_Typical Insulated Exterior Mass Floor R-15.63","type":"MeshPhongMaterial","color":15631086,"ambient":15631086,"emissive":0,"specular":15631086,"shininess":50,"opacity":1.0,"transparent":false,"wireframe":false,"side":2},{"uuid":"12d305c8-839f-4d43-98f3-6a63279e52a2","name":"ThermalZone_Sp-Kitchen Sys-3 Flr-1 Sch-B HPlcmt-north ZN","type":"MeshPhongMaterial","color":16768685,"ambient":16768685,"emissive":0,"specular":16768685,"shininess":50,"opacity":1.0,"transparent":false,"wireframe":false,"side":2},{"uuid":"7f92a767-45f8-4998-a3a1-3727a43705dc","name":"ThermalZone_Sp-Dining Sys-3 Flr-1 Sch-B HPlcmt-south ZN","type":"MeshPhongMaterial","color":13789470,"ambient":13789470,"emissive":0,"specular":13789470,"shininess":50,"opacity":1.0,"transparent":false,"wireframe":false,"side":2},{"uuid":"97d43136-85ae-4d33-a3e8-e3c4a0e25f0e","name":"ThermalZone_Sp-attic Sys-0 Flr-2 Sch-- undefined - HPlcmt-core ZN","type":"MeshPhongMaterial","color":16775930,"ambient":16775930,"emissive":0,"specular":16775930,"shininess":50,"opacity":1.0,"transparent":false,"wireframe":false,"side":2},{"uuid":"a4b72e44-db74-4782-9f45-05f595079afd","name":"SpaceType_Space Function Dining - bar lounge/leisure","type":"MeshPhongMaterial","color":16777215,"ambient":16777215,"emissive":0,"specular":16777215,"shininess":50,"opacity":1.0,"transparent":false,"wireframe":false,"side":2},{"uuid":"1592759f-6d43-4ca0-8301-daa0fd39bd36","name":"SpaceType_Space Function Food preparation","type":"MeshPhongMaterial","color":16777215,"ambient":16777215,"emissive":0,"specular":16777215,"shininess":50,"opacity":1.0,"transparent":false,"wireframe":false,"side":2},{"uuid":"d59999ab-9802-43f3-ac93-3cbf7bfb44af","name":"SpaceType_Space Function - undefined -","type":"MeshPhongMaterial","color":16777215,"ambient":16777215,"emissive":0,"specular":16777215,"shininess":50,"opacity":1.0,"transparent":false,"wireframe":false,"side":2},{"uuid":"c6f99362-b89d-4484-ac5b-889b18523773","name":"BuildingStory_Building Story 1","type":"MeshPhongMaterial","color":16744272,"ambient":16744272,"emissive":0,"specular":16744272,"shininess":50,"opacity":1.0,"transparent":false,"wireframe":false,"side":2},{"uuid":"bd7a10cb-b5b5-4c21-92fe-76c01746530d","name":"BuildingStory_Building Story 2","type":"MeshPhongMaterial","color":9109643,"ambient":9109643,"emissive":0,"specular":9109643,"shininess":50,"opacity":1.0,"transparent":false,"wireframe":false,"side":2}],"object":{"uuid":"3b0c0610-c881-40a7-b568-ab638f567bbf","type":"Scene","matrix":[1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1],"children":[{"uuid":"d77e2f1d-89bb-4c93-afac-68eb6db85b25","name":"Dining_Wall_East","type":"Mesh","geometry":"0ce33173-4d99-4659-a3cf-f4e2f4507992","material":"64de3e86-c6eb-4dd5-bfcc-edf34a15e841","matrix":[1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1],"userData":{"handle":"0ce33173-4d99-4659-a3cf-f4e2f4507992","name":"Dining_Wall_East","surfaceType":"Wall","constructionName":"Customized opaque construction {39fe92a3-7fa9-4f59-bf5e-19b1adb7111a} to conductance of 0.247","spaceName":"Dining","thermalZoneName":"Sp-Dining Sys-3 Flr-1 Sch-B HPlcmt-south ZN","spaceTypeName":"Space Function Dining - bar lounge/leisure","buildingStoryName":"Building Story 1","outsideBoundaryCondition":"Outdoors","outsideBoundaryConditionObjectName":"","outsideBoundaryConditionObjectHandle":null,"coincidentWithOutsideObject":false,"sunExposure":"SunExposed","windExposure":"WindExposed","surfaceTypeMaterialName":"Wall","boundaryMaterialName":"Boundary_Outdoors_SunWind","constructionMaterialName":"Construction_Customized opaque construction {39fe92a3-7fa9-4f59-bf5e-19b1adb7111a} to conductance of 0.247","thermalZoneMaterialName":"ThermalZone_Sp-Dining Sys-3 Flr-1 Sch-B HPlcmt-south ZN","spaceTypeMaterialName":"SpaceType_Space Function Dining - bar lounge/leisure","buildingStoryMaterialName":"BuildingStory_Building Story 1"}},{"uuid":"fee20694-4da4-4a24-a6a5-4832f457a150","name":"Dining_Wall_East_Window","type":"Mesh","geometry":"d143d736-245a-42f7-8084-9f92d4c6b4f4","material":"6a9276dc-e570-4b24-ae2b-62654737355a","matrix":[1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1],"userData":{"handle":"d143d736-245a-42f7-8084-9f92d4c6b4f4","name":"Dining_Wall_East_Window","surfaceType":"FixedWindow","constructionName":"Customized Fenestration: cond=0.220 tvis=0.220 tsol=0.232","spaceName":"Dining","thermalZoneName":"Sp-Dining Sys-3 Flr-1 Sch-B HPlcmt-south ZN","spaceTypeName":"Space Function Dining - bar lounge/leisure","buildingStoryName":"Building Story 1","outsideBoundaryCondition":"Outdoors","outsideBoundaryConditionObjectName":"","outsideBoundaryConditionObjectHandle":null,"coincidentWithOutsideObject":false,"sunExposure":"SunExposed","windExposure":"WindExposed","surfaceTypeMaterialName":"Window","boundaryMaterialName":"Boundary_Outdoors_SunWind","constructionMaterialName":"Construction_Customized Fenestration: cond=0.220 tvis=0.220 tsol=0.232","thermalZoneMaterialName":"ThermalZone_Sp-Dining Sys-3 Flr-1 Sch-B HPlcmt-south ZN","spaceTypeMaterialName":"SpaceType_Space Function Dining - bar lounge/leisure","buildingStoryMaterialName":"BuildingStory_Building Story 1"}},{"uuid":"647db3c6-9c13-42a0-bac5-8518e66eff06","name":"Dining_Floor","type":"Mesh","geometry":"1f56496f-7c9c-4b39-8d4b-bc0ec99baa9c","material":"9d1ba0db-7c71-4e64-bd60-01a2ba61cca3","matrix":[1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1],"userData":{"handle":"1f56496f-7c9c-4b39-8d4b-bc0ec99baa9c","name":"Dining_Floor","surfaceType":"Floor","constructionName":"Customized opaque construction {2470b35b-34c2-464d-bf39-4e783c0d3bdd} to conductance of 0.757","spaceName":"Dining","thermalZoneName":"Sp-Dining Sys-3 Flr-1 Sch-B HPlcmt-south ZN","spaceTypeName":"Space Function Dining - bar lounge/leisure","buildingStoryName":"Building Story 1","outsideBoundaryCondition":"Ground","outsideBoundaryConditionObjectName":"","outsideBoundaryConditionObjectHandle":null,"coincidentWithOutsideObject":false,"sunExposure":"NoSun","windExposure":"NoWind","surfaceTypeMaterialName":"Floor","boundaryMaterialName":"Boundary_Ground","constructionMaterialName":"Construction_Customized opaque construction {2470b35b-34c2-464d-bf39-4e783c0d3bdd} to conductance of 0.757","thermalZoneMaterialName":"ThermalZone_Sp-Dining Sys-3 Flr-1 Sch-B HPlcmt-south ZN","spaceTypeMaterialName":"SpaceType_Space Function Dining - bar lounge/leisure","buildingStoryMaterialName":"BuildingStory_Building Story 1"}},{"uuid":"e36c30d4-cc5d-49cf-a7b4-c121996397b8","name":"north-roof","type":"Mesh","geometry":"23285ff9-2c6a-4cb5-9097-93028196dae1","material":"d88eaf10-6a0e-4561-b205-204e7e27696a","matrix":[1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1],"userData":{"handle":"23285ff9-2c6a-4cb5-9097-93028196dae1","name":"north-roof","surfaceType":"RoofCeiling","constructionName":"Customized opaque construction {73f8f82b-2415-47e3-baf9-63442baf781d} to conductance of 0.183","spaceName":"attic","thermalZoneName":"Sp-attic Sys-0 Flr-2 Sch-- undefined - HPlcmt-core ZN","spaceTypeName":"Space Function - undefined -","buildingStoryName":"Building Story 2","outsideBoundaryCondition":"Outdoors","outsideBoundaryConditionObjectName":"","outsideBoundaryConditionObjectHandle":null,"coincidentWithOutsideObject":false,"sunExposure":"SunExposed","windExposure":"WindExposed","surfaceTypeMaterialName":"RoofCeiling","boundaryMaterialName":"Boundary_Outdoors_SunWind","constructionMaterialName":"Construction_Customized opaque construction {73f8f82b-2415-47e3-baf9-63442baf781d} to conductance of 0.183","thermalZoneMaterialName":"ThermalZone_Sp-attic Sys-0 Flr-2 Sch-- undefined - HPlcmt-core ZN","spaceTypeMaterialName":"SpaceType_Space Function - undefined -","buildingStoryMaterialName":"BuildingStory_Building Story 2"}},{"uuid":"a8fc9e3b-74aa-4d9f-8500-2b1627a7f3c9","name":"Dining_Ceiling","type":"Mesh","geometry":"239e359d-98c3-4ad3-909e-507d9cdc12fd","material":"d88eaf10-6a0e-4561-b205-204e7e27696a","matrix":[1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1],"userData":{"handle":"239e359d-98c3-4ad3-909e-507d9cdc12fd","name":"Dining_Ceiling","surfaceType":"RoofCeiling","constructionName":"Typical Interior Ceiling","spaceName":"Dining","thermalZoneName":"Sp-Dining Sys-3 Flr-1 Sch-B HPlcmt-south ZN","spaceTypeName":"Space Function Dining - bar lounge/leisure","buildingStoryName":"Building Story 1","outsideBoundaryCondition":"Surface","outsideBoundaryConditionObjectName":"attic-floor-dinning","outsideBoundaryConditionObjectHandle":"dbb61c21-e373-4c96-b80c-9293e6b4e972","coincidentWithOutsideObject":true,"sunExposure":"NoSun","windExposure":"NoWind","surfaceTypeMaterialName":"RoofCeiling","boundaryMaterialName":"Boundary_Surface","constructionMaterialName":"Construction_Typical Interior Ceiling","thermalZoneMaterialName":"ThermalZone_Sp-Dining Sys-3 Flr-1 Sch-B HPlcmt-south ZN","spaceTypeMaterialName":"SpaceType_Space Function Dining - bar lounge/leisure","buildingStoryMaterialName":"BuildingStory_Building Story 1"}},{"uuid":"189d45e2-cfa4-442d-bce7-fcf366f11639","name":"Dining_Wall_North-PPAutoCreateOther","type":"Mesh","geometry":"2636ff31-c556-495c-b12e-5d6feddbc9cf","material":"64de3e86-c6eb-4dd5-bfcc-edf34a15e841","matrix":[1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1],"userData":{"handle":"2636ff31-c556-495c-b12e-5d6feddbc9cf","name":"Dining_Wall_North-PPAutoCreateOther","surfaceType":"Wall","constructionName":"Typical Interior Wall","spaceName":"Kitchen","thermalZoneName":"Sp-Kitchen Sys-3 Flr-1 Sch-B HPlcmt-north ZN","spaceTypeName":"Space Function Food preparation","buildingStoryName":"Building Story 1","outsideBoundaryCondition":"Surface","outsideBoundaryConditionObjectName":"Dining_Wall_North","outsideBoundaryConditionObjectHandle":"aeca9f74-baf7-4879-9ec6-6b786bd73254","coincidentWithOutsideObject":true,"sunExposure":"NoSun","windExposure":"NoWind","surfaceTypeMaterialName":"Wall","boundaryMaterialName":"Boundary_Surface","constructionMaterialName":"Construction_Typical Interior Wall","thermalZoneMaterialName":"ThermalZone_Sp-Kitchen Sys-3 Flr-1 Sch-B HPlcmt-north ZN","spaceTypeMaterialName":"SpaceType_Space Function Food preparation","buildingStoryMaterialName":"BuildingStory_Building Story 1"}},{"uuid":"90ca4dcb-f24e-4313-a270-ff6efe7c6fec","name":"Kitchen_Wall_North","type":"Mesh","geometry":"29502d46-e7f0-4ace-80f2-bf8c5f22399e","material":"64de3e86-c6eb-4dd5-bfcc-edf34a15e841","matrix":[1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1],"userData":{"handle":"29502d46-e7f0-4ace-80f2-bf8c5f22399e","name":"Kitchen_Wall_North","surfaceType":"Wall","constructionName":"Customized opaque construction {39fe92a3-7fa9-4f59-bf5e-19b1adb7111a} to conductance of 0.247","spaceName":"Kitchen","thermalZoneName":"Sp-Kitchen Sys-3 Flr-1 Sch-B HPlcmt-north ZN","spaceTypeName":"Space Function Food preparation","buildingStoryName":"Building Story 1","outsideBoundaryCondition":"Outdoors","outsideBoundaryConditionObjectName":"","outsideBoundaryConditionObjectHandle":null,"coincidentWithOutsideObject":false,"sunExposure":"SunExposed","windExposure":"WindExposed","surfaceTypeMaterialName":"Wall","boundaryMaterialName":"Boundary_Outdoors_SunWind","constructionMaterialName":"Construction_Customized opaque construction {39fe92a3-7fa9-4f59-bf5e-19b1adb7111a} to conductance of 0.247","thermalZoneMaterialName":"ThermalZone_Sp-Kitchen Sys-3 Flr-1 Sch-B HPlcmt-north ZN","spaceTypeMaterialName":"SpaceType_Space Function Food preparation","buildingStoryMaterialName":"BuildingStory_Building Story 1"}},{"uuid":"3c06b9c1-ad77-4364-9f06-d1f31b3f8268","name":"Kitchen_Ceiling","type":"Mesh","geometry":"39f6e2e0-5e68-4d9f-a51b-93c992967b4d","material":"d88eaf10-6a0e-4561-b205-204e7e27696a","matrix":[1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1],"userData":{"handle":"39f6e2e0-5e68-4d9f-a51b-93c992967b4d","name":"Kitchen_Ceiling","surfaceType":"RoofCeiling","constructionName":"Typical Interior Ceiling","spaceName":"Kitchen","thermalZoneName":"Sp-Kitchen Sys-3 Flr-1 Sch-B HPlcmt-north ZN","spaceTypeName":"Space Function Food preparation","buildingStoryName":"Building Story 1","outsideBoundaryCondition":"Surface","outsideBoundaryConditionObjectName":"attic-floor-kitchen","outsideBoundaryConditionObjectHandle":"4586d3be-ec21-4c3f-bdb8-2e7cc621e90a","coincidentWithOutsideObject":true,"sunExposure":"NoSun","windExposure":"NoWind","surfaceTypeMaterialName":"RoofCeiling","boundaryMaterialName":"Boundary_Surface","constructionMaterialName":"Construction_Typical Interior Ceiling","thermalZoneMaterialName":"ThermalZone_Sp-Kitchen Sys-3 Flr-1 Sch-B HPlcmt-north ZN","spaceTypeMaterialName":"SpaceType_Space Function Food preparation","buildingStoryMaterialName":"BuildingStory_Building Story 1"}},{"uuid":"bfe4492f-8d71-40fb-9669-677a18578948","name":"attic-floor-kitchen","type":"Mesh","geometry":"4586d3be-ec21-4c3f-bdb8-2e7cc621e90a","material":"9d1ba0db-7c71-4e64-bd60-01a2ba61cca3","matrix":[1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1],"userData":{"handle":"4586d3be-ec21-4c3f-bdb8-2e7cc621e90a","name":"attic-floor-kitchen","surfaceType":"Floor","constructionName":"Typical Interior Floor","spaceName":"attic","thermalZoneName":"Sp-attic Sys-0 Flr-2 Sch-- undefined - HPlcmt-core ZN","spaceTypeName":"Space Function - undefined -","buildingStoryName":"Building Story 2","outsideBoundaryCondition":"Surface","outsideBoundaryConditionObjectName":"Kitchen_Ceiling","outsideBoundaryConditionObjectHandle":"39f6e2e0-5e68-4d9f-a51b-93c992967b4d","coincidentWithOutsideObject":true,"sunExposure":"NoSun","windExposure":"NoWind","surfaceTypeMaterialName":"Floor","boundaryMaterialName":"Boundary_Surface","constructionMaterialName":"Construction_Typical Interior Floor","thermalZoneMaterialName":"ThermalZone_Sp-attic Sys-0 Flr-2 Sch-- undefined - HPlcmt-core ZN","spaceTypeMaterialName":"SpaceType_Space Function - undefined -","buildingStoryMaterialName":"BuildingStory_Building Story 2"}},{"uuid":"dda81a06-8680-419f-80c4-5c06cf02f2f4","name":"south-roof","type":"Mesh","geometry":"75eb92db-8917-4314-8e60-e78636e3d97c","material":"d88eaf10-6a0e-4561-b205-204e7e27696a","matrix":[1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1],"userData":{"handle":"75eb92db-8917-4314-8e60-e78636e3d97c","name":"south-roof","surfaceType":"RoofCeiling","constructionName":"Customized opaque construction {73f8f82b-2415-47e3-baf9-63442baf781d} to conductance of 0.183","spaceName":"attic","thermalZoneName":"Sp-attic Sys-0 Flr-2 Sch-- undefined - HPlcmt-core ZN","spaceTypeName":"Space Function - undefined -","buildingStoryName":"Building Story 2","outsideBoundaryCondition":"Outdoors","outsideBoundaryConditionObjectName":"","outsideBoundaryConditionObjectHandle":null,"coincidentWithOutsideObject":false,"sunExposure":"SunExposed","windExposure":"WindExposed","surfaceTypeMaterialName":"RoofCeiling","boundaryMaterialName":"Boundary_Outdoors_SunWind","constructionMaterialName":"Construction_Customized opaque construction {73f8f82b-2415-47e3-baf9-63442baf781d} to conductance of 0.183","thermalZoneMaterialName":"ThermalZone_Sp-attic Sys-0 Flr-2 Sch-- undefined - HPlcmt-core ZN","spaceTypeMaterialName":"SpaceType_Space Function - undefined -","buildingStoryMaterialName":"BuildingStory_Building Story 2"}},{"uuid":"73236f2e-300f-45e2-8605-eef4c67c6b3f","name":"Kitchen_Floor","type":"Mesh","geometry":"7ae35256-3ec9-4852-b5d2-007b50623dbd","material":"9d1ba0db-7c71-4e64-bd60-01a2ba61cca3","matrix":[1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1],"userData":{"handle":"7ae35256-3ec9-4852-b5d2-007b50623dbd","name":"Kitchen_Floor","surfaceType":"Floor","constructionName":"Customized opaque construction {2470b35b-34c2-464d-bf39-4e783c0d3bdd} to conductance of 0.757","spaceName":"Kitchen","thermalZoneName":"Sp-Kitchen Sys-3 Flr-1 Sch-B HPlcmt-north ZN","spaceTypeName":"Space Function Food preparation","buildingStoryName":"Building Story 1","outsideBoundaryCondition":"Ground","outsideBoundaryConditionObjectName":"","outsideBoundaryConditionObjectHandle":null,"coincidentWithOutsideObject":false,"sunExposure":"NoSun","windExposure":"NoWind","surfaceTypeMaterialName":"Floor","boundaryMaterialName":"Boundary_Ground","constructionMaterialName":"Construction_Customized opaque construction {2470b35b-34c2-464d-bf39-4e783c0d3bdd} to conductance of 0.757","thermalZoneMaterialName":"ThermalZone_Sp-Kitchen Sys-3 Flr-1 Sch-B HPlcmt-north ZN","spaceTypeMaterialName":"SpaceType_Space Function Food preparation","buildingStoryMaterialName":"BuildingStory_Building Story 1"}},{"uuid":"948a8f88-bac7-40ff-aca6-42d14ad2d5f8","name":"west-roof","type":"Mesh","geometry":"95c0bfd9-6c14-4700-b916-3da2bdc3ec3d","material":"d88eaf10-6a0e-4561-b205-204e7e27696a","matrix":[1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1],"userData":{"handle":"95c0bfd9-6c14-4700-b916-3da2bdc3ec3d","name":"west-roof","surfaceType":"RoofCeiling","constructionName":"Customized opaque construction {73f8f82b-2415-47e3-baf9-63442baf781d} to conductance of 0.183","spaceName":"attic","thermalZoneName":"Sp-attic Sys-0 Flr-2 Sch-- undefined - HPlcmt-core ZN","spaceTypeName":"Space Function - undefined -","buildingStoryName":"Building Story 2","outsideBoundaryCondition":"Outdoors","outsideBoundaryConditionObjectName":"","outsideBoundaryConditionObjectHandle":null,"coincidentWithOutsideObject":false,"sunExposure":"SunExposed","windExposure":"WindExposed","surfaceTypeMaterialName":"RoofCeiling","boundaryMaterialName":"Boundary_Outdoors_SunWind","constructionMaterialName":"Construction_Customized opaque construction {73f8f82b-2415-47e3-baf9-63442baf781d} to conductance of 0.183","thermalZoneMaterialName":"ThermalZone_Sp-attic Sys-0 Flr-2 Sch-- undefined - HPlcmt-core ZN","spaceTypeMaterialName":"SpaceType_Space Function - undefined -","buildingStoryMaterialName":"BuildingStory_Building Story 2"}},{"uuid":"6d83371e-b29b-449c-8db9-b096240c984c","name":"Kitchen_Wall_West","type":"Mesh","geometry":"98c3e342-d789-4d0e-9013-b5820ea58e80","material":"64de3e86-c6eb-4dd5-bfcc-edf34a15e841","matrix":[1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1],"userData":{"handle":"98c3e342-d789-4d0e-9013-b5820ea58e80","name":"Kitchen_Wall_West","surfaceType":"Wall","constructionName":"Customized opaque construction {39fe92a3-7fa9-4f59-bf5e-19b1adb7111a} to conductance of 0.247","spaceName":"Kitchen","thermalZoneName":"Sp-Kitchen Sys-3 Flr-1 Sch-B HPlcmt-north ZN","spaceTypeName":"Space Function Food preparation","buildingStoryName":"Building Story 1","outsideBoundaryCondition":"Outdoors","outsideBoundaryConditionObjectName":"","outsideBoundaryConditionObjectHandle":null,"coincidentWithOutsideObject":false,"sunExposure":"SunExposed","windExposure":"WindExposed","surfaceTypeMaterialName":"Wall","boundaryMaterialName":"Boundary_Outdoors_SunWind","constructionMaterialName":"Construction_Customized opaque construction {39fe92a3-7fa9-4f59-bf5e-19b1adb7111a} to conductance of 0.247","thermalZoneMaterialName":"ThermalZone_Sp-Kitchen Sys-3 Flr-1 Sch-B HPlcmt-north ZN","spaceTypeMaterialName":"SpaceType_Space Function Food preparation","buildingStoryMaterialName":"BuildingStory_Building Story 1"}},{"uuid":"47d998ab-35ca-4f94-bfb2-10e5decf0a25","name":"east-roof","type":"Mesh","geometry":"a6bad208-b799-49a9-ac94-60afc3e2348c","material":"d88eaf10-6a0e-4561-b205-204e7e27696a","matrix":[1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1],"userData":{"handle":"a6bad208-b799-49a9-ac94-60afc3e2348c","name":"east-roof","surfaceType":"RoofCeiling","constructionName":"Customized opaque construction {73f8f82b-2415-47e3-baf9-63442baf781d} to conductance of 0.183","spaceName":"attic","thermalZoneName":"Sp-attic Sys-0 Flr-2 Sch-- undefined - HPlcmt-core ZN","spaceTypeName":"Space Function - undefined -","buildingStoryName":"Building Story 2","outsideBoundaryCondition":"Outdoors","outsideBoundaryConditionObjectName":"","outsideBoundaryConditionObjectHandle":null,"coincidentWithOutsideObject":false,"sunExposure":"SunExposed","windExposure":"WindExposed","surfaceTypeMaterialName":"RoofCeiling","boundaryMaterialName":"Boundary_Outdoors_SunWind","constructionMaterialName":"Construction_Customized opaque construction {73f8f82b-2415-47e3-baf9-63442baf781d} to conductance of 0.183","thermalZoneMaterialName":"ThermalZone_Sp-attic Sys-0 Flr-2 Sch-- undefined - HPlcmt-core ZN","spaceTypeMaterialName":"SpaceType_Space Function - undefined -","buildingStoryMaterialName":"BuildingStory_Building Story 2"}},{"uuid":"96d33528-55d9-42ed-8604-2f80bc2f3ced","name":"Dining_Wall_North","type":"Mesh","geometry":"aeca9f74-baf7-4879-9ec6-6b786bd73254","material":"64de3e86-c6eb-4dd5-bfcc-edf34a15e841","matrix":[1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1],"userData":{"handle":"aeca9f74-baf7-4879-9ec6-6b786bd73254","name":"Dining_Wall_North","surfaceType":"Wall","constructionName":"Typical Interior Wall","spaceName":"Dining","thermalZoneName":"Sp-Dining Sys-3 Flr-1 Sch-B HPlcmt-south ZN","spaceTypeName":"Space Function Dining - bar lounge/leisure","buildingStoryName":"Building Story 1","outsideBoundaryCondition":"Surface","outsideBoundaryConditionObjectName":"Dining_Wall_North-PPAutoCreateOther","outsideBoundaryConditionObjectHandle":"2636ff31-c556-495c-b12e-5d6feddbc9cf","coincidentWithOutsideObject":true,"sunExposure":"NoSun","windExposure":"NoWind","surfaceTypeMaterialName":"Wall","boundaryMaterialName":"Boundary_Surface","constructionMaterialName":"Construction_Typical Interior Wall","thermalZoneMaterialName":"ThermalZone_Sp-Dining Sys-3 Flr-1 Sch-B HPlcmt-south ZN","spaceTypeMaterialName":"SpaceType_Space Function Dining - bar lounge/leisure","buildingStoryMaterialName":"BuildingStory_Building Story 1"}},{"uuid":"ccf586af-124c-4730-af82-15aa7e55ae8b","name":"Dining_Wall_West","type":"Mesh","geometry":"ca26efc0-2f1e-498e-99e2-2fc5e3f319dd","material":"64de3e86-c6eb-4dd5-bfcc-edf34a15e841","matrix":[1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1],"userData":{"handle":"ca26efc0-2f1e-498e-99e2-2fc5e3f319dd","name":"Dining_Wall_West","surfaceType":"Wall","constructionName":"Customized opaque construction {39fe92a3-7fa9-4f59-bf5e-19b1adb7111a} to conductance of 0.247","spaceName":"Dining","thermalZoneName":"Sp-Dining Sys-3 Flr-1 Sch-B HPlcmt-south ZN","spaceTypeName":"Space Function Dining - bar lounge/leisure","buildingStoryName":"Building Story 1","outsideBoundaryCondition":"Outdoors","outsideBoundaryConditionObjectName":"","outsideBoundaryConditionObjectHandle":null,"coincidentWithOutsideObject":false,"sunExposure":"SunExposed","windExposure":"WindExposed","surfaceTypeMaterialName":"Wall","boundaryMaterialName":"Boundary_Outdoors_SunWind","constructionMaterialName":"Construction_Customized opaque construction {39fe92a3-7fa9-4f59-bf5e-19b1adb7111a} to conductance of 0.247","thermalZoneMaterialName":"ThermalZone_Sp-Dining Sys-3 Flr-1 Sch-B HPlcmt-south ZN","spaceTypeMaterialName":"SpaceType_Space Function Dining - bar lounge/leisure","buildingStoryMaterialName":"BuildingStory_Building Story 1"}},{"uuid":"ec5b13ff-ec39-4805-b986-b2f948624ecf","name":"Dining_Wall_West_Window","type":"Mesh","geometry":"f744d345-23bf-4a04-a9c7-9534f2277765","material":"6a9276dc-e570-4b24-ae2b-62654737355a","matrix":[1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1],"userData":{"handle":"f744d345-23bf-4a04-a9c7-9534f2277765","name":"Dining_Wall_West_Window","surfaceType":"FixedWindow","constructionName":"Customized Fenestration: cond=0.220 tvis=0.220 tsol=0.232","spaceName":"Dining","thermalZoneName":"Sp-Dining Sys-3 Flr-1 Sch-B HPlcmt-south ZN","spaceTypeName":"Space Function Dining - bar lounge/leisure","buildingStoryName":"Building Story 1","outsideBoundaryCondition":"Outdoors","outsideBoundaryConditionObjectName":"","outsideBoundaryConditionObjectHandle":null,"coincidentWithOutsideObject":false,"sunExposure":"SunExposed","windExposure":"WindExposed","surfaceTypeMaterialName":"Window","boundaryMaterialName":"Boundary_Outdoors_SunWind","constructionMaterialName":"Construction_Customized Fenestration: cond=0.220 tvis=0.220 tsol=0.232","thermalZoneMaterialName":"ThermalZone_Sp-Dining Sys-3 Flr-1 Sch-B HPlcmt-south ZN","spaceTypeMaterialName":"SpaceType_Space Function Dining - bar lounge/leisure","buildingStoryMaterialName":"BuildingStory_Building Story 1"}},{"uuid":"35f0be66-a600-4e1b-97cc-353578f88750","name":"attic-floor-dinning","type":"Mesh","geometry":"dbb61c21-e373-4c96-b80c-9293e6b4e972","material":"9d1ba0db-7c71-4e64-bd60-01a2ba61cca3","matrix":[1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1],"userData":{"handle":"dbb61c21-e373-4c96-b80c-9293e6b4e972","name":"attic-floor-dinning","surfaceType":"Floor","constructionName":"Typical Interior Floor","spaceName":"attic","thermalZoneName":"Sp-attic Sys-0 Flr-2 Sch-- undefined - HPlcmt-core ZN","spaceTypeName":"Space Function - undefined -","buildingStoryName":"Building Story 2","outsideBoundaryCondition":"Surface","outsideBoundaryConditionObjectName":"Dining_Ceiling","outsideBoundaryConditionObjectHandle":"239e359d-98c3-4ad3-909e-507d9cdc12fd","coincidentWithOutsideObject":true,"sunExposure":"NoSun","windExposure":"NoWind","surfaceTypeMaterialName":"Floor","boundaryMaterialName":"Boundary_Surface","constructionMaterialName":"Construction_Typical Interior Floor","thermalZoneMaterialName":"ThermalZone_Sp-attic Sys-0 Flr-2 Sch-- undefined - HPlcmt-core ZN","spaceTypeMaterialName":"SpaceType_Space Function - undefined -","buildingStoryMaterialName":"BuildingStory_Building Story 2"}},{"uuid":"67a7dc3e-ac3b-446e-8915-0ecbd81564ce","name":"Kitchen_Wall_East","type":"Mesh","geometry":"e6173982-c332-4cd4-8e85-d9c6d4cb0930","material":"64de3e86-c6eb-4dd5-bfcc-edf34a15e841","matrix":[1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1],"userData":{"handle":"e6173982-c332-4cd4-8e85-d9c6d4cb0930","name":"Kitchen_Wall_East","surfaceType":"Wall","constructionName":"Customized opaque construction {39fe92a3-7fa9-4f59-bf5e-19b1adb7111a} to conductance of 0.247","spaceName":"Kitchen","thermalZoneName":"Sp-Kitchen Sys-3 Flr-1 Sch-B HPlcmt-north ZN","spaceTypeName":"Space Function Food preparation","buildingStoryName":"Building Story 1","outsideBoundaryCondition":"Outdoors","outsideBoundaryConditionObjectName":"","outsideBoundaryConditionObjectHandle":null,"coincidentWithOutsideObject":false,"sunExposure":"SunExposed","windExposure":"WindExposed","surfaceTypeMaterialName":"Wall","boundaryMaterialName":"Boundary_Outdoors_SunWind","constructionMaterialName":"Construction_Customized opaque construction {39fe92a3-7fa9-4f59-bf5e-19b1adb7111a} to conductance of 0.247","thermalZoneMaterialName":"ThermalZone_Sp-Kitchen Sys-3 Flr-1 Sch-B HPlcmt-north ZN","spaceTypeMaterialName":"SpaceType_Space Function Food preparation","buildingStoryMaterialName":"BuildingStory_Building Story 1"}},{"uuid":"d58c2898-fef5-4ea6-82d6-a8d54c163d26","name":"Dining_Wall_South","type":"Mesh","geometry":"ea2e6ce6-6128-4151-b661-73815c44ea06","material":"64de3e86-c6eb-4dd5-bfcc-edf34a15e841","matrix":[1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1],"userData":{"handle":"ea2e6ce6-6128-4151-b661-73815c44ea06","name":"Dining_Wall_South","surfaceType":"Wall","constructionName":"Customized opaque construction {39fe92a3-7fa9-4f59-bf5e-19b1adb7111a} to conductance of 0.247","spaceName":"Dining","thermalZoneName":"Sp-Dining Sys-3 Flr-1 Sch-B HPlcmt-south ZN","spaceTypeName":"Space Function Dining - bar lounge/leisure","buildingStoryName":"Building Story 1","outsideBoundaryCondition":"Outdoors","outsideBoundaryConditionObjectName":"","outsideBoundaryConditionObjectHandle":null,"coincidentWithOutsideObject":false,"sunExposure":"SunExposed","windExposure":"WindExposed","surfaceTypeMaterialName":"Wall","boundaryMaterialName":"Boundary_Outdoors_SunWind","constructionMaterialName":"Construction_Customized opaque construction {39fe92a3-7fa9-4f59-bf5e-19b1adb7111a} to conductance of 0.247","thermalZoneMaterialName":"ThermalZone_Sp-Dining Sys-3 Flr-1 Sch-B HPlcmt-south ZN","spaceTypeMaterialName":"SpaceType_Space Function Dining - bar lounge/leisure","buildingStoryMaterialName":"BuildingStory_Building Story 1"}},{"uuid":"05bfd68e-fb43-48a5-bfc8-89e3da0b9471","name":"Dining_Wall_South_Window","type":"Mesh","geometry":"4d770958-e1ac-42ab-ac14-5c96cf821de6","material":"6a9276dc-e570-4b24-ae2b-62654737355a","matrix":[1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1],"userData":{"handle":"4d770958-e1ac-42ab-ac14-5c96cf821de6","name":"Dining_Wall_South_Window","surfaceType":"FixedWindow","constructionName":"Customized Fenestration: cond=0.220 tvis=0.220 tsol=0.232","spaceName":"Dining","thermalZoneName":"Sp-Dining Sys-3 Flr-1 Sch-B HPlcmt-south ZN","spaceTypeName":"Space Function Dining - bar lounge/leisure","buildingStoryName":"Building Story 1","outsideBoundaryCondition":"Outdoors","outsideBoundaryConditionObjectName":"","outsideBoundaryConditionObjectHandle":null,"coincidentWithOutsideObject":false,"sunExposure":"SunExposed","windExposure":"WindExposed","surfaceTypeMaterialName":"Window","boundaryMaterialName":"Boundary_Outdoors_SunWind","constructionMaterialName":"Construction_Customized Fenestration: cond=0.220 tvis=0.220 tsol=0.232","thermalZoneMaterialName":"ThermalZone_Sp-Dining Sys-3 Flr-1 Sch-B HPlcmt-south ZN","spaceTypeMaterialName":"SpaceType_Space Function Dining - bar lounge/leisure","buildingStoryMaterialName":"BuildingStory_Building Story 1"}}]}};
+var renderer, scene, light, scene_objects, scene_edges, object_edges, coincident_objects, back_objects;
+var perspectiveCamera, orthographicCamera, perspectiveControls, orthographicControls;
+var project, materials, variable;
+var dataFolder, dateTimeControl;
+var colorBar, colorBarContainer, colorBarHeight, colorBarWidth;
+var mouseDownX, mouseDownY;
+var dragXStart, dragYStart;
+
+var raycaster;
+var mouse;
+var headsUp;
+var intersected, selected_material, selected_material_back;
+
+var getStringFromLocalStorage = function (key, defaultValue) {
+  try {
+    value = localStorage.getItem(key);
+    if (value == null){
+      return defaultValue;
+    }else{
+      return value;
+    }
+  } catch(e) {
+    return defaultValue;
+  }
+}
+
+var getBoolFromLocalStorage = function (key, defaultValue) {
+  try {
+    value = localStorage.getItem(key);
+    if (value == null){
+      return defaultValue;
+    }else{
+      return (value == 'true');
+    }
+  } catch(e) {
+    return defaultValue;
+  }
+}
+
+var getFloatFromLocalStorage = function (key, defaultValue) {
+  try {
+    value = localStorage.getItem(key);
+    if (value == null){
+      return defaultValue;
+    }else{
+      return parseFloat(value);
+    }
+  } catch(e) {
+    return defaultValue;
+  }
+}
+
+var setLocalStorage = function (key, value) {
+  try {
+    localStorage.setItem(key, value);
+  } catch(e) {
+  }
+}
+
+var settings = {
+  renderBy: 'Surface Type',
+  showStory: 'All Stories',
+  showFloors: getBoolFromLocalStorage('showFloors', true),
+  showWalls: getBoolFromLocalStorage('showWalls', true),
+  showRoofCeilings: getBoolFromLocalStorage('showRoofCeilings', true),
+  showWindows: getBoolFromLocalStorage('showWindows', true),
+  showDoors: getBoolFromLocalStorage('showDoors', true),
+  showShading: getBoolFromLocalStorage('showShading', true),
+  showPartitions: getBoolFromLocalStorage('showPartitions', true),
+  showWireframe: getBoolFromLocalStorage('showWireframe', true),
+  xView: function() {setAllCameraAngles(0, 0, 1);},
+  yView: function() {setAllCameraAngles(-90, 0, 1);},
+  zView: function() {setAllCameraAngles(0, 90, 1);},
+  reset: function() {setAllCameraAngles(-30, 30, 1);},
+  orthographic: getBoolFromLocalStorage('showWireframe', false),
+  xSection: 0,
+  ySection: 0,
+  zSection: 0,
+  variableName: '',
+  colorScheme: getStringFromLocalStorage('colorScheme', 'diverging'),
+  daySlider: 0,
+  hourSlider: 1,
+  cycleHour: false,
+  cycleSpeed: getFloatFromLocalStorage('cycleSpeed', 1.0),
+  rotateColorBar: getBoolFromLocalStorage('rotateColorBar', false),
+  dateTime: ''
+};
+
+var getColor = function (x, min, max, palette) {
+
+  if (x == null){
+    return new THREE.Color(255, 255, 255);
+  }
+  
+  x = Math.min(Math.max(x, min), max);
+  var percent = (x-min)/(max-min);
+  var r = 1 - percent;
+  var b = 1 - percent;
+  var g = 1 - percent;
+
+  switch (palette) {
+    case 'sequential':
+      r = 1 - 0.392 * (1 + erf((percent - 0.869) / 0.255));
+      g = 1.021 - 0.456 * (1 + erf((percent - 0.527) / 0.376));
+      b = 1 - 0.493 * (1 + erf((percent - 0.272)/0.309));
+      break;
+    case 'diverging':
+      r = 0.237 - 2.13 * percent + 26.92 * Math.pow(percent, 2) - 65.5 * Math.pow(percent, 3) + 63.5 * Math.pow(percent, 4) - 22.36 * Math.pow(percent, 5);
+      g = Math.pow((0.572 + 1.524 * percent - 1.811 * Math.pow(percent, 2)) / (1 - 0.291 * percent + 0.1574 * Math.pow(percent, 2)), 2);
+      b = 1 / (1.579 - 4.03 * percent + 12.92 * Math.pow(percent, 2) - 31.4 * Math.pow(percent, 3) + 48.6 * Math.pow(percent, 4) - 23.36 * Math.pow(percent, 5));
+      break;
+    case 'rainbow':
+      r = (0.472 - 0.567 * percent + 4.05 * Math.pow(percent, 2)) / (1 + 8.72 * percent - 19.17 * Math.pow(percent, 2) + 14.1 * Math.pow(percent, 3));
+      g = 0.108932 - 1.22635 * percent + 27.284 * Math.pow(percent, 2) - 98.577 * Math.pow(percent, 3) + 163.3 * Math.pow(percent, 4) - 131.395 * Math.pow(percent, 5) + 40.634 * Math.pow(percent, 6);
+      b = 1 / (1.97 + 3.54 * percent - 68.5 * Math.pow(percent, 2) + 243 * Math.pow(percent, 3) - 297 * Math.pow(percent, 4) + 125 * Math.pow(percent, 5));
+      break;
+  }
+  return new THREE.Color(r, g, b);
+};
+function fitInWindow() {
+  var container = document.getElementById('color-bar-container');
+  var style = container.style;
+  if (!settings.rotateColorBar) {
+    var height = colorBarHeight + 112;
+    var width = colorBarWidth + 42;
+    var top = parseInt(style.top);
+    var left = parseInt(style.left);
+    if (left < 0) {
+      style.left = 0;
+    } else if (window.innerWidth < (left + width)) {
+      style.left = (window.innerWidth - width) + 'px';
+    }
+    if (top < 0) {
+      style.top = 0;
+    } else if (window.innerHeight < (top + height)) {
+      style.top = (window.innerHeight - height) + 'px';
+    }
+  } else {
+    var half = (colorBarWidth + 42) / 2;
+    var height = colorBarWidth + 42;
+    var width = colorBarHeight + 112;
+    var top = parseInt(style.top) - half;
+    var left = parseInt(style.left) + half;
+    if (left < 0) {
+      style.left = -half + 'px';
+    } else if (window.innerWidth < (left + width)) {
+      style.left = (window.innerWidth - width - half) + 'px';
+    }
+    if (top < 0) {
+      style.top = half + 'px';
+    } else if (window.innerHeight < (top + height)) {
+      style.top = (window.innerHeight - height + half) + 'px';
+    }
+  }
+}
+function updateColorBarSelection(value) {
+  var line = document.getElementById('color-bar-selection-line');
+  var text = document.getElementById('color-bar-selection-text');
+  if (value != '') {
+    var percent = (value - variable.valueMin) / (variable.valueMax - variable.valueMin);
+    line.style.left = (20 + colorBarWidth * percent) + 'px';
+    text.style.left = (10 + colorBarWidth * percent) + 'px';
+    text.innerHTML = Math.round(value * 100) / 100;
+  } else {
+    line.style.display = 'none';
+    text.style.display = 'none';
+  }
+}
+function updateBalloon(object) {
+  var span = document.getElementById('balloon-variable-name');
+  if (span) span.innerHTML = object.userData.variableName;
+  
+  span = document.getElementById('balloon-variable-key-name');
+  if (span) span.innerHTML = object.userData.variableKeyName;
+  
+  span = document.getElementById('balloon-variable-date');
+  if (span) span.innerHTML = object.userData.variableDate;
+  
+  span = document.getElementById('balloon-variable-time');
+  if (span) span.innerHTML = object.userData.variableTime;
+
+  span = document.getElementById('balloon-variable-value');
+  if (span) span.innerHTML = object.userData.variableValue;
+}
+
+function removeSelection() {
+  selectObject(null);
+  headsUp.style.display = 'none';
+  document.body.style.cursor = 'auto';
+  document.getElementById('color-bar-selection-line').style.display = 'none';
+  document.getElementById('color-bar-selection-text').style.display = 'none';
+}
+function allowDrop(ev) {
+  ev.preventDefault();
+}
+function drag(ev) {
+  dragXStart = ev.x;
+  dragYStart = ev.y;
+}
+function drop(ev) {
+  ev.preventDefault();
+  var container = document.getElementById('color-bar-container')
+  container.classList.add('ignore-transition');
+  var style = container.style;
+  var top = parseInt(style.top) + (ev.y - dragYStart);
+  var left = parseInt(style.left) + (ev.x - dragXStart);
+  style.top = top + 'px';
+  style.left = left + 'px';
+  setTimeout(function() {container.classList.remove('ignore-transition');}, 1);
+  fitInWindow();
+  setLocalStorage('colorBarTop', parseInt(style.top));
+  setLocalStorage('colorBarLeft', parseInt(style.left));
+}
+
+init();
+animate();
+
+function parseMaterials(json) {
+  var materials = {};
+  var loader = new THREE.MaterialLoader();
+  for ( var i = 0, l = json.length; i < l; i ++ ) {
+    var data = json[ i ];
+    var material = loader.parse( data );
+    material.uuid = data.uuid;
+    material.name = data.name;
+    materials[ data.name ] = material;
+  }
+  return materials;
+}
+
+function cameraLookAt() {
+  return new THREE.Vector3(os_data.metadata.boundingBox.lookAtX, os_data.metadata.boundingBox.lookAtZ, -os_data.metadata.boundingBox.lookAtY);
+}
+
+function cameraRadius() {
+  return 4 * os_data.metadata.boundingBox.lookAtR;
+}
+
+function setAllCameraAngles(theta, phi, tweenTime) {
+  perspectiveTweenTime = tweenTime;
+  orthographicTweenTime = tweenTime;
+  if (settings.orthographic){
+    perspectiveTweenTime = 0;
+  }else{
+    orthographicTweenTime = 0;
+  }
+  setCameraAngles(perspectiveCamera, perspectiveControls, theta, phi, perspectiveTweenTime);
+  setCameraAngles(orthographicCamera, orthographicControls, theta, phi, orthographicTweenTime);
+}
+
+// theta is rotation about OpenStudio Z in degrees, phi is rotation above ground plane in degrees
+function setCameraAngles(camera, controls, theta, phi, tweenTime) {
+  var aim = cameraLookAt();
+
+  var startRadius = Math.sqrt(Math.pow(camera.position.x - aim.x, 2) + Math.pow(camera.position.y - aim.y, 2) + Math.pow(camera.position.z - aim.z, 2));
+  var endRadius = cameraRadius();
+  var endX = endRadius * Math.cos(theta * Math.PI / 180.0) * Math.cos(phi * Math.PI / 180.0) + aim.x; // X in OpenStudio coordinates
+  var endY = endRadius * Math.sin(phi * Math.PI / 180.0) + aim.y; // Z in OpenStudio coordinates
+  var endZ = -endRadius * Math.sin(theta * Math.PI / 180.0) * Math.cos(phi * Math.PI / 180.0) + aim.z; // Y in OpenStudio coordinates
+
+  var endUpX = 0;
+  var endUpY = 1;
+  var endUpZ = 0;
+  if (phi == 90){
+    endUpX = 0;
+    endUpY = 1;
+    endUpZ = -0.01;
+  }
+
+  var target = {
+    progress: 0,
+    start: {
+      x: camera.position.x,
+      y: camera.position.y,
+      z: camera.position.z,
+      r: startRadius,
+      theta: Math.acos(camera.position.z / startRadius),
+      phi: Math.atan2(camera.position.y, camera.position.x),
+      upX: camera.up.x,
+      upY: camera.up.y,
+      upZ: camera.up.z,
+      lookAtX: controls.target.x,
+      lookAtY: controls.target.y,
+      lookAtZ: controls.target.z,
+      targetX: controls.target.x,
+      targetY: controls.target.y,
+      targetZ: controls.target.z,
+      zoom: camera.zoom
+    },
+    end: {
+      x: endX,
+      y: endY,
+      z: endZ,
+      r: endRadius,
+      theta: Math.acos(endZ / endRadius),
+      phi: Math.atan2(endY, endX),
+      upX: endUpX,
+      upY: endUpY,
+      upZ: endUpZ,
+      lookAtX: aim.x,
+      lookAtY: aim.y,
+      lookAtZ: aim.z,
+      targetX: aim.x,
+      targetY: aim.y,
+      targetZ: aim.z,
+      zoom: 1
+    }
+  };
+
+  TweenLite.to(target, tweenTime, {
+    progress: 1,
+    ease: Power3.easeInOut,
+    onUpdate: function (tween) {
+      var r = tween.target.start.r + tween.target.progress * (tween.target.end.r - tween.target.start.r);
+      var theta = tween.target.start.theta + tween.target.progress * (tween.target.end.theta - tween.target.start.theta);
+      var phi = tween.target.start.phi + tween.target.progress * (tween.target.end.phi - tween.target.start.phi);
+      var zoom = tween.target.start.zoom + tween.target.progress * (tween.target.end.zoom - tween.target.start.zoom);
+      var x = r * Math.sin(theta) * Math.cos(phi);
+      var y = r * Math.sin(theta) * Math.sin(phi);
+      var z = r * Math.cos(theta);
+      var upX = tween.target.start.upX + tween.target.progress * (tween.target.end.upX - tween.target.start.upX);
+      var upY = tween.target.start.upY + tween.target.progress * (tween.target.end.upY - tween.target.start.upY);
+      var upZ = tween.target.start.upZ + tween.target.progress * (tween.target.end.upZ - tween.target.start.upZ);
+      var lookAtX = tween.target.start.lookAtX + tween.target.progress * (tween.target.end.lookAtX - tween.target.start.lookAtX);
+      var lookAtY = tween.target.start.lookAtY + tween.target.progress * (tween.target.end.lookAtY - tween.target.start.lookAtY);
+      var lookAtZ = tween.target.start.lookAtZ + tween.target.progress * (tween.target.end.lookAtZ - tween.target.start.lookAtZ);
+      var targetX = tween.target.start.targetX + tween.target.progress * (tween.target.end.targetX - tween.target.start.targetX);
+      var targetY = tween.target.start.targetY + tween.target.progress * (tween.target.end.targetY - tween.target.start.targetY);
+      var targetZ = tween.target.start.targetZ + tween.target.progress * (tween.target.end.targetZ - tween.target.start.targetZ);
+
+      camera.position.set(x, y, z);
+      camera.zoom = zoom;
+      camera.up.set(upX, upY, upZ);
+      camera.lookAt(new THREE.Vector3(lookAtX, lookAtY, lookAtZ));
+      camera.updateProjectionMatrix();
+
+      controls.target = new THREE.Vector3(targetX, targetY, targetZ);
+    },
+    onUpdateParams: ["{self}"],
+    onComplete: function () {
+      camera.position.set(endX, endY, endZ);
+      camera.zoom = 1;
+      camera.up.set(endUpX, endUpY, endUpZ);
+      camera.lookAt(aim);
+      camera.updateProjectionMatrix();
+
+      controls.target = aim;
+    }
+  });
+}
+
+function init() {
+
+  var css = document.head.appendChild(document.createElement('style'));
+  css.innerHTML = 'body { font:600 12pt monospace; margin:0; overflow:hidden; }';
+
+  // Heads Up
+  headsUp = document.body.appendChild(document.createElement('div'));
+  headsUp.setAttribute('id', 'heads-up');
+
+  // Color Bar
+  colorBarHeight = 40;
+  colorBarWidth = 256;
+  colorBar = document.createElement('canvas');
+  colorBar.setAttribute('id', 'color-bar');
+  colorBar.setAttribute('height', colorBarHeight);
+  colorBar.setAttribute('width', colorBarWidth);
+
+  document.documentElement.setAttribute('ondrop', 'drop(event)');
+  document.documentElement.setAttribute('ondragover', 'allowDrop(event)');
+
+  var top = getFloatFromLocalStorage('colorBarTop', 0);
+  var left = getFloatFromLocalStorage('colorBarLeft', 0);
+  colorBarContainer = document.body.appendChild(document.createElement('div'));
+  colorBarContainer.setAttribute('id', 'color-bar-container');
+  colorBarContainer.setAttribute('draggable', 'true');
+  colorBarContainer.setAttribute('ondragstart', 'drag(event)');
+  colorBarContainer.style.height = (colorBarHeight + 112) + 'px';
+  colorBarContainer.style.width = (colorBarWidth + 42) + 'px';
+  colorBarContainer.style.top = top + 'px';
+  colorBarContainer.style.left = left + 'px';
+  if (settings.rotateColorBar) colorBarContainer.classList.add('rotate');
+  colorBarContainer.appendChild(colorBar);
+
+  var bar = document.createElement('div');
+  bar.classList.add('color-bar-tick');
+  bar.style.bottom = (colorBarHeight + 21) + 'px';
+  bar.style.left = 20 + 'px';
+  colorBarContainer.appendChild(bar);
+  bar = bar.cloneNode();
+  bar.style.left = 20 + colorBarWidth + 'px';
+  colorBarContainer.appendChild(bar);
+  bar = bar.cloneNode();
+  bar.setAttribute('id', 'color-bar-selection-line');
+  bar.style.display = 'none';
+  bar.style.bottom = '20px';
+  bar.style.height = '56px';
+  colorBarContainer.appendChild(bar);
+
+  var text = document.createElement('span');
+  text.classList.add('color-bar-text');
+  text.setAttribute('id', 'color-bar-min');
+  text.style.bottom = (colorBarHeight + 30) + 'px';
+  text.style.left = 10 + 'px';
+  colorBarContainer.appendChild(text);
+  text = text.cloneNode();
+  text.setAttribute('id', 'color-bar-max');
+  text.style.left = 10 + colorBarWidth + 'px';
+  colorBarContainer.appendChild(text);
+  text = text.cloneNode();
+  text.setAttribute('id', 'color-bar-selection-text');
+  colorBarContainer.appendChild(text);
+
+  renderer = new THREE.WebGLRenderer({
+    alpha: 1,
+    antialias: true,
+    clearColor: 0xffffff
+  }); 
+  renderer.setSize(window.innerWidth, window.innerHeight);
+  renderer.shadowMapEnabled = true;
+  renderer.shadowMapSoft = true;
+  document.body.appendChild(renderer.domElement);
+
+  scene = new THREE.Scene();
+
+  aspect = window.innerWidth / window.innerHeight;
+  orthographicCamera = new THREE.OrthographicCamera( 4*aspect*os_data.metadata.boundingBox.lookAtR / - 2, 4*aspect*os_data.metadata.boundingBox.lookAtR / 2, 4*os_data.metadata.boundingBox.lookAtR / 2, 4*os_data.metadata.boundingBox.lookAtR / - 2, 1, 5000 );
+  scene.add(orthographicCamera); // for light to follow
+  orthographicCamera.up.set(0,1,0);
+  orthographicCamera.lookAt(cameraLookAt());
+
+  perspectiveCamera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 5000);
+  scene.add(perspectiveCamera); // for light to follow
+  perspectiveCamera.up.set(0,1,0);
+  perspectiveCamera.lookAt(cameraLookAt());
+
+  // Controls
+  orthographicControls = new THREE.OrbitControls(orthographicCamera, renderer.domElement);
+  orthographicControls.minDistance = 10;
+  orthographicControls.maxDistance = 1000;
+  orthographicControls.enabled = true;
+
+  perspectiveControls = new THREE.OrbitControls(perspectiveCamera, renderer.domElement);
+  perspectiveControls.minDistance = 10;
+  perspectiveControls.maxDistance = 1000;
+  perspectiveControls.enabled = true;
+
+  // initialize camera and controls
+  setAllCameraAngles(-30, 30, 0);
+
+  // Lights
+  light = new THREE.AmbientLight(0xbbbbbb);
+  scene.add(light);
+
+  // Axes, adapted from AxisHelper.js
+  var axisSize = cameraRadius();
+
+  var xAxisMaterial = new THREE.LineBasicMaterial({ color: 0xff0000 });
+  var xAxisGeometry = new THREE.Geometry();
+  xAxisGeometry.vertices.push( new THREE.Vector3(0,0,0), new THREE.Vector3(axisSize,0,0));
+  scene.add( new THREE.Line( xAxisGeometry, xAxisMaterial ) );
+
+  var yAxisMaterial = new THREE.LineBasicMaterial({ color: 0x00ff00 });
+  var yAxisGeometry = new THREE.Geometry();
+  yAxisGeometry.vertices.push( new THREE.Vector3(0,0,0), new THREE.Vector3(0,0,-axisSize));
+  scene.add( new THREE.Line( yAxisGeometry, yAxisMaterial ) );
+
+  var zAxisMaterial = new THREE.LineBasicMaterial({ color: 0x0000ff });
+  var zAxisGeometry = new THREE.Geometry();
+  zAxisGeometry.vertices.push( new THREE.Vector3(0,0,0), new THREE.Vector3(0,axisSize,0));
+  scene.add( new THREE.Line( zAxisGeometry, zAxisMaterial ) );
+
+  // scene
+  project = new THREE.Object3D();
+  scene.add(project);
+
+  var loader = new THREE.ObjectLoader();
+  data = loader.parse(os_data);
+  project.add(data);
+
+  // scene_objects is an array of THREE.Mesh where each mesh is a real OpenStudio object
+  scene_objects = project.children[0].children;
+
+  // temp is a map of OpenStudio handle to scene object
+  var temp = {};
+  scene_objects.forEach(function(object) {
+    temp[object.userData.handle] = object;
+  });
+
+  // coincident_objects store references between adjacent objects that are truly coincident, meaning that their vertices are completely the same
+  // when an object's coincident object is visible we do not want to show the back object
+  coincident_objects = {};
+  scene_objects.forEach(function(object) {
+    if (object.userData.coincidentWithOutsideObject){
+      coincident_objects[object.uuid] = temp[object.userData.outsideBoundaryConditionObjectHandle];
+    }
+  });
+
+  // back_objects are copies of scene_objects that exist only so we can color their back sides
+  scene_edges = [];
+  back_objects = {};
+  object_edges = {};
+  scene_objects.forEach(function(object) {
+    edges = new THREE.EdgesHelper( object, 0x000000 );
+    scene.add(edges);
+    edge = scene.children[scene.children.length-1];
+    scene_edges.push(edge);
+    object_edges[object.uuid] = edge;
+
+    back_object = object.clone();
+    back_object.visible = false;
+    back_object.name = back_object.name + ' Back';
+    scene.add(back_object);
+    back_object = scene.children[scene.children.length-1];
+    back_object.geometry = object.geometry.clone();
+    back_objects[object.uuid] = back_object;
+  });
+
+  // show look at point
+  //var sg = new THREE.SphereGeometry( 1, 32, 32 );
+  //var sm = new THREE.MeshBasicMaterial( {color: 0xff0000} );
+  //var s = new THREE.Mesh( sg, sm );
+  //scene.add( s );
+  //s.position.set(cameraLookAt().x, cameraLookAt().y, cameraLookAt().z);
+
+  raycaster = new THREE.Raycaster();
+  mouse = new THREE.Vector2();
+
+  selected_material = new THREE.MeshPhongMaterial({
+    name: 'Selected',
+    color: 0xffff00,
+    ambient: 0xffff00,
+    specular: 0xffff00,
+    emissive: 0xffff00,
+    shininess: 50,
+    side: THREE.DoubleSide
+  });
+  
+  materials = parseMaterials(os_data.materials);
+
+  renderer.domElement.addEventListener('mousedown', onDocumentMouseDown, false);
+  renderer.domElement.addEventListener('click', onDocumentMouseClick, false);
+}
+
+function setSelectedMaterial(object) {
+  //console.log("Selecting " + object.name);
+
+  object.wasVisible = object.visible;
+  object.lastMaterial = object.material;
+  object.visible = true;
+  object.material = selected_material;
+  object.material.needsUpdate = true;
+}
+
+function removeMaterial(object) {
+  //console.log("Removing material from " + object.name);
+
+  object.wasVisible = object.visible;
+  object.lastMaterial = object.material;
+  object.visible = false;
+  object.material = null;
+}
+
+function restoreLastMaterial(object) {
+  //console.log("Restoring last material to " + object.name);
+
+  object.visible = object.wasVisible;
+  object.material = object.lastMaterial;
+  if (object.material){
+    object.material.needsUpdate = true;
+  }
+  object.lastMaterial = null;
+}
+
+function selectObject(object) {
+  renderBy = settings.renderBy;
+  isData = (renderBy == 'Data');
+  
+  if (intersected != object){
+
+    // restore material on currently selected
+    if (intersected){
+      edges = object_edges[intersected.uuid];
+      if (edges){
+        edges.material.color.setRGB(0,0,0);
+        edges.material.linewidth = 1;
+        edges.material.needsUpdate = true;
+      }
+    }
+    if (!isData && intersected) {
+      restoreLastMaterial(intersected);
+
+      coincident_intersected = coincident_objects[intersected.uuid];
+      if (coincident_intersected) {
+        restoreLastMaterial(coincident_intersected);
+      }
+
+      back_intersected = back_objects[intersected.uuid];
+      if (back_intersected) {
+        restoreLastMaterial(back_intersected);
+      }
+    }
+
+    // set the new intersected objects
+    intersected = object;
+
+    // save last material and set new one
+    if (intersected){
+      edges = object_edges[intersected.uuid];
+      if (edges){
+        edges.material.color.setRGB(0,255,0);
+        edges.material.linewidth = 4;
+        edges.material.needsUpdate = true;
+      }
+    }
+    if (!isData && intersected) {
+      setSelectedMaterial(intersected);
+
+      coincident_intersected = coincident_objects[intersected.uuid];
+      if (coincident_intersected) {
+        removeMaterial(coincident_intersected);
+      }
+
+      back_intersected = back_objects[intersected.uuid];
+      if (back_intersected) {
+        removeMaterial(back_intersected);
+      }
+    }
+    if (isData && intersected) {
+      update();
+    }
+  }
+}
+
+function onDocumentMouseDown(event) {
+  mouseDownX = event.clientX;
+  mouseDownY = event.clientY;
+}
+function onDocumentMouseClick(event) {
+  // Only act on the mouse click if it was an actual click, not a drag to orbit the camera
+  if (mouseDownX == event.clientX && mouseDownY == event.clientY) {
+    mouse.x = (event.clientX / renderer.domElement.width) * 2 - 1;
+    mouse.y = -(event.clientY / renderer.domElement.height) * 2 + 1;
+
+    if (settings.orthographic){
+      raycaster.setFromCamera(mouse, orthographicCamera);
+    }else{
+      raycaster.setFromCamera(mouse, perspectiveCamera);
+    }
+
+    // raycaster intersects invisible objects so filter first
+    var pickable = scene_objects.filter(function(x){return x.visible;});
+    intersects = raycaster.intersectObjects(pickable);
+    if (intersects.length) {
+
+      selectObject(intersects[0].object);
+
+      headsUp.style.left = 10 + 0.5 * window.innerWidth + mouse.x * 0.5 * window.innerWidth + 'px';
+      headsUp.style.top = -10 + 0.5 * window.innerHeight - mouse.y * 0.5 * window.innerHeight + 'px';
+      headsUp.style.display = 'block';
+      document.getElementById('color-bar-selection-line').style.display = 'block';
+      document.getElementById('color-bar-selection-text').style.display = 'inline-block';
+
+      var txt = 'Name: ' + intersected.userData.name + '<br>';
+      switch (settings.renderBy) {
+        case "Surface Type":
+          txt += 'Surface Type: ' + intersected.userData.surfaceType + '<br>';
+          if (intersected.userData.spaceName){
+            txt += 'Space Name: ' + intersected.userData.spaceName;
+          }
+          break;
+        case "Normal":
+          txt += 'Surface Type: ' + intersected.userData.surfaceType + '<br>'
+          if (intersected.userData.spaceName){
+            txt += 'Space Name: ' + intersected.userData.spaceName;
+          }
+          break;
+        case "Boundary":
+          if (intersected.userData.outsideBoundaryCondition){
+            txt += 'Outside Boundary Condition: ' + intersected.userData.outsideBoundaryCondition + '<br>';
+          }
+          txt += 'Sun Exposure: ' + intersected.userData.sunExposure + '<br>';
+          txt += 'Wind Exposure: ' + intersected.userData.windExposure;
+          break;
+        case "Construction":
+          if (intersected.userData.constructionName){
+            txt += 'Construction Name: ' + intersected.userData.constructionName;
+          }
+          break;
+        case "Thermal Zone":
+          if (intersected.userData.thermalZoneName){
+            txt += 'Thermal Zone: ' + intersected.userData.thermalZoneName;
+          }
+          break;
+        case "Space Type":
+          if (intersected.userData.spaceTypeName){
+            txt += 'Space Type: ' + intersected.userData.spaceTypeName;
+          }
+          break;
+        case "Building Story":
+          if (intersected.userData.buildingStoryName){
+            txt += 'Story Name: ' + intersected.userData.buildingStoryName;
+          }
+          break;
+        case "Data":
+          // in javascript (0 == '' == false)
+          if (intersected.userData.variableValue !== '') {
+            txt += 'Variable: <span id="balloon-variable-name">' + intersected.userData.variableName + '</span><br>';
+            txt += 'Key: <span id="balloon-variable-key-name">' + intersected.userData.variableKeyName + '</span><br>';
+            txt += 'Date: <span id="balloon-variable-date">' + intersected.userData.variableDate + '</span><br>';
+            txt += 'Time: <span id="balloon-variable-time">' + intersected.userData.variableTime + '</span><br>';
+            txt += 'Value: <span id="balloon-variable-value">' + intersected.userData.variableValue + '</span> ' + intersected.userData.variableUnits;
+          }
+          updateColorBarSelection(intersected.userData.variableValue);
+          break;
+      }
+
+      headsUp.innerHTML = txt;
+      document.body.style.cursor = 'pointer';
+    } else {
+      removeSelection();
+    }
+  }
+}
+
+function animate(timestamp) {
+  requestAnimationFrame(animate);
+  orthographicControls.update();
+  perspectiveControls.update();
+  if (settings.orthographic){
+    renderer.render(scene, orthographicCamera);
+  }else{
+    renderer.render(scene, perspectiveCamera);
+  }
+}
+
+function erf(x) {
+  // constants
+  var a1 =  0.254829592;
+  var a2 = -0.284496736;
+  var a3 =  1.421413741;
+  var a4 = -1.453152027;
+  var a5 =  1.061405429;
+  var p  =  0.3275911;
+
+  // Save the sign of x
+  var sign = 1;
+  if (x < 0) {
+    sign = -1;
+  }
+  x = Math.abs(x);
+
+  // A&S formula 7.1.26
+  var t = 1.0/(1.0 + p*x);
+  var y = 1.0 - (((((a5*t + a4)*t) + a3)*t + a2)*t + a1)*t*Math.exp(-x*x);
+
+  return sign*y;
+}
+
+var updateColorBar = function() {
+  var ctx = colorBar.getContext('2d');
+  var colorBarData = ctx.createImageData(colorBarWidth, colorBarHeight);
+  var colorBarRow = [];
+  for (var i = 0; i < colorBarWidth; i++) {
+    var pixel = getColor(i, 0, colorBarWidth - 1, settings.colorScheme);
+    colorBarRow[i*4]   = pixel.r * 255;
+    colorBarRow[i*4+1] = pixel.g * 255;
+    colorBarRow[i*4+2] = pixel.b * 255;
+    colorBarRow[i*4+3] = 255;
+  }
+  for (var i = 0; i < colorBarData.data.length; i++) {
+    colorBarData.data[i] = colorBarRow[i % (colorBarWidth*4)];
+  }
+  ctx.putImageData(colorBarData, 0, 0);
+
+  document.getElementById('color-bar-min').innerHTML = Math.round(variable.valueMin * 100) / 100;
+  document.getElementById('color-bar-max').innerHTML = Math.round(variable.valueMax * 100) / 100;
+};
+function cycleHour() {
+  if (settings.cycleHour) {
+    settings.hourSlider = settings.hourSlider % 24 + 1;
+    update();
+    setTimeout(cycleHour, 1000 / settings.cycleSpeed);
+  }
+}
+
+var gui = null;
+var dataFolder = null;
+var update = function (value) {
+  renderBy = settings.renderBy;
+  isData = (renderBy == 'Data');
+  if (isData && !dataFolder){
+    variable_names = [];
+    os_data.variables.forEach(function(os_data_var) {
+      variable_names.push(os_data_var.name);
+    });
+    variable = os_data.variables[0];
+    settings.variableName = variable.name;
+
+    dataFolder = gui.addFolder('Data Rendering');
+    dataFolder.add(settings, 'variableName', variable_names).name('Variable').onChange(updateVariable);
+    dataFolder.add(settings, 'colorScheme', {'Grayscale': 'grayscale', 'Sequential': 'sequential', 'Diverging': 'diverging', 'Rainbow': 'rainbow'}).name('Color Scheme').onChange(function(value) {
+      setLocalStorage('colorScheme', value);
+      updateColorBar();
+      update(value);
+    });
+    dataFolder.add(settings, 'daySlider', 0, variable.numDays-1, 1).name('Day').onChange(update);
+    dataFolder.add(settings, 'hourSlider', variable.hoursPerInterval, 24).step(variable.hoursPerInterval).name('Hour').listen().onChange(update);
+    dateTimeControl = dataFolder.add(settings, 'dateTime').name('Date Time').listen();
+    dataFolder.add(settings, 'rotateColorBar').name('Rotate Color Bar').onChange(function(value) {
+      if (value) {
+        colorBarContainer.classList.add('rotate');
+      } else {
+        colorBarContainer.classList.remove('rotate');
+      }
+      fitInWindow();
+      setLocalStorage('rotateColorBar', value);
+    });
+    dataFolder.add(settings, 'cycleHour').name('Cycle Hour').onChange(function(cycleHourValue) {
+      if (cycleHourValue) {
+        cycleHour();
+      }
+    });
+    dataFolder.add(settings, 'cycleSpeed', 1, 10).name('Cycle Speed').onChange(function(value) {
+      setLocalStorage('cycleSpeed', value);
+    });
+    dataFolder.open();
+    document.getElementById('color-bar-container').style.display = 'block';
+    fitInWindow();
+    updateColorBar();
+  } else if (!isData && dataFolder) {
+    gui.removeFolder('Data Rendering');
+    dataFolder = null;
+    if (settings.cycleHour) {
+      settings.cycleHour = false;
+    }
+    document.getElementById('color-bar-container').style.display = 'none';
+  }
+
+  var i = null;
+  var date = '';
+  var time = '';
+  var units = '';
+  if (isData && variable){
+    i = Math.floor(variable.intervalsPerDay*Math.floor(settings.daySlider) + variable.intervalsPerHour*Math.floor(settings.hourSlider)) - 1;
+    t = os_data.times[variable.timeIndex][i];
+    var d = new Date(0); // The 0 there is the key, which sets the date to the epoch
+    d.setUTCSeconds(t);
+    
+    date = ('0' + (d.getUTCMonth()+1)).slice(-2) + '/' + ('0'+d.getUTCDate()).slice(-2);
+    time = ('0' + d.getUTCHours()).slice(-2) + ':' + ('0'+d.getUTCMinutes()).slice(-2);
+
+    settings.dateTime = date + ' - ' + time;
+    dateTimeControl.updateDisplay();
+
+    if (variable.units.length) {
+      units = '(' + variable.units + ')';
+    }
+  }
+
+  scene_objects.forEach(function(object) {
+
+    surfaceType = object.userData.surfaceType;
+
+    object.visible = true;
+
+    if (settings.showStory == 'All Stories' || settings.showStory == object.userData.buildingStoryName){
+      // no-op
+    }else{
+      object.visible = false;
+    }
+
+    if (!settings.showFloors && surfaceType == 'Floor'){
+      object.visible = false;
+    }else if (!settings.showWalls && surfaceType == 'Wall'){
+      object.visible = false;
+    }else if (!settings.showRoofCeilings && surfaceType == 'RoofCeiling'){
+      object.visible = false;
+    }else if (!settings.showWindows && surfaceType.indexOf('Window') > -1){
+      object.visible = false;
+    }else if (!settings.showWindows && surfaceType.indexOf('GlassDoor') > -1){
+      // hide these with doors
+      //object.visible = false;
+    }else if (!settings.showWindows && surfaceType.indexOf('Skylight') > -1){
+      object.visible = false;
+    }else if (!settings.showWindows && surfaceType.indexOf('TubularDaylight') > -1){
+      object.visible = false;
+    }else if (!settings.showDoors && surfaceType.indexOf('Door') > -1){
+      object.visible = false;
+    }else if (!settings.showShading && (surfaceType.indexOf('Shading') > -1)){
+      object.visible = false;
+    }else if (!settings.showPartitions && (surfaceType == 'InteriorPartitionSurface')){
+      object.visible = false;
+    }
+
+    var material = null;
+    var material_double_sided = null;
+    var material_back = null;
+    switch (renderBy) {
+      case "Surface Type":
+        material = materials[object.userData.surfaceTypeMaterialName];
+        material_double_sided = material;
+        if (coincident_objects[object.uuid]){
+          // coincident object present, only show inside face
+          material = materials[object.userData.surfaceTypeMaterialName + '_Int'];
+        }
+        material_back = materials[object.userData.surfaceTypeMaterialName + '_Int'];
+        break;
+      case "Normal":
+        material = materials.NormalMaterial;
+        material_double_sided = material;
+        if (coincident_objects[object.uuid]){
+          // coincident object present, only show inside face
+          material = materials.NormalMaterial_Int;
+        }
+        material_back = materials.NormalMaterial_Int;
+        break;
+      case "Boundary":
+        material = materials[object.userData.boundaryMaterialName];
+        break;
+      case "Construction":
+        material = materials[object.userData.constructionMaterialName];
+        break;
+      case "Thermal Zone":
+        material = materials[object.userData.thermalZoneMaterialName];
+        break;
+      case "Space Type":
+        material = materials[object.userData.spaceTypeMaterialName];
+        break;
+      case "Building Story":
+        material = materials[object.userData.buildingStoryMaterialName];
+        break;
+      case "Data":
+        var value = null;
+        var keyName = '';
+        var object_variables = object.userData.variables.filter(function(x){return x.name == settings.variableName;});
+        if (object_variables.length > 0){
+          var object_variable = object_variables[0];
+          if (object_variable.valueIndex !== null){
+            value = variable.values[object_variable.valueIndex][i];
+          }
+          if (object_variable.keyName !== null){
+            keyName = object_variable.keyName;
+          }
+        }
+       
+        if (value !== null) {
+          object.userData.variableName = settings.variableName;
+          object.userData.variableDate = date;
+          object.userData.variableTime = time;
+          object.userData.variableKeyName = keyName;
+          object.userData.variableValue = value;
+          object.userData.variableUnits = units;
+        }else{
+          object.userData.variableName = settings.variableName;
+          object.userData.variableDate = date;
+          object.userData.variableTime = time;
+          object.userData.variableKeyName = keyName;          
+          object.userData.variableValue = '';
+          object.userData.variableUnits = units;
+        }
+
+        material = new THREE.MeshBasicMaterial({side: THREE.DoubleSide});
+        material.color.set(getColor(value, variable.valueMin, variable.valueMax, settings.colorScheme));
+        break;
+    }
+    
+    if (intersected) {
+      updateBalloon(intersected);
+      updateColorBarSelection(intersected.userData.variableValue);
+    }
+    
+    object.material = material;
+    object.material_double_sided = material_double_sided;
+    if ( material !== null){
+      object.material.needsUpdate = true;
+    }
+
+    var edge = object_edges[object.uuid];
+    if (settings.showWireframe || object.visible){
+      edge.visible = true;
+    }else{
+      edge.visible = false;
+    }
+
+    back_object = back_objects[object.uuid];
+    if (back_object){
+      back_object.material = material_back;
+      if ( material_back !== null){
+        back_object.visible = object.visible;
+        back_object.material.needsUpdate = true;
+      }else{
+        back_object.visible = false;
+      }
+    }
+  });
+
+  // turn off back objects where coincident objects are visible
+  scene_objects.forEach(function(object) {
+    if (object.visible){
+      coincident_object = coincident_objects[object.uuid];
+      if (coincident_object){
+        back_object = back_objects[object.uuid];
+        if (back_object){
+          if (coincident_object.visible){
+            // coincident object is visible, hide back object
+            back_object.visible = false;
+          }else{
+            // coincident object is not visible, show back object
+            back_object.visible = true;
+
+            if (object.material_double_sided){
+              // switch to double sided material so we can select this
+              object.material = object.material_double_sided;
+              object.material.needsUpdate = true;
+            }
+          }
+        }
+      }
+    }
+  });
+};
+
+var updateVariable = function (variableName) {
+  var variables = os_data.variables.filter(function(x){return x.name == variableName;});
+  if (variables.length){
+    variable = variables[0];
+  }
+  updateColorBar();
+  update();
+};
+
+document.addEventListener('DOMContentLoaded', function(event) {
+
+  var has_data = (os_data.metadata.variables && os_data.metadata.variables.length);
+
+  dat.GUI.prototype.removeFolder = function(name) {
+    this.__folders[name].close();
+    this.__folders[name].domElement.parentNode.parentNode.removeChild(this.__folders[name].domElement.parentNode);
+    this.__folders[name] = undefined;
+    this.onResize();
+  };
+
+  gui = new dat.GUI();
+  var render_modes = ['Surface Type', 'Normal', 'Boundary', 'Construction', 'Thermal Zone', 'Space Type', 'Building Story'];
+  if (has_data){
+    render_modes.push('Data');
+  }
+  gui.add(settings, 'renderBy', render_modes).name('Render By').onChange(function(value) {
+    removeSelection();
+    update(value);
+  });
+
+  building_story_names = os_data.metadata.buildingStoryNames;
+  building_story_names.unshift('All Stories');
+  gui.add(settings, 'showStory', building_story_names).name('Show Story').onChange(function(value) {
+    removeSelection();
+    update(value);
+  });
+
+  var f1 = gui.addFolder('Surface Filters');
+  f1.add(settings, 'showFloors').name('Show Floors').onChange(function(value) {
+    removeSelection();
+    setLocalStorage('showFloors', value);
+    update(value);
+  });
+  f1.add(settings, 'showWalls').name('Show Walls').onChange(function(value) {
+    removeSelection();
+    setLocalStorage('showWalls', value);
+    update(value);
+  });
+  f1.add(settings, 'showRoofCeilings').name('Show Roofs').onChange(function(value) {
+    removeSelection();
+    setLocalStorage('showRoofCeilings', value);
+    update(value);
+  });
+  f1.add(settings, 'showWindows').name('Show Windows').onChange(function(value) {
+    removeSelection();
+    setLocalStorage('showWindows', value);
+    update(value);
+  });
+  f1.add(settings, 'showDoors').name('Show Doors').onChange(function(value) {
+    removeSelection();
+    setLocalStorage('showDoors', value);
+    update(value);
+  });
+  f1.add(settings, 'showShading').name('Show Shading').onChange(function(value) {
+    removeSelection();
+    setLocalStorage('showShading', value);
+    update(value);
+  });
+  f1.add(settings, 'showPartitions').name('Show Partitions').onChange(function(value) {
+    removeSelection();
+    setLocalStorage('showPartitions', value);
+    update(value);
+  });  
+  f1.add(settings, 'showWireframe').name('Show Wireframe').onChange(function(value) {
+    removeSelection();
+    setLocalStorage('showWireframe', value);
+    update(value);
+  });
+  f1.open();
+
+  var f2 = gui.addFolder('Camera');
+  f2.add(settings, 'orthographic').name('Orthographic').onChange(function(value) {
+    setLocalStorage('orthographic', value);
+  });
+  f2.add(settings, 'xView').name('X View');
+  f2.add(settings, 'yView').name('Y View');
+  f2.add(settings, 'zView').name('Z View');
+  f2.add(settings, 'reset').name('Reset');
+  f2.open();
+
+  /*var f2 = gui.addFolder('Section Cut');
+  f2.add(settings, 'xSection', 0, 360).name('X Section').onChange(function (value) {
+    console.log('X cut: ' + value);
+  });
+  f2.add(settings, 'ySection', 0, 360).name('Y Section').onChange(function (value) {
+    console.log('Y cut: ' + value);
+  });
+  f2.add(settings, 'zSection', 0, 360).name('Z Section').onChange(function (value) {
+    console.log('Z cut: ' + value);
+  });
+  f2.open();*/
+
+  update();
+});
+</script>
+</body>
+</html>

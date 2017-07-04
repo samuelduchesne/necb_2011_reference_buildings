@@ -1,0 +1,2329 @@
+{
+  "os_standards_revision": "c771d41",
+  "os_standards_version": "0.1.14",
+  "openstudio_version": "2.1.0.ae0b9e616a",
+  "energyplus_version": "8.7.0",
+  "date": "2017-06-30 14:25:28 +0000",
+  "building": {
+    "name": "NECB 2011-MidriseApartment-NECB HDD Method-CAN_PE_Charlottetown.717060_CWEC.epw created: 2017-06-30 14:22:31 +0000",
+    "conditioned_floor_area_m2": 3134.614198677911,
+    "exterior_area_m2": 2325.693387747441,
+    "volume": 9553.837020054672,
+    "number_of_stories": 3
+  },
+  "geography": {
+    "hdd": 4703.0,
+    "cdd": 94.0,
+    "climate_zone": "6",
+    "city": "Charlottetown CDA",
+    "state_province_region": "PE",
+    "country": "CAN",
+    "latitude": 46.28,
+    "longitude": -63.13
+  },
+  "spacetype_area_breakdown": {
+    "space_function_conf./meet./multi-purpose": 88.24927425738,
+    "space_function_corr._<_2.4m_wide-sch-g": 310.637422441752,
+    "space_function_dwelling_unit(s)": 2735.7275019787794
+  },
+  "economics": {
+    "electricity_cost": 0.0,
+    "electricity_cost_per_m2": 0.0,
+    "natural_gas_cost": 0.0,
+    "natural_gas_cost_per_m2": 0.0,
+    "additional_cost": 0.0,
+    "additional_cost_per_m2": 0.0,
+    "total_cost": 0.0,
+    "total_cost_per_m2": 0.0
+  },
+  "end_uses": {
+    "heating_gj": 784.6,
+    "cooling_gj": 66.44,
+    "interior_lighting_gj": 134.61,
+    "exterior_lighting_gj": 0,
+    "interior_equipment_gj": 191.76,
+    "exterior_equipment_gj": 0,
+    "fans_gj": 88.01,
+    "pumps_gj": 0,
+    "heat_rejection_gj": 0,
+    "humidification_gj": 0,
+    "heat_recovery_gj": 0,
+    "water_systems_gj": 268.75,
+    "water_systems_water_m3": 1225.0,
+    "refrigeration_gj": 0,
+    "generators_gj": 0,
+    "total_end_uses_gj": 1534.17,
+    "total_end_uses_water_m3": 1225.0
+  },
+  "end_uses_eui": {
+    "heating_gj_per_m2": 0.25030193518900073,
+    "cooling_gj_per_m2": 0.021195590841138427,
+    "interior_lighting_gj_per_m2": 0.042943083731572004,
+    "exterior_lighting_gj_per_m2": 0,
+    "interior_equipment_gj_per_m2": 0.06117499246984805,
+    "exterior_equipment_gj_per_m2": 0,
+    "fans_gj_per_m2": 0.028076820438419522,
+    "pumps_gj_per_m2": 0,
+    "heat_rejection_gj_per_m2": 0,
+    "humidification_gj_per_m2": 0,
+    "heat_recovery_gj_per_m2": 0,
+    "water_systems_gj_per_m2": 0.08573622875611005,
+    "water_systems_water_m3_per_m2": 0.3907976938650598,
+    "refrigeration_gj_per_m2": 0,
+    "generators_gj_per_m2": 0,
+    "total_end_uses_gj_per_m2": 0.4894286514260888,
+    "total_end_uses_water_m3_per_m2": 0.3907976938650598
+  },
+  "meter_peaks": {
+    "electric_w": 229597.38,
+    "natural_gas_w": "NA"
+  },
+  "unmet_hours": {
+    "cooling": 7.25,
+    "heating": 0.25
+  },
+  "service_water_heating": {
+    "total_nominal_occupancy": 66.400984317651,
+    "electricity_per_year": 268.75,
+    "electricity_per_day": 0.7352941176470589,
+    "electricity_per_day_per_occupant": 0.011073542436201504,
+    "natural_gas_per_year": 0.0,
+    "additional_fuel_per_year": 0.0,
+    "water_m3_per_year": 1225.0,
+    "water_m3_per_day": 3.3515731874145005,
+    "water_m3_per_day_per_occupant": 0.05047475156966266
+  },
+  "envelope": {
+    "outdoor_walls_average_conductance_w_per_m2_k": 0.247,
+    "outdoor_roofs_average_conductance_w_per_m2_k": 0.183,
+    "ground_floors_average_conductance_w_per_m2_k": 0.757,
+    "windows_average_conductance_w_per_m2_k": 2.2,
+    "fdwr": 20.0,
+    "srr": 0.0,
+    "constructions": {
+      "exterior_fenestration": [
+        {
+          "name": "Customized Fenestration: cond=0.220 tvis=0.220 tsol=0.232",
+          "net_area_m2": 306.92,
+          "thermal_conductance_m2_w_per_k": 2.2,
+          "solar_transmittance": 0.6,
+          "visible_tranmittance": 0.21
+        }
+      ],
+      "exterior_opaque": [
+        {
+          "name": "Customized opaque construction {91943aaf-e1fc-4d2f-abd1-ada14289fd40} to conductance of 0.183",
+          "net_area_m2": 783.65,
+          "thermal_conductance_m2_w_per_k": 0.183,
+          "solar_absorptance": 0.7
+        },
+        {
+          "name": "Customized opaque construction {abbcaa07-79ef-4d47-b4b2-f24ff5bddde9} to conductance of 0.247",
+          "net_area_m2": 1235.12,
+          "thermal_conductance_m2_w_per_k": 0.247,
+          "solar_absorptance": 0.92
+        }
+      ],
+      "ground": [
+        {
+          "name": "Customized opaque construction {61f760d1-bf95-4eea-bb0d-3365cb4073f5} to conductance of 0.757",
+          "net_area_m2": 783.65,
+          "thermal_conductance_m2_w_per_k": 0.757,
+          "solar_absorptance": 0.7
+        }
+      ]
+    }
+  },
+  "spaces": [
+    {
+      "name": "M NE Apartment",
+      "multiplier": 2,
+      "volume": 268.9706387946299,
+      "exterior_wall_area": 58.523198206013,
+      "space_type_name": "Space Function Dwelling Unit(s)",
+      "thermal_zone": "Sp-M NE Apartment Sys-1 Flr-1 Sch-G HPlcmt-north ZN",
+      "breathing_zone_outdoor_airflow_vbz": 0.061,
+      "infiltration_method": "Flow/ExteriorArea",
+      "infiltration_flow_per_m2": 0.00025,
+      "occupancy_schedule": "NECB-G-Occupancy",
+      "occ_per_m2": 0.017,
+      "lighting_w_per_m2": 5.0,
+      "electric_w_per_m2": 5.0,
+      "shw_m3_per_s": 0.0,
+      "waterUseEquipment": [
+        {
+          "peak_flow_rate": 3.95701431674116e-06,
+          "peak_flow_rate_per_area": 4.483905788505958e-08,
+          "shw_watts_per_person": 499.9789259795902
+        }
+      ]
+    },
+    {
+      "name": "T NW Apartment",
+      "multiplier": 1,
+      "volume": 268.9706387946299,
+      "exterior_wall_area": 58.523198206013,
+      "space_type_name": "Space Function Dwelling Unit(s)",
+      "thermal_zone": "Sp-T NW Apartment Sys-1 Flr-2 Sch-G HPlcmt-north ZN",
+      "breathing_zone_outdoor_airflow_vbz": 0.0305,
+      "infiltration_method": "Flow/ExteriorArea",
+      "infiltration_flow_per_m2": 0.00025,
+      "occupancy_schedule": "NECB-G-Occupancy",
+      "occ_per_m2": 0.017,
+      "lighting_w_per_m2": 5.0,
+      "electric_w_per_m2": 5.0,
+      "shw_m3_per_s": 0.0,
+      "waterUseEquipment": [
+        {
+          "peak_flow_rate": 3.95701431674116e-06,
+          "peak_flow_rate_per_area": 4.483905788505958e-08,
+          "shw_watts_per_person": 499.9789259795902
+        }
+      ]
+    },
+    {
+      "name": "T N1 Apartment",
+      "multiplier": 1,
+      "volume": 268.9706387946299,
+      "exterior_wall_area": 35.299707884312475,
+      "space_type_name": "Space Function Dwelling Unit(s)",
+      "thermal_zone": "Sp-T N1 Apartment Sys-1 Flr-2 Sch-G HPlcmt-north ZN",
+      "breathing_zone_outdoor_airflow_vbz": 0.0305,
+      "infiltration_method": "Flow/ExteriorArea",
+      "infiltration_flow_per_m2": 0.00025,
+      "occupancy_schedule": "NECB-G-Occupancy",
+      "occ_per_m2": 0.017,
+      "lighting_w_per_m2": 5.0,
+      "electric_w_per_m2": 5.0,
+      "shw_m3_per_s": 0.0,
+      "waterUseEquipment": [
+        {
+          "peak_flow_rate": 3.95701431674116e-06,
+          "peak_flow_rate_per_area": 4.483905788505958e-08,
+          "shw_watts_per_person": 499.9789259795902
+        }
+      ]
+    },
+    {
+      "name": "G NW Apartment",
+      "multiplier": 1,
+      "volume": 268.9706387946299,
+      "exterior_wall_area": 58.523198206013,
+      "space_type_name": "Space Function Dwelling Unit(s)",
+      "thermal_zone": "Sp-G NW Apartment Sys-1 Flr-3 Sch-G HPlcmt-north ZN",
+      "breathing_zone_outdoor_airflow_vbz": 0.0305,
+      "infiltration_method": "Flow/ExteriorArea",
+      "infiltration_flow_per_m2": 0.00025,
+      "occupancy_schedule": "NECB-G-Occupancy",
+      "occ_per_m2": 0.017,
+      "lighting_w_per_m2": 5.0,
+      "electric_w_per_m2": 5.0,
+      "shw_m3_per_s": 0.0,
+      "waterUseEquipment": [
+        {
+          "peak_flow_rate": 3.95701431674116e-06,
+          "peak_flow_rate_per_area": 4.483905788505958e-08,
+          "shw_watts_per_person": 499.9789259795902
+        }
+      ]
+    },
+    {
+      "name": "M S1 Apartment",
+      "multiplier": 2,
+      "volume": 268.9706387946299,
+      "exterior_wall_area": 35.29970763544874,
+      "space_type_name": "Space Function Dwelling Unit(s)",
+      "thermal_zone": "Sp-M S1 Apartment Sys-1 Flr-1 Sch-G HPlcmt-south ZN",
+      "breathing_zone_outdoor_airflow_vbz": 0.061,
+      "infiltration_method": "Flow/ExteriorArea",
+      "infiltration_flow_per_m2": 0.00025,
+      "occupancy_schedule": "NECB-G-Occupancy",
+      "occ_per_m2": 0.017,
+      "lighting_w_per_m2": 5.0,
+      "electric_w_per_m2": 5.0,
+      "shw_m3_per_s": 0.0,
+      "waterUseEquipment": [
+        {
+          "peak_flow_rate": 3.95701431674116e-06,
+          "peak_flow_rate_per_area": 4.483905788505958e-08,
+          "shw_watts_per_person": 499.9789259795902
+        }
+      ]
+    },
+    {
+      "name": "T Corridor",
+      "multiplier": 1,
+      "volume": 236.69414465662908,
+      "exterior_wall_area": 10.218335739031637,
+      "space_type_name": "Space Function Corr. < 2.4m wide-sch-G",
+      "thermal_zone": "Sp-T Corridor Sys-1 Flr-2 Sch-G HPlcmt-west ZN",
+      "breathing_zone_outdoor_airflow_vbz": 0.0237,
+      "infiltration_method": "Flow/ExteriorArea",
+      "infiltration_flow_per_m2": 0.00025,
+      "occupancy_schedule": "NECB-G-Occupancy",
+      "occ_per_m2": 0.01,
+      "lighting_w_per_m2": 8.4,
+      "waterUseEquipment": [
+
+      ]
+    },
+    {
+      "name": "G S1 Apartment",
+      "multiplier": 1,
+      "volume": 268.9706387946299,
+      "exterior_wall_area": 35.299707386585,
+      "space_type_name": "Space Function Dwelling Unit(s)",
+      "thermal_zone": "Sp-G S1 Apartment Sys-1 Flr-3 Sch-G HPlcmt-south ZN",
+      "breathing_zone_outdoor_airflow_vbz": 0.0305,
+      "infiltration_method": "Flow/ExteriorArea",
+      "infiltration_flow_per_m2": 0.00025,
+      "occupancy_schedule": "NECB-G-Occupancy",
+      "occ_per_m2": 0.017,
+      "lighting_w_per_m2": 5.0,
+      "electric_w_per_m2": 5.0,
+      "shw_m3_per_s": 0.0,
+      "waterUseEquipment": [
+        {
+          "peak_flow_rate": 3.95701431674116e-06,
+          "peak_flow_rate_per_area": 4.483905788505958e-08,
+          "shw_watts_per_person": 499.9789259795902
+        }
+      ]
+    },
+    {
+      "name": "G N2 Apartment",
+      "multiplier": 1,
+      "volume": 268.9706387946299,
+      "exterior_wall_area": 35.299707386585,
+      "space_type_name": "Space Function Dwelling Unit(s)",
+      "thermal_zone": "Sp-G N2 Apartment Sys-1 Flr-3 Sch-G HPlcmt-north ZN",
+      "breathing_zone_outdoor_airflow_vbz": 0.0305,
+      "infiltration_method": "Flow/ExteriorArea",
+      "infiltration_flow_per_m2": 0.00025,
+      "occupancy_schedule": "NECB-G-Occupancy",
+      "occ_per_m2": 0.017,
+      "lighting_w_per_m2": 5.0,
+      "electric_w_per_m2": 5.0,
+      "shw_m3_per_s": 0.0,
+      "waterUseEquipment": [
+        {
+          "peak_flow_rate": 3.95701431674116e-06,
+          "peak_flow_rate_per_area": 4.483905788505958e-08,
+          "shw_watts_per_person": 499.9789259795902
+        }
+      ]
+    },
+    {
+      "name": "M SE Apartment",
+      "multiplier": 2,
+      "volume": 268.9706387946299,
+      "exterior_wall_area": 58.523198206013,
+      "space_type_name": "Space Function Dwelling Unit(s)",
+      "thermal_zone": "Sp-M SE Apartment Sys-1 Flr-1 Sch-G HPlcmt-south ZN",
+      "breathing_zone_outdoor_airflow_vbz": 0.061,
+      "infiltration_method": "Flow/ExteriorArea",
+      "infiltration_flow_per_m2": 0.00025,
+      "occupancy_schedule": "NECB-G-Occupancy",
+      "occ_per_m2": 0.017,
+      "lighting_w_per_m2": 5.0,
+      "electric_w_per_m2": 5.0,
+      "shw_m3_per_s": 0.0,
+      "waterUseEquipment": [
+        {
+          "peak_flow_rate": 3.95701431674116e-06,
+          "peak_flow_rate_per_area": 4.483905788505958e-08,
+          "shw_watts_per_person": 499.9789259795902
+        }
+      ]
+    },
+    {
+      "name": "T S1 Apartment",
+      "multiplier": 1,
+      "volume": 268.9706387946299,
+      "exterior_wall_area": 35.299707386585,
+      "space_type_name": "Space Function Dwelling Unit(s)",
+      "thermal_zone": "Sp-T S1 Apartment Sys-1 Flr-2 Sch-G HPlcmt-south ZN",
+      "breathing_zone_outdoor_airflow_vbz": 0.0305,
+      "infiltration_method": "Flow/ExteriorArea",
+      "infiltration_flow_per_m2": 0.00025,
+      "occupancy_schedule": "NECB-G-Occupancy",
+      "occ_per_m2": 0.017,
+      "lighting_w_per_m2": 5.0,
+      "electric_w_per_m2": 5.0,
+      "shw_m3_per_s": 0.0,
+      "waterUseEquipment": [
+        {
+          "peak_flow_rate": 3.95701431674116e-06,
+          "peak_flow_rate_per_area": 4.483905788505958e-08,
+          "shw_watts_per_person": 499.9789259795902
+        }
+      ]
+    },
+    {
+      "name": "M N2 Apartment",
+      "multiplier": 2,
+      "volume": 268.9706387946299,
+      "exterior_wall_area": 35.299707884312475,
+      "space_type_name": "Space Function Dwelling Unit(s)",
+      "thermal_zone": "Sp-M N2 Apartment Sys-1 Flr-1 Sch-G HPlcmt-north ZN",
+      "breathing_zone_outdoor_airflow_vbz": 0.061,
+      "infiltration_method": "Flow/ExteriorArea",
+      "infiltration_flow_per_m2": 0.00025,
+      "occupancy_schedule": "NECB-G-Occupancy",
+      "occ_per_m2": 0.017,
+      "lighting_w_per_m2": 5.0,
+      "electric_w_per_m2": 5.0,
+      "shw_m3_per_s": 0.0,
+      "waterUseEquipment": [
+        {
+          "peak_flow_rate": 3.95701431674116e-06,
+          "peak_flow_rate_per_area": 4.483905788505958e-08,
+          "shw_watts_per_person": 499.9789259795902
+        }
+      ]
+    },
+    {
+      "name": "G N1 Apartment",
+      "multiplier": 1,
+      "volume": 268.9706387946299,
+      "exterior_wall_area": 35.299707884312475,
+      "space_type_name": "Space Function Dwelling Unit(s)",
+      "thermal_zone": "Sp-G N1 Apartment Sys-1 Flr-3 Sch-G HPlcmt-north ZN",
+      "breathing_zone_outdoor_airflow_vbz": 0.0305,
+      "infiltration_method": "Flow/ExteriorArea",
+      "infiltration_flow_per_m2": 0.00025,
+      "occupancy_schedule": "NECB-G-Occupancy",
+      "occ_per_m2": 0.017,
+      "lighting_w_per_m2": 5.0,
+      "electric_w_per_m2": 5.0,
+      "shw_m3_per_s": 0.0,
+      "waterUseEquipment": [
+        {
+          "peak_flow_rate": 3.95701431674116e-06,
+          "peak_flow_rate_per_area": 4.483905788505958e-08,
+          "shw_watts_per_person": 499.9789259795902
+        }
+      ]
+    },
+    {
+      "name": "T SW Apartment",
+      "multiplier": 1,
+      "volume": 268.9706387946299,
+      "exterior_wall_area": 58.523198206013,
+      "space_type_name": "Space Function Dwelling Unit(s)",
+      "thermal_zone": "Sp-T SW Apartment Sys-1 Flr-2 Sch-G HPlcmt-south ZN",
+      "breathing_zone_outdoor_airflow_vbz": 0.0305,
+      "infiltration_method": "Flow/ExteriorArea",
+      "infiltration_flow_per_m2": 0.00025,
+      "occupancy_schedule": "NECB-G-Occupancy",
+      "occ_per_m2": 0.017,
+      "lighting_w_per_m2": 5.0,
+      "electric_w_per_m2": 5.0,
+      "shw_m3_per_s": 0.0,
+      "waterUseEquipment": [
+        {
+          "peak_flow_rate": 3.95701431674116e-06,
+          "peak_flow_rate_per_area": 4.483905788505958e-08,
+          "shw_watts_per_person": 499.9789259795902
+        }
+      ]
+    },
+    {
+      "name": "G NE Apartment",
+      "multiplier": 1,
+      "volume": 268.9706387946299,
+      "exterior_wall_area": 58.523198454876585,
+      "space_type_name": "Space Function Dwelling Unit(s)",
+      "thermal_zone": "Sp-G NE Apartment Sys-1 Flr-3 Sch-G HPlcmt-north ZN",
+      "breathing_zone_outdoor_airflow_vbz": 0.0305,
+      "infiltration_method": "Flow/ExteriorArea",
+      "infiltration_flow_per_m2": 0.00025,
+      "occupancy_schedule": "NECB-G-Occupancy",
+      "occ_per_m2": 0.017,
+      "lighting_w_per_m2": 5.0,
+      "electric_w_per_m2": 5.0,
+      "shw_m3_per_s": 0.0,
+      "waterUseEquipment": [
+        {
+          "peak_flow_rate": 3.95701431674116e-06,
+          "peak_flow_rate_per_area": 4.483905788505958e-08,
+          "shw_watts_per_person": 499.9789259795902
+        }
+      ]
+    },
+    {
+      "name": "M S2 Apartment",
+      "multiplier": 2,
+      "volume": 268.9706387946299,
+      "exterior_wall_area": 35.299707884312475,
+      "space_type_name": "Space Function Dwelling Unit(s)",
+      "thermal_zone": "Sp-M S2 Apartment Sys-1 Flr-1 Sch-G HPlcmt-south ZN",
+      "breathing_zone_outdoor_airflow_vbz": 0.061,
+      "infiltration_method": "Flow/ExteriorArea",
+      "infiltration_flow_per_m2": 0.00025,
+      "occupancy_schedule": "NECB-G-Occupancy",
+      "occ_per_m2": 0.017,
+      "lighting_w_per_m2": 5.0,
+      "electric_w_per_m2": 5.0,
+      "shw_m3_per_s": 0.0,
+      "waterUseEquipment": [
+        {
+          "peak_flow_rate": 3.95701431674116e-06,
+          "peak_flow_rate_per_area": 4.483905788505958e-08,
+          "shw_watts_per_person": 499.9789259795902
+        }
+      ]
+    },
+    {
+      "name": "G S2 Apartment",
+      "multiplier": 1,
+      "volume": 268.9706387946299,
+      "exterior_wall_area": 35.299707884312475,
+      "space_type_name": "Space Function Dwelling Unit(s)",
+      "thermal_zone": "Sp-G S2 Apartment Sys-1 Flr-3 Sch-G HPlcmt-south ZN",
+      "breathing_zone_outdoor_airflow_vbz": 0.0305,
+      "infiltration_method": "Flow/ExteriorArea",
+      "infiltration_flow_per_m2": 0.00025,
+      "occupancy_schedule": "NECB-G-Occupancy",
+      "occ_per_m2": 0.017,
+      "lighting_w_per_m2": 5.0,
+      "electric_w_per_m2": 5.0,
+      "shw_m3_per_s": 0.0,
+      "waterUseEquipment": [
+        {
+          "peak_flow_rate": 3.95701431674116e-06,
+          "peak_flow_rate_per_area": 4.483905788505958e-08,
+          "shw_watts_per_person": 499.9789259795902
+        }
+      ]
+    },
+    {
+      "name": "M SW Apartment",
+      "multiplier": 2,
+      "volume": 268.9706387946299,
+      "exterior_wall_area": 58.523198206013,
+      "space_type_name": "Space Function Dwelling Unit(s)",
+      "thermal_zone": "Sp-M SW Apartment Sys-1 Flr-1 Sch-G HPlcmt-south ZN",
+      "breathing_zone_outdoor_airflow_vbz": 0.061,
+      "infiltration_method": "Flow/ExteriorArea",
+      "infiltration_flow_per_m2": 0.00025,
+      "occupancy_schedule": "NECB-G-Occupancy",
+      "occ_per_m2": 0.017,
+      "lighting_w_per_m2": 5.0,
+      "electric_w_per_m2": 5.0,
+      "shw_m3_per_s": 0.0,
+      "waterUseEquipment": [
+        {
+          "peak_flow_rate": 3.95701431674116e-06,
+          "peak_flow_rate_per_area": 4.483905788505958e-08,
+          "shw_watts_per_person": 499.9789259795902
+        }
+      ]
+    },
+    {
+      "name": "Office",
+      "multiplier": 1,
+      "volume": 268.9706387946299,
+      "exterior_wall_area": 58.52319870374018,
+      "space_type_name": "Space Function Conf./meet./multi-purpose",
+      "thermal_zone": "Sp-Office Sys-3 Flr-3 Sch-C HPlcmt-south ZN",
+      "breathing_zone_outdoor_airflow_vbz": 0.139,
+      "infiltration_method": "Flow/ExteriorArea",
+      "infiltration_flow_per_m2": 0.00025,
+      "occupancy_schedule": "NECB-C-Occupancy",
+      "occ_per_m2": 0.2,
+      "lighting_w_per_m2": 11.88,
+      "electric_w_per_m2": 1.0,
+      "shw_m3_per_s": 0.0,
+      "waterUseEquipment": [
+        {
+          "peak_flow_rate": 4.28177010818041e-06,
+          "peak_flow_rate_per_area": 4.8519040459104284e-08,
+          "shw_watts_per_person": 45.13291790657253
+        }
+      ]
+    },
+    {
+      "name": "T N2 Apartment",
+      "multiplier": 1,
+      "volume": 268.9706387946299,
+      "exterior_wall_area": 35.299707386585,
+      "space_type_name": "Space Function Dwelling Unit(s)",
+      "thermal_zone": "Sp-T N2 Apartment Sys-1 Flr-2 Sch-G HPlcmt-north ZN",
+      "breathing_zone_outdoor_airflow_vbz": 0.0305,
+      "infiltration_method": "Flow/ExteriorArea",
+      "infiltration_flow_per_m2": 0.00025,
+      "occupancy_schedule": "NECB-G-Occupancy",
+      "occ_per_m2": 0.017,
+      "lighting_w_per_m2": 5.0,
+      "electric_w_per_m2": 5.0,
+      "shw_m3_per_s": 0.0,
+      "waterUseEquipment": [
+        {
+          "peak_flow_rate": 3.95701431674116e-06,
+          "peak_flow_rate_per_area": 4.483905788505958e-08,
+          "shw_watts_per_person": 499.9789259795902
+        }
+      ]
+    },
+    {
+      "name": "G Corridor",
+      "multiplier": 1,
+      "volume": 236.69414465662908,
+      "exterior_wall_area": 10.218338158481554,
+      "space_type_name": "Space Function Corr. < 2.4m wide-sch-G",
+      "thermal_zone": "Sp-G Corridor Sys-1 Flr-3 Sch-G HPlcmt-east ZN",
+      "breathing_zone_outdoor_airflow_vbz": 0.0237,
+      "infiltration_method": "Flow/ExteriorArea",
+      "infiltration_flow_per_m2": 0.00025,
+      "occupancy_schedule": "NECB-G-Occupancy",
+      "occ_per_m2": 0.01,
+      "lighting_w_per_m2": 8.4,
+      "waterUseEquipment": [
+
+      ]
+    },
+    {
+      "name": "M N1 Apartment",
+      "multiplier": 2,
+      "volume": 268.9706387946299,
+      "exterior_wall_area": 35.299707386585,
+      "space_type_name": "Space Function Dwelling Unit(s)",
+      "thermal_zone": "Sp-M N1 Apartment Sys-1 Flr-1 Sch-G HPlcmt-north ZN",
+      "breathing_zone_outdoor_airflow_vbz": 0.061,
+      "infiltration_method": "Flow/ExteriorArea",
+      "infiltration_flow_per_m2": 0.00025,
+      "occupancy_schedule": "NECB-G-Occupancy",
+      "occ_per_m2": 0.017,
+      "lighting_w_per_m2": 5.0,
+      "electric_w_per_m2": 5.0,
+      "shw_m3_per_s": 0.0,
+      "waterUseEquipment": [
+        {
+          "peak_flow_rate": 3.95701431674116e-06,
+          "peak_flow_rate_per_area": 4.483905788505958e-08,
+          "shw_watts_per_person": 499.9789259795902
+        }
+      ]
+    },
+    {
+      "name": "T SE Apartment",
+      "multiplier": 1,
+      "volume": 268.9706387946299,
+      "exterior_wall_area": 58.523198206013,
+      "space_type_name": "Space Function Dwelling Unit(s)",
+      "thermal_zone": "Sp-T SE Apartment Sys-1 Flr-2 Sch-G HPlcmt-south ZN",
+      "breathing_zone_outdoor_airflow_vbz": 0.0305,
+      "infiltration_method": "Flow/ExteriorArea",
+      "infiltration_flow_per_m2": 0.00025,
+      "occupancy_schedule": "NECB-G-Occupancy",
+      "occ_per_m2": 0.017,
+      "lighting_w_per_m2": 5.0,
+      "electric_w_per_m2": 5.0,
+      "shw_m3_per_s": 0.0,
+      "waterUseEquipment": [
+        {
+          "peak_flow_rate": 3.95701431674116e-06,
+          "peak_flow_rate_per_area": 4.483905788505958e-08,
+          "shw_watts_per_person": 499.9789259795902
+        }
+      ]
+    },
+    {
+      "name": "T S2 Apartment",
+      "multiplier": 1,
+      "volume": 268.9706387946299,
+      "exterior_wall_area": 35.299707386585,
+      "space_type_name": "Space Function Dwelling Unit(s)",
+      "thermal_zone": "Sp-T S2 Apartment Sys-1 Flr-2 Sch-G HPlcmt-south ZN",
+      "breathing_zone_outdoor_airflow_vbz": 0.0305,
+      "infiltration_method": "Flow/ExteriorArea",
+      "infiltration_flow_per_m2": 0.00025,
+      "occupancy_schedule": "NECB-G-Occupancy",
+      "occ_per_m2": 0.017,
+      "lighting_w_per_m2": 5.0,
+      "electric_w_per_m2": 5.0,
+      "shw_m3_per_s": 0.0,
+      "waterUseEquipment": [
+        {
+          "peak_flow_rate": 3.95701431674116e-06,
+          "peak_flow_rate_per_area": 4.483905788505958e-08,
+          "shw_watts_per_person": 499.9789259795902
+        }
+      ]
+    },
+    {
+      "name": "M NW Apartment",
+      "multiplier": 2,
+      "volume": 268.9706387946299,
+      "exterior_wall_area": 58.523198206013,
+      "space_type_name": "Space Function Dwelling Unit(s)",
+      "thermal_zone": "Sp-M NW Apartment Sys-1 Flr-1 Sch-G HPlcmt-north ZN",
+      "breathing_zone_outdoor_airflow_vbz": 0.061,
+      "infiltration_method": "Flow/ExteriorArea",
+      "infiltration_flow_per_m2": 0.00025,
+      "occupancy_schedule": "NECB-G-Occupancy",
+      "occ_per_m2": 0.017,
+      "lighting_w_per_m2": 5.0,
+      "electric_w_per_m2": 5.0,
+      "shw_m3_per_s": 0.0,
+      "waterUseEquipment": [
+        {
+          "peak_flow_rate": 3.95701431674116e-06,
+          "peak_flow_rate_per_area": 4.483905788505958e-08,
+          "shw_watts_per_person": 499.9789259795902
+        }
+      ]
+    },
+    {
+      "name": "T NE Apartment",
+      "multiplier": 1,
+      "volume": 268.9706387946299,
+      "exterior_wall_area": 58.523198206013,
+      "space_type_name": "Space Function Dwelling Unit(s)",
+      "thermal_zone": "Sp-T NE Apartment Sys-1 Flr-2 Sch-G HPlcmt-north ZN",
+      "breathing_zone_outdoor_airflow_vbz": 0.0305,
+      "infiltration_method": "Flow/ExteriorArea",
+      "infiltration_flow_per_m2": 0.00025,
+      "occupancy_schedule": "NECB-G-Occupancy",
+      "occ_per_m2": 0.017,
+      "lighting_w_per_m2": 5.0,
+      "electric_w_per_m2": 5.0,
+      "shw_m3_per_s": 0.0,
+      "waterUseEquipment": [
+        {
+          "peak_flow_rate": 3.95701431674116e-06,
+          "peak_flow_rate_per_area": 4.483905788505958e-08,
+          "shw_watts_per_person": 499.9789259795902
+        }
+      ]
+    },
+    {
+      "name": "G SW Apartment",
+      "multiplier": 1,
+      "volume": 268.9706387946299,
+      "exterior_wall_area": 58.523198206013,
+      "space_type_name": "Space Function Dwelling Unit(s)",
+      "thermal_zone": "Sp-G SW Apartment Sys-1 Flr-3 Sch-G HPlcmt-south ZN",
+      "breathing_zone_outdoor_airflow_vbz": 0.0305,
+      "infiltration_method": "Flow/ExteriorArea",
+      "infiltration_flow_per_m2": 0.00025,
+      "occupancy_schedule": "NECB-G-Occupancy",
+      "occ_per_m2": 0.017,
+      "lighting_w_per_m2": 5.0,
+      "electric_w_per_m2": 5.0,
+      "shw_m3_per_s": 0.0,
+      "waterUseEquipment": [
+        {
+          "peak_flow_rate": 3.95701431674116e-06,
+          "peak_flow_rate_per_area": 4.483905788505958e-08,
+          "shw_watts_per_person": 499.9789259795902
+        }
+      ]
+    },
+    {
+      "name": "M Corridor",
+      "multiplier": 2,
+      "volume": 236.69414465662908,
+      "exterior_wall_area": 10.218334985236,
+      "space_type_name": "Space Function Corr. < 2.4m wide-sch-G",
+      "thermal_zone": "Sp-M Corridor Sys-1 Flr-1 Sch-G HPlcmt-east ZN",
+      "breathing_zone_outdoor_airflow_vbz": 0.0473,
+      "infiltration_method": "Flow/ExteriorArea",
+      "infiltration_flow_per_m2": 0.00025,
+      "occupancy_schedule": "NECB-G-Occupancy",
+      "occ_per_m2": 0.01,
+      "lighting_w_per_m2": 8.4,
+      "waterUseEquipment": [
+
+      ]
+    }
+  ],
+  "thermal_zones": [
+    {
+      "name": "Sp-M N2 Apartment Sys-1 Flr-1 Sch-G HPlcmt-north ZN",
+      "floor_area": 88.24927425738,
+      "multiplier": 2,
+      "is_conditioned": "Yes",
+      "is_ideal_air_loads": false,
+      "heating_sizing_factor": 1.3,
+      "cooling_sizing_factor": 1.1,
+      "zone_heating_design_supply_air_temperature": 43.0,
+      "zone_cooling_design_supply_air_temperature": 13.0,
+      "spaces": [
+        {
+          "name": "M N2 Apartment",
+          "type": "Space Function Dwelling Unit(s)"
+        }
+      ],
+      "equipment": [
+        {
+          "name": "Sp-M N2 Apartment Sys-1 Flr-1 Sch-G HPlcmt-north ZN PTAC",
+          "type": "ZoneHVACComponent"
+        },
+        {
+          "name": "Zone HVAC Baseboard Convective Electric 2",
+          "type": "ZoneHVACComponent"
+        },
+        {
+          "name": "Air Terminal Single Duct Uncontrolled 2",
+          "type": "StraightComponent"
+        }
+      ]
+    },
+    {
+      "name": "Sp-G S2 Apartment Sys-1 Flr-3 Sch-G HPlcmt-south ZN",
+      "floor_area": 88.24927425738,
+      "multiplier": 1,
+      "is_conditioned": "Yes",
+      "is_ideal_air_loads": false,
+      "heating_sizing_factor": 1.3,
+      "cooling_sizing_factor": 1.1,
+      "zone_heating_design_supply_air_temperature": 43.0,
+      "zone_cooling_design_supply_air_temperature": 13.0,
+      "spaces": [
+        {
+          "name": "G S2 Apartment",
+          "type": "Space Function Dwelling Unit(s)"
+        }
+      ],
+      "equipment": [
+        {
+          "name": "Sp-G S2 Apartment Sys-1 Flr-3 Sch-G HPlcmt-south ZN PTAC",
+          "type": "ZoneHVACComponent"
+        },
+        {
+          "name": "Zone HVAC Baseboard Convective Electric 25",
+          "type": "ZoneHVACComponent"
+        },
+        {
+          "name": "Air Terminal Single Duct Uncontrolled 25",
+          "type": "StraightComponent"
+        }
+      ]
+    },
+    {
+      "name": "Sp-T S2 Apartment Sys-1 Flr-2 Sch-G HPlcmt-south ZN",
+      "floor_area": 88.24927425738,
+      "multiplier": 1,
+      "is_conditioned": "Yes",
+      "is_ideal_air_loads": false,
+      "heating_sizing_factor": 1.3,
+      "cooling_sizing_factor": 1.1,
+      "zone_heating_design_supply_air_temperature": 43.0,
+      "zone_cooling_design_supply_air_temperature": 13.0,
+      "spaces": [
+        {
+          "name": "T S2 Apartment",
+          "type": "Space Function Dwelling Unit(s)"
+        }
+      ],
+      "equipment": [
+        {
+          "name": "Sp-T S2 Apartment Sys-1 Flr-2 Sch-G HPlcmt-south ZN PTAC",
+          "type": "ZoneHVACComponent"
+        },
+        {
+          "name": "Zone HVAC Baseboard Convective Electric 18",
+          "type": "ZoneHVACComponent"
+        },
+        {
+          "name": "Air Terminal Single Duct Uncontrolled 18",
+          "type": "StraightComponent"
+        }
+      ]
+    },
+    {
+      "name": "Sp-G N1 Apartment Sys-1 Flr-3 Sch-G HPlcmt-north ZN",
+      "floor_area": 88.24927425738,
+      "multiplier": 1,
+      "is_conditioned": "Yes",
+      "is_ideal_air_loads": false,
+      "heating_sizing_factor": 1.3,
+      "cooling_sizing_factor": 1.1,
+      "zone_heating_design_supply_air_temperature": 43.0,
+      "zone_cooling_design_supply_air_temperature": 13.0,
+      "spaces": [
+        {
+          "name": "G N1 Apartment",
+          "type": "Space Function Dwelling Unit(s)"
+        }
+      ],
+      "equipment": [
+        {
+          "name": "Sp-G N1 Apartment Sys-1 Flr-3 Sch-G HPlcmt-north ZN PTAC",
+          "type": "ZoneHVACComponent"
+        },
+        {
+          "name": "Zone HVAC Baseboard Convective Electric 21",
+          "type": "ZoneHVACComponent"
+        },
+        {
+          "name": "Air Terminal Single Duct Uncontrolled 21",
+          "type": "StraightComponent"
+        }
+      ]
+    },
+    {
+      "name": "Sp-M Corridor Sys-1 Flr-1 Sch-G HPlcmt-east ZN",
+      "floor_area": 77.659355610438,
+      "multiplier": 2,
+      "is_conditioned": "Yes",
+      "is_ideal_air_loads": false,
+      "heating_sizing_factor": 1.3,
+      "cooling_sizing_factor": 1.1,
+      "zone_heating_design_supply_air_temperature": 43.0,
+      "zone_cooling_design_supply_air_temperature": 13.0,
+      "spaces": [
+        {
+          "name": "M Corridor",
+          "type": "Space Function Corr. < 2.4m wide-sch-G"
+        }
+      ],
+      "equipment": [
+        {
+          "name": "Sp-M Corridor Sys-1 Flr-1 Sch-G HPlcmt-east ZN PTAC",
+          "type": "ZoneHVACComponent"
+        },
+        {
+          "name": "Zone HVAC Baseboard Convective Electric 5",
+          "type": "ZoneHVACComponent"
+        },
+        {
+          "name": "Air Terminal Single Duct Uncontrolled 5",
+          "type": "StraightComponent"
+        }
+      ]
+    },
+    {
+      "name": "Sp-M S2 Apartment Sys-1 Flr-1 Sch-G HPlcmt-south ZN",
+      "floor_area": 88.24927425738,
+      "multiplier": 2,
+      "is_conditioned": "Yes",
+      "is_ideal_air_loads": false,
+      "heating_sizing_factor": 1.3,
+      "cooling_sizing_factor": 1.1,
+      "zone_heating_design_supply_air_temperature": 43.0,
+      "zone_cooling_design_supply_air_temperature": 13.0,
+      "spaces": [
+        {
+          "name": "M S2 Apartment",
+          "type": "Space Function Dwelling Unit(s)"
+        }
+      ],
+      "equipment": [
+        {
+          "name": "Sp-M S2 Apartment Sys-1 Flr-1 Sch-G HPlcmt-south ZN PTAC",
+          "type": "ZoneHVACComponent"
+        },
+        {
+          "name": "Zone HVAC Baseboard Convective Electric 8",
+          "type": "ZoneHVACComponent"
+        },
+        {
+          "name": "Air Terminal Single Duct Uncontrolled 8",
+          "type": "StraightComponent"
+        }
+      ]
+    },
+    {
+      "name": "Sp-T SW Apartment Sys-1 Flr-2 Sch-G HPlcmt-south ZN",
+      "floor_area": 88.24927425738,
+      "multiplier": 1,
+      "is_conditioned": "Yes",
+      "is_ideal_air_loads": false,
+      "heating_sizing_factor": 1.3,
+      "cooling_sizing_factor": 1.1,
+      "zone_heating_design_supply_air_temperature": 43.0,
+      "zone_cooling_design_supply_air_temperature": 13.0,
+      "spaces": [
+        {
+          "name": "T SW Apartment",
+          "type": "Space Function Dwelling Unit(s)"
+        }
+      ],
+      "equipment": [
+        {
+          "name": "Sp-T SW Apartment Sys-1 Flr-2 Sch-G HPlcmt-south ZN PTAC",
+          "type": "ZoneHVACComponent"
+        },
+        {
+          "name": "Zone HVAC Baseboard Convective Electric 16",
+          "type": "ZoneHVACComponent"
+        },
+        {
+          "name": "Air Terminal Single Duct Uncontrolled 16",
+          "type": "StraightComponent"
+        }
+      ]
+    },
+    {
+      "name": "Sp-M NW Apartment Sys-1 Flr-1 Sch-G HPlcmt-north ZN",
+      "floor_area": 88.24927425738,
+      "multiplier": 2,
+      "is_conditioned": "Yes",
+      "is_ideal_air_loads": false,
+      "heating_sizing_factor": 1.3,
+      "cooling_sizing_factor": 1.1,
+      "zone_heating_design_supply_air_temperature": 43.0,
+      "zone_cooling_design_supply_air_temperature": 13.0,
+      "spaces": [
+        {
+          "name": "M NW Apartment",
+          "type": "Space Function Dwelling Unit(s)"
+        }
+      ],
+      "equipment": [
+        {
+          "name": "Sp-M NW Apartment Sys-1 Flr-1 Sch-G HPlcmt-north ZN PTAC",
+          "type": "ZoneHVACComponent"
+        },
+        {
+          "name": "Zone HVAC Baseboard Convective Electric 4",
+          "type": "ZoneHVACComponent"
+        },
+        {
+          "name": "Air Terminal Single Duct Uncontrolled 4",
+          "type": "StraightComponent"
+        }
+      ]
+    },
+    {
+      "name": "Sp-T SE Apartment Sys-1 Flr-2 Sch-G HPlcmt-south ZN",
+      "floor_area": 88.24927425738,
+      "multiplier": 1,
+      "is_conditioned": "Yes",
+      "is_ideal_air_loads": false,
+      "heating_sizing_factor": 1.3,
+      "cooling_sizing_factor": 1.1,
+      "zone_heating_design_supply_air_temperature": 43.0,
+      "zone_cooling_design_supply_air_temperature": 13.0,
+      "spaces": [
+        {
+          "name": "T SE Apartment",
+          "type": "Space Function Dwelling Unit(s)"
+        }
+      ],
+      "equipment": [
+        {
+          "name": "Sp-T SE Apartment Sys-1 Flr-2 Sch-G HPlcmt-south ZN PTAC",
+          "type": "ZoneHVACComponent"
+        },
+        {
+          "name": "Zone HVAC Baseboard Convective Electric 17",
+          "type": "ZoneHVACComponent"
+        },
+        {
+          "name": "Air Terminal Single Duct Uncontrolled 17",
+          "type": "StraightComponent"
+        }
+      ]
+    },
+    {
+      "name": "Sp-T NE Apartment Sys-1 Flr-2 Sch-G HPlcmt-north ZN",
+      "floor_area": 88.24927425738,
+      "multiplier": 1,
+      "is_conditioned": "Yes",
+      "is_ideal_air_loads": false,
+      "heating_sizing_factor": 1.3,
+      "cooling_sizing_factor": 1.1,
+      "zone_heating_design_supply_air_temperature": 43.0,
+      "zone_cooling_design_supply_air_temperature": 13.0,
+      "spaces": [
+        {
+          "name": "T NE Apartment",
+          "type": "Space Function Dwelling Unit(s)"
+        }
+      ],
+      "equipment": [
+        {
+          "name": "Sp-T NE Apartment Sys-1 Flr-2 Sch-G HPlcmt-north ZN PTAC",
+          "type": "ZoneHVACComponent"
+        },
+        {
+          "name": "Zone HVAC Baseboard Convective Electric 13",
+          "type": "ZoneHVACComponent"
+        },
+        {
+          "name": "Air Terminal Single Duct Uncontrolled 13",
+          "type": "StraightComponent"
+        }
+      ]
+    },
+    {
+      "name": "Sp-Office Sys-3 Flr-3 Sch-C HPlcmt-south ZN",
+      "floor_area": 88.24927425738,
+      "multiplier": 1,
+      "is_conditioned": "Yes",
+      "is_ideal_air_loads": false,
+      "heating_sizing_factor": 1.3,
+      "cooling_sizing_factor": 1.1,
+      "zone_heating_design_supply_air_temperature": 43.0,
+      "zone_cooling_design_supply_air_temperature": 13.0,
+      "spaces": [
+        {
+          "name": "Office",
+          "type": "Space Function Conf./meet./multi-purpose"
+        }
+      ],
+      "equipment": [
+        {
+          "name": "Air Terminal Single Duct Uncontrolled 27",
+          "type": "StraightComponent"
+        },
+        {
+          "name": "Zone HVAC Baseboard Convective Electric 27",
+          "type": "ZoneHVACComponent"
+        }
+      ]
+    },
+    {
+      "name": "Sp-M SE Apartment Sys-1 Flr-1 Sch-G HPlcmt-south ZN",
+      "floor_area": 88.24927425738,
+      "multiplier": 2,
+      "is_conditioned": "Yes",
+      "is_ideal_air_loads": false,
+      "heating_sizing_factor": 1.3,
+      "cooling_sizing_factor": 1.1,
+      "zone_heating_design_supply_air_temperature": 43.0,
+      "zone_cooling_design_supply_air_temperature": 13.0,
+      "spaces": [
+        {
+          "name": "M SE Apartment",
+          "type": "Space Function Dwelling Unit(s)"
+        }
+      ],
+      "equipment": [
+        {
+          "name": "Sp-M SE Apartment Sys-1 Flr-1 Sch-G HPlcmt-south ZN PTAC",
+          "type": "ZoneHVACComponent"
+        },
+        {
+          "name": "Zone HVAC Baseboard Convective Electric 7",
+          "type": "ZoneHVACComponent"
+        },
+        {
+          "name": "Air Terminal Single Duct Uncontrolled 7",
+          "type": "StraightComponent"
+        }
+      ]
+    },
+    {
+      "name": "Sp-G S1 Apartment Sys-1 Flr-3 Sch-G HPlcmt-south ZN",
+      "floor_area": 88.24927425738,
+      "multiplier": 1,
+      "is_conditioned": "Yes",
+      "is_ideal_air_loads": false,
+      "heating_sizing_factor": 1.3,
+      "cooling_sizing_factor": 1.1,
+      "zone_heating_design_supply_air_temperature": 43.0,
+      "zone_cooling_design_supply_air_temperature": 13.0,
+      "spaces": [
+        {
+          "name": "G S1 Apartment",
+          "type": "Space Function Dwelling Unit(s)"
+        }
+      ],
+      "equipment": [
+        {
+          "name": "Sp-G S1 Apartment Sys-1 Flr-3 Sch-G HPlcmt-south ZN PTAC",
+          "type": "ZoneHVACComponent"
+        },
+        {
+          "name": "Zone HVAC Baseboard Convective Electric 24",
+          "type": "ZoneHVACComponent"
+        },
+        {
+          "name": "Air Terminal Single Duct Uncontrolled 24",
+          "type": "StraightComponent"
+        }
+      ]
+    },
+    {
+      "name": "Sp-M N1 Apartment Sys-1 Flr-1 Sch-G HPlcmt-north ZN",
+      "floor_area": 88.24927425738,
+      "multiplier": 2,
+      "is_conditioned": "Yes",
+      "is_ideal_air_loads": false,
+      "heating_sizing_factor": 1.3,
+      "cooling_sizing_factor": 1.1,
+      "zone_heating_design_supply_air_temperature": 43.0,
+      "zone_cooling_design_supply_air_temperature": 13.0,
+      "spaces": [
+        {
+          "name": "M N1 Apartment",
+          "type": "Space Function Dwelling Unit(s)"
+        }
+      ],
+      "equipment": [
+        {
+          "name": "Sp-M N1 Apartment Sys-1 Flr-1 Sch-G HPlcmt-north ZN PTAC",
+          "type": "ZoneHVACComponent"
+        },
+        {
+          "name": "Zone HVAC Baseboard Convective Electric 3",
+          "type": "ZoneHVACComponent"
+        },
+        {
+          "name": "Air Terminal Single Duct Uncontrolled 3",
+          "type": "StraightComponent"
+        }
+      ]
+    },
+    {
+      "name": "Sp-G NE Apartment Sys-1 Flr-3 Sch-G HPlcmt-north ZN",
+      "floor_area": 88.24927425738,
+      "multiplier": 1,
+      "is_conditioned": "Yes",
+      "is_ideal_air_loads": false,
+      "heating_sizing_factor": 1.3,
+      "cooling_sizing_factor": 1.1,
+      "zone_heating_design_supply_air_temperature": 43.0,
+      "zone_cooling_design_supply_air_temperature": 13.0,
+      "spaces": [
+        {
+          "name": "G NE Apartment",
+          "type": "Space Function Dwelling Unit(s)"
+        }
+      ],
+      "equipment": [
+        {
+          "name": "Sp-G NE Apartment Sys-1 Flr-3 Sch-G HPlcmt-north ZN PTAC",
+          "type": "ZoneHVACComponent"
+        },
+        {
+          "name": "Zone HVAC Baseboard Convective Electric 22",
+          "type": "ZoneHVACComponent"
+        },
+        {
+          "name": "Air Terminal Single Duct Uncontrolled 22",
+          "type": "StraightComponent"
+        }
+      ]
+    },
+    {
+      "name": "Sp-G NW Apartment Sys-1 Flr-3 Sch-G HPlcmt-north ZN",
+      "floor_area": 88.24927425738,
+      "multiplier": 1,
+      "is_conditioned": "Yes",
+      "is_ideal_air_loads": false,
+      "heating_sizing_factor": 1.3,
+      "cooling_sizing_factor": 1.1,
+      "zone_heating_design_supply_air_temperature": 43.0,
+      "zone_cooling_design_supply_air_temperature": 13.0,
+      "spaces": [
+        {
+          "name": "G NW Apartment",
+          "type": "Space Function Dwelling Unit(s)"
+        }
+      ],
+      "equipment": [
+        {
+          "name": "Sp-G NW Apartment Sys-1 Flr-3 Sch-G HPlcmt-north ZN PTAC",
+          "type": "ZoneHVACComponent"
+        },
+        {
+          "name": "Zone HVAC Baseboard Convective Electric 19",
+          "type": "ZoneHVACComponent"
+        },
+        {
+          "name": "Air Terminal Single Duct Uncontrolled 19",
+          "type": "StraightComponent"
+        }
+      ]
+    },
+    {
+      "name": "Sp-T Corridor Sys-1 Flr-2 Sch-G HPlcmt-west ZN",
+      "floor_area": 77.659355610438,
+      "multiplier": 1,
+      "is_conditioned": "Yes",
+      "is_ideal_air_loads": false,
+      "heating_sizing_factor": 1.3,
+      "cooling_sizing_factor": 1.1,
+      "zone_heating_design_supply_air_temperature": 43.0,
+      "zone_cooling_design_supply_air_temperature": 13.0,
+      "spaces": [
+        {
+          "name": "T Corridor",
+          "type": "Space Function Corr. < 2.4m wide-sch-G"
+        }
+      ],
+      "equipment": [
+        {
+          "name": "Sp-T Corridor Sys-1 Flr-2 Sch-G HPlcmt-west ZN PTAC",
+          "type": "ZoneHVACComponent"
+        },
+        {
+          "name": "Zone HVAC Baseboard Convective Electric 14",
+          "type": "ZoneHVACComponent"
+        },
+        {
+          "name": "Air Terminal Single Duct Uncontrolled 14",
+          "type": "StraightComponent"
+        }
+      ]
+    },
+    {
+      "name": "Sp-T S1 Apartment Sys-1 Flr-2 Sch-G HPlcmt-south ZN",
+      "floor_area": 88.24927425738,
+      "multiplier": 1,
+      "is_conditioned": "Yes",
+      "is_ideal_air_loads": false,
+      "heating_sizing_factor": 1.3,
+      "cooling_sizing_factor": 1.1,
+      "zone_heating_design_supply_air_temperature": 43.0,
+      "zone_cooling_design_supply_air_temperature": 13.0,
+      "spaces": [
+        {
+          "name": "T S1 Apartment",
+          "type": "Space Function Dwelling Unit(s)"
+        }
+      ],
+      "equipment": [
+        {
+          "name": "Sp-T S1 Apartment Sys-1 Flr-2 Sch-G HPlcmt-south ZN PTAC",
+          "type": "ZoneHVACComponent"
+        },
+        {
+          "name": "Zone HVAC Baseboard Convective Electric 15",
+          "type": "ZoneHVACComponent"
+        },
+        {
+          "name": "Air Terminal Single Duct Uncontrolled 15",
+          "type": "StraightComponent"
+        }
+      ]
+    },
+    {
+      "name": "Sp-M S1 Apartment Sys-1 Flr-1 Sch-G HPlcmt-south ZN",
+      "floor_area": 88.24927425738,
+      "multiplier": 2,
+      "is_conditioned": "Yes",
+      "is_ideal_air_loads": false,
+      "heating_sizing_factor": 1.3,
+      "cooling_sizing_factor": 1.1,
+      "zone_heating_design_supply_air_temperature": 43.0,
+      "zone_cooling_design_supply_air_temperature": 13.0,
+      "spaces": [
+        {
+          "name": "M S1 Apartment",
+          "type": "Space Function Dwelling Unit(s)"
+        }
+      ],
+      "equipment": [
+        {
+          "name": "Sp-M S1 Apartment Sys-1 Flr-1 Sch-G HPlcmt-south ZN PTAC",
+          "type": "ZoneHVACComponent"
+        },
+        {
+          "name": "Zone HVAC Baseboard Convective Electric 6",
+          "type": "ZoneHVACComponent"
+        },
+        {
+          "name": "Air Terminal Single Duct Uncontrolled 6",
+          "type": "StraightComponent"
+        }
+      ]
+    },
+    {
+      "name": "Sp-G Corridor Sys-1 Flr-3 Sch-G HPlcmt-east ZN",
+      "floor_area": 77.659355610438,
+      "multiplier": 1,
+      "is_conditioned": "Yes",
+      "is_ideal_air_loads": false,
+      "heating_sizing_factor": 1.3,
+      "cooling_sizing_factor": 1.1,
+      "zone_heating_design_supply_air_temperature": 43.0,
+      "zone_cooling_design_supply_air_temperature": 13.0,
+      "spaces": [
+        {
+          "name": "G Corridor",
+          "type": "Space Function Corr. < 2.4m wide-sch-G"
+        }
+      ],
+      "equipment": [
+        {
+          "name": "Sp-G Corridor Sys-1 Flr-3 Sch-G HPlcmt-east ZN PTAC",
+          "type": "ZoneHVACComponent"
+        },
+        {
+          "name": "Zone HVAC Baseboard Convective Electric 23",
+          "type": "ZoneHVACComponent"
+        },
+        {
+          "name": "Air Terminal Single Duct Uncontrolled 23",
+          "type": "StraightComponent"
+        }
+      ]
+    },
+    {
+      "name": "Sp-M SW Apartment Sys-1 Flr-1 Sch-G HPlcmt-south ZN",
+      "floor_area": 88.24927425738,
+      "multiplier": 2,
+      "is_conditioned": "Yes",
+      "is_ideal_air_loads": false,
+      "heating_sizing_factor": 1.3,
+      "cooling_sizing_factor": 1.1,
+      "zone_heating_design_supply_air_temperature": 43.0,
+      "zone_cooling_design_supply_air_temperature": 13.0,
+      "spaces": [
+        {
+          "name": "M SW Apartment",
+          "type": "Space Function Dwelling Unit(s)"
+        }
+      ],
+      "equipment": [
+        {
+          "name": "Sp-M SW Apartment Sys-1 Flr-1 Sch-G HPlcmt-south ZN PTAC",
+          "type": "ZoneHVACComponent"
+        },
+        {
+          "name": "Zone HVAC Baseboard Convective Electric 9",
+          "type": "ZoneHVACComponent"
+        },
+        {
+          "name": "Air Terminal Single Duct Uncontrolled 9",
+          "type": "StraightComponent"
+        }
+      ]
+    },
+    {
+      "name": "Sp-T N2 Apartment Sys-1 Flr-2 Sch-G HPlcmt-north ZN",
+      "floor_area": 88.24927425738,
+      "multiplier": 1,
+      "is_conditioned": "Yes",
+      "is_ideal_air_loads": false,
+      "heating_sizing_factor": 1.3,
+      "cooling_sizing_factor": 1.1,
+      "zone_heating_design_supply_air_temperature": 43.0,
+      "zone_cooling_design_supply_air_temperature": 13.0,
+      "spaces": [
+        {
+          "name": "T N2 Apartment",
+          "type": "Space Function Dwelling Unit(s)"
+        }
+      ],
+      "equipment": [
+        {
+          "name": "Sp-T N2 Apartment Sys-1 Flr-2 Sch-G HPlcmt-north ZN PTAC",
+          "type": "ZoneHVACComponent"
+        },
+        {
+          "name": "Zone HVAC Baseboard Convective Electric 12",
+          "type": "ZoneHVACComponent"
+        },
+        {
+          "name": "Air Terminal Single Duct Uncontrolled 12",
+          "type": "StraightComponent"
+        }
+      ]
+    },
+    {
+      "name": "Sp-G SW Apartment Sys-1 Flr-3 Sch-G HPlcmt-south ZN",
+      "floor_area": 88.24927425738,
+      "multiplier": 1,
+      "is_conditioned": "Yes",
+      "is_ideal_air_loads": false,
+      "heating_sizing_factor": 1.3,
+      "cooling_sizing_factor": 1.1,
+      "zone_heating_design_supply_air_temperature": 43.0,
+      "zone_cooling_design_supply_air_temperature": 13.0,
+      "spaces": [
+        {
+          "name": "G SW Apartment",
+          "type": "Space Function Dwelling Unit(s)"
+        }
+      ],
+      "equipment": [
+        {
+          "name": "Sp-G SW Apartment Sys-1 Flr-3 Sch-G HPlcmt-south ZN PTAC",
+          "type": "ZoneHVACComponent"
+        },
+        {
+          "name": "Zone HVAC Baseboard Convective Electric 26",
+          "type": "ZoneHVACComponent"
+        },
+        {
+          "name": "Air Terminal Single Duct Uncontrolled 26",
+          "type": "StraightComponent"
+        }
+      ]
+    },
+    {
+      "name": "Sp-G N2 Apartment Sys-1 Flr-3 Sch-G HPlcmt-north ZN",
+      "floor_area": 88.24927425738,
+      "multiplier": 1,
+      "is_conditioned": "Yes",
+      "is_ideal_air_loads": false,
+      "heating_sizing_factor": 1.3,
+      "cooling_sizing_factor": 1.1,
+      "zone_heating_design_supply_air_temperature": 43.0,
+      "zone_cooling_design_supply_air_temperature": 13.0,
+      "spaces": [
+        {
+          "name": "G N2 Apartment",
+          "type": "Space Function Dwelling Unit(s)"
+        }
+      ],
+      "equipment": [
+        {
+          "name": "Sp-G N2 Apartment Sys-1 Flr-3 Sch-G HPlcmt-north ZN PTAC",
+          "type": "ZoneHVACComponent"
+        },
+        {
+          "name": "Zone HVAC Baseboard Convective Electric 20",
+          "type": "ZoneHVACComponent"
+        },
+        {
+          "name": "Air Terminal Single Duct Uncontrolled 20",
+          "type": "StraightComponent"
+        }
+      ]
+    },
+    {
+      "name": "Sp-M NE Apartment Sys-1 Flr-1 Sch-G HPlcmt-north ZN",
+      "floor_area": 88.24927425738,
+      "multiplier": 2,
+      "is_conditioned": "Yes",
+      "is_ideal_air_loads": false,
+      "heating_sizing_factor": 1.3,
+      "cooling_sizing_factor": 1.1,
+      "zone_heating_design_supply_air_temperature": 43.0,
+      "zone_cooling_design_supply_air_temperature": 13.0,
+      "spaces": [
+        {
+          "name": "M NE Apartment",
+          "type": "Space Function Dwelling Unit(s)"
+        }
+      ],
+      "equipment": [
+        {
+          "name": "Sp-M NE Apartment Sys-1 Flr-1 Sch-G HPlcmt-north ZN PTAC",
+          "type": "ZoneHVACComponent"
+        },
+        {
+          "name": "Zone HVAC Baseboard Convective Electric 1",
+          "type": "ZoneHVACComponent"
+        },
+        {
+          "name": "Air Terminal Single Duct Uncontrolled 1",
+          "type": "StraightComponent"
+        }
+      ]
+    },
+    {
+      "name": "Sp-T N1 Apartment Sys-1 Flr-2 Sch-G HPlcmt-north ZN",
+      "floor_area": 88.24927425738,
+      "multiplier": 1,
+      "is_conditioned": "Yes",
+      "is_ideal_air_loads": false,
+      "heating_sizing_factor": 1.3,
+      "cooling_sizing_factor": 1.1,
+      "zone_heating_design_supply_air_temperature": 43.0,
+      "zone_cooling_design_supply_air_temperature": 13.0,
+      "spaces": [
+        {
+          "name": "T N1 Apartment",
+          "type": "Space Function Dwelling Unit(s)"
+        }
+      ],
+      "equipment": [
+        {
+          "name": "Sp-T N1 Apartment Sys-1 Flr-2 Sch-G HPlcmt-north ZN PTAC",
+          "type": "ZoneHVACComponent"
+        },
+        {
+          "name": "Zone HVAC Baseboard Convective Electric 11",
+          "type": "ZoneHVACComponent"
+        },
+        {
+          "name": "Air Terminal Single Duct Uncontrolled 11",
+          "type": "StraightComponent"
+        }
+      ]
+    },
+    {
+      "name": "Sp-T NW Apartment Sys-1 Flr-2 Sch-G HPlcmt-north ZN",
+      "floor_area": 88.24927425738,
+      "multiplier": 1,
+      "is_conditioned": "Yes",
+      "is_ideal_air_loads": false,
+      "heating_sizing_factor": 1.3,
+      "cooling_sizing_factor": 1.1,
+      "zone_heating_design_supply_air_temperature": 43.0,
+      "zone_cooling_design_supply_air_temperature": 13.0,
+      "spaces": [
+        {
+          "name": "T NW Apartment",
+          "type": "Space Function Dwelling Unit(s)"
+        }
+      ],
+      "equipment": [
+        {
+          "name": "Sp-T NW Apartment Sys-1 Flr-2 Sch-G HPlcmt-north ZN PTAC",
+          "type": "ZoneHVACComponent"
+        },
+        {
+          "name": "Zone HVAC Baseboard Convective Electric 10",
+          "type": "ZoneHVACComponent"
+        },
+        {
+          "name": "Air Terminal Single Duct Uncontrolled 10",
+          "type": "StraightComponent"
+        }
+      ]
+    }
+  ],
+  "air_loops": [
+    {
+      "name": "Make-up air unit",
+      "thermal_zones": [
+        "Sp-M NE Apartment Sys-1 Flr-1 Sch-G HPlcmt-north ZN",
+        "Sp-M N2 Apartment Sys-1 Flr-1 Sch-G HPlcmt-north ZN",
+        "Sp-M N1 Apartment Sys-1 Flr-1 Sch-G HPlcmt-north ZN",
+        "Sp-M NW Apartment Sys-1 Flr-1 Sch-G HPlcmt-north ZN",
+        "Sp-M Corridor Sys-1 Flr-1 Sch-G HPlcmt-east ZN",
+        "Sp-M S1 Apartment Sys-1 Flr-1 Sch-G HPlcmt-south ZN",
+        "Sp-M SE Apartment Sys-1 Flr-1 Sch-G HPlcmt-south ZN",
+        "Sp-M S2 Apartment Sys-1 Flr-1 Sch-G HPlcmt-south ZN",
+        "Sp-M SW Apartment Sys-1 Flr-1 Sch-G HPlcmt-south ZN",
+        "Sp-T NW Apartment Sys-1 Flr-2 Sch-G HPlcmt-north ZN",
+        "Sp-T N1 Apartment Sys-1 Flr-2 Sch-G HPlcmt-north ZN",
+        "Sp-T N2 Apartment Sys-1 Flr-2 Sch-G HPlcmt-north ZN",
+        "Sp-T NE Apartment Sys-1 Flr-2 Sch-G HPlcmt-north ZN",
+        "Sp-T Corridor Sys-1 Flr-2 Sch-G HPlcmt-west ZN",
+        "Sp-T S1 Apartment Sys-1 Flr-2 Sch-G HPlcmt-south ZN",
+        "Sp-T SW Apartment Sys-1 Flr-2 Sch-G HPlcmt-south ZN",
+        "Sp-T SE Apartment Sys-1 Flr-2 Sch-G HPlcmt-south ZN",
+        "Sp-T S2 Apartment Sys-1 Flr-2 Sch-G HPlcmt-south ZN",
+        "Sp-G NW Apartment Sys-1 Flr-3 Sch-G HPlcmt-north ZN",
+        "Sp-G N2 Apartment Sys-1 Flr-3 Sch-G HPlcmt-north ZN",
+        "Sp-G N1 Apartment Sys-1 Flr-3 Sch-G HPlcmt-north ZN",
+        "Sp-G NE Apartment Sys-1 Flr-3 Sch-G HPlcmt-north ZN",
+        "Sp-G Corridor Sys-1 Flr-3 Sch-G HPlcmt-east ZN",
+        "Sp-G S1 Apartment Sys-1 Flr-3 Sch-G HPlcmt-south ZN",
+        "Sp-G S2 Apartment Sys-1 Flr-3 Sch-G HPlcmt-south ZN",
+        "Sp-G SW Apartment Sys-1 Flr-3 Sch-G HPlcmt-south ZN"
+      ],
+      "total_floor_area_served": 2262.711374751054,
+      "supply_fan": {
+        "type": "CV",
+        "name": "Fan Constant Volume 1",
+        "fan_efficiency": 0.39975,
+        "motor_efficiency": 0.615,
+        "pressure_rise": 640.0,
+        "max_air_flow_rate": -1.0
+      },
+      "economizer": {
+        "name": "Controller Outdoor Air 1",
+        "control_type": "DifferentialEnthalpy"
+      },
+      "cooling_coils": {
+        "dx_single_speed": [
+          {
+            "name": "Coil Cooling DX Single Speed 1 84kBtu/hr 9.7EER",
+            "cop": 3.34254939197089,
+            "nominal_total_capacity_w": 25810.55
+          }
+        ],
+        "dx_two_speed": [
+
+        ]
+      },
+      "heating_coils": {
+        "coil_heating_gas": [
+
+        ],
+        "coil_heating_electric": [
+          {
+            "name": "Coil Heating Electric 1",
+            "type": "Electric"
+          }
+        ],
+        "coil_heating_water": [
+
+        ]
+      }
+    },
+    {
+      "name": "Sp-Office Sys-3 Flr-3 Sch-C HPlcmt-south ZN NECB System 3 PSZ",
+      "thermal_zones": [
+        "Sp-Office Sys-3 Flr-3 Sch-C HPlcmt-south ZN"
+      ],
+      "total_floor_area_served": 88.24927425738,
+      "supply_fan": {
+        "type": "CV",
+        "name": "Fan Constant Volume 28",
+        "fan_efficiency": 0.39975,
+        "motor_efficiency": 0.615,
+        "pressure_rise": 640.0,
+        "max_air_flow_rate": -1.0
+      },
+      "economizer": {
+        "name": "Controller Outdoor Air 2",
+        "control_type": "NoEconomizer"
+      },
+      "cooling_coils": {
+        "dx_single_speed": [
+          {
+            "name": "Coil Cooling DX Single Speed 28 18kBtu/hr 14.0SEER",
+            "cop": 3.8248,
+            "nominal_total_capacity_w": 5610.08
+          }
+        ],
+        "dx_two_speed": [
+
+        ]
+      },
+      "heating_coils": {
+        "coil_heating_gas": [
+
+        ],
+        "coil_heating_electric": [
+          {
+            "name": "Coil Heating Electric 28",
+            "type": "Electric"
+          }
+        ],
+        "coil_heating_water": [
+
+        ]
+      }
+    }
+  ],
+  "plant_loops": [
+    {
+      "name": "Main Service Water Loop",
+      "design_loop_exit_temperature": 60.0000000000001,
+      "loop_design_temperature_difference": 5.0,
+      "pumps": [
+        {
+          "name": "Service Water Loop Pump",
+          "type": "Pump:ConstantSpeed",
+          "head_pa": 0.01,
+          "water_flow_m3_per_s": 0.000127,
+          "electric_power_w": 0.0,
+          "motor_efficency": 0.7
+        }
+      ],
+      "boilers": [
+
+      ],
+      "chiller_electric_eir": [
+
+      ],
+      "cooling_tower_single_speed": [
+
+      ],
+      "water_heater_mixed": [
+        {
+          "name": "1150.0gal Electricity Water Heater - 1150kBtu/hr 1.0 Therm Eff",
+          "type": "WaterHeater:Mixed",
+          "heater_thermal_efficiency": 1.0,
+          "heater_fuel_type": "Electricity"
+        }
+      ]
+    }
+  ],
+  "eplusout_err": {
+    "warnings": [
+      " ** Warning ** IP: IDF line~201 Alpha Argument length exceeds maximum, will be truncated=  NECB 2011-MidriseApartment-NECB HDD Method-CAN_PE_Charlottetown.717060_CWEC.epw created: 2017-06-30 14:22:31 +000   **   ~~~   ** Will be processed as Alpha=NECB 2011-MIDRISEAPARTMENT-NECB HDD METHOD-CAN_PE_CHARLOTTETOWN.717060_CWEC.EPW CREATED: 2017-06-30 14:22:31 +0000",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"ECONOMIZER MAX OA FRACTION 100 PCT DEFAULT\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 1\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 10\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 11\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 12\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 13\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 14\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 15\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 16\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 17\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 18\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 19\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 2\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 20\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 21\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 22\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 23\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 24\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 25\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 26\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 27\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 28\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 29\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 30\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 31\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 32\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 33\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 34\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 35\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 36\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 37\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 38\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 39\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 40\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 41\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 42\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 43\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 44\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 45\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 46\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 47\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 48\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 49\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 50\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 51\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 52\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 53\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 54\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 55\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 56\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 57\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 58\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 59\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 6\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 60\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 61\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 62\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 63\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 64\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 65\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 66\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 67\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 68\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 69\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 7\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 70\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 71\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 72\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 73\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 74\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 75\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 76\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 77\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 78\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 79\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 8\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 9\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"ECONOMIZER MAX OA FRACTION 100 PCT\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 10\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 11\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 12\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 13\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 14\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 15\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 16\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 17\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 18\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 19\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 20\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 21\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 22\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 23\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 24\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 25\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 26\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 27\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 28\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 29\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 3\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 30\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 31\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 32\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 33\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 34\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 35\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 36\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 37\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 38\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 39\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 4\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 40\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 41\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 42\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 43\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 44\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 45\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 46\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 47\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 48\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 49\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 5\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 50\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 51\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 52\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 53\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 54\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 55\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 56\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 57\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 58\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 59\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 6\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 60\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 61\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 62\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 63\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 64\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 65\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 66\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 67\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 68\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 69\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 7\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 70\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 71\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 72\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 73\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 74\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 8\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 9\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Constant=\"ALWAYS OFF DISCRETE\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Constant=\"ALWAYS ON CONTINUOUS\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "CheckUsedConstructions: There are 26 nominally unused constructions in input.  For explicit details on each unused construction, use Output:Diagnostics,DisplayExtraWarnings;",
+      "GetDXCoils: Coil:Cooling:DX:SingleSpeed=\"COIL COOLING DX SINGLE SPEED 24 6KBTU/HR 11.0EER\", invalid  ...Part Load Fraction Correlation Curve Name = DXCOOL-NECB2011-REF-COOLPLFFPLR 16 has out of range value.  ...Curve maximum must be <= 1.0, curve max at PLR = 0.99 is 1.015  ...Setting curve maximum to 1.0 and simulation continues.",
+      "GetDXCoils: Coil:Cooling:DX:SingleSpeed=\"COIL COOLING DX SINGLE SPEED 22 5KBTU/HR 11.0EER\", invalid  ...Part Load Fraction Correlation Curve Name = DXCOOL-NECB2011-REF-COOLPLFFPLR 14 has out of range value.  ...Curve maximum must be <= 1.0, curve max at PLR = 0.99 is 1.015  ...Setting curve maximum to 1.0 and simulation continues.",
+      "GetDXCoils: Coil:Cooling:DX:SingleSpeed=\"COIL COOLING DX SINGLE SPEED 21 5KBTU/HR 11.0EER\", invalid  ...Part Load Fraction Correlation Curve Name = DXCOOL-NECB2011-REF-COOLPLFFPLR 13 has out of range value.  ...Curve maximum must be <= 1.0, curve max at PLR = 0.99 is 1.015  ...Setting curve maximum to 1.0 and simulation continues.",
+      "GetDXCoils: Coil:Cooling:DX:SingleSpeed=\"COIL COOLING DX SINGLE SPEED 23 9KBTU/HR 10.6EER\", invalid  ...Part Load Fraction Correlation Curve Name = DXCOOL-NECB2011-REF-COOLPLFFPLR 15 has out of range value.  ...Curve maximum must be <= 1.0, curve max at PLR = 0.99 is 1.015  ...Setting curve maximum to 1.0 and simulation continues.",
+      "GetDXCoils: Coil:Cooling:DX:SingleSpeed=\"COIL COOLING DX SINGLE SPEED 20 8KBTU/HR 10.7EER\", invalid  ...Part Load Fraction Correlation Curve Name = DXCOOL-NECB2011-REF-COOLPLFFPLR 12 has out of range value.  ...Curve maximum must be <= 1.0, curve max at PLR = 0.99 is 1.015  ...Setting curve maximum to 1.0 and simulation continues.",
+      "GetDXCoils: Coil:Cooling:DX:SingleSpeed=\"COIL COOLING DX SINGLE SPEED 25 6KBTU/HR 11.0EER\", invalid  ...Part Load Fraction Correlation Curve Name = DXCOOL-NECB2011-REF-COOLPLFFPLR 17 has out of range value.  ...Curve maximum must be <= 1.0, curve max at PLR = 0.99 is 1.015  ...Setting curve maximum to 1.0 and simulation continues.",
+      "GetDXCoils: Coil:Cooling:DX:SingleSpeed=\"COIL COOLING DX SINGLE SPEED 26 6KBTU/HR 11.0EER\", invalid  ...Part Load Fraction Correlation Curve Name = DXCOOL-NECB2011-REF-COOLPLFFPLR 18 has out of range value.  ...Curve maximum must be <= 1.0, curve max at PLR = 0.99 is 1.015  ...Setting curve maximum to 1.0 and simulation continues.",
+      "GetDXCoils: Coil:Cooling:DX:SingleSpeed=\"COIL COOLING DX SINGLE SPEED 27 9KBTU/HR 10.6EER\", invalid  ...Part Load Fraction Correlation Curve Name = DXCOOL-NECB2011-REF-COOLPLFFPLR 19 has out of range value.  ...Curve maximum must be <= 1.0, curve max at PLR = 0.99 is 1.015  ...Setting curve maximum to 1.0 and simulation continues.",
+      "GetDXCoils: Coil:Cooling:DX:SingleSpeed=\"COIL COOLING DX SINGLE SPEED 6 6KBTU/HR 11.0EER\", invalid  ...Part Load Fraction Correlation Curve Name = DXCOOL-NECB2011-REF-COOLPLFFPLR 24 has out of range value.  ...Curve maximum must be <= 1.0, curve max at PLR = 0.99 is 1.015  ...Setting curve maximum to 1.0 and simulation continues.",
+      "GetDXCoils: Coil:Cooling:DX:SingleSpeed=\"COIL COOLING DX SINGLE SPEED 4 5KBTU/HR 11.0EER\", invalid  ...Part Load Fraction Correlation Curve Name = DXCOOL-NECB2011-REF-COOLPLFFPLR 22 has out of range value.  ...Curve maximum must be <= 1.0, curve max at PLR = 0.99 is 1.015  ...Setting curve maximum to 1.0 and simulation continues.",
+      "GetDXCoils: Coil:Cooling:DX:SingleSpeed=\"COIL COOLING DX SINGLE SPEED 3 5KBTU/HR 11.0EER\", invalid  ...Part Load Fraction Correlation Curve Name = DXCOOL-NECB2011-REF-COOLPLFFPLR 21 has out of range value.  ...Curve maximum must be <= 1.0, curve max at PLR = 0.99 is 1.015  ...Setting curve maximum to 1.0 and simulation continues.",
+      "GetDXCoils: Coil:Cooling:DX:SingleSpeed=\"COIL COOLING DX SINGLE SPEED 2 9KBTU/HR 10.5EER\", invalid  ...Part Load Fraction Correlation Curve Name = DXCOOL-NECB2011-REF-COOLPLFFPLR 11 has out of range value.  ...Curve maximum must be <= 1.0, curve max at PLR = 0.99 is 1.015  ...Setting curve maximum to 1.0 and simulation continues.",
+      "GetDXCoils: Coil:Cooling:DX:SingleSpeed=\"COIL COOLING DX SINGLE SPEED 5 9KBTU/HR 10.5EER\", invalid  ...Part Load Fraction Correlation Curve Name = DXCOOL-NECB2011-REF-COOLPLFFPLR 23 has out of range value.  ...Curve maximum must be <= 1.0, curve max at PLR = 0.99 is 1.015  ...Setting curve maximum to 1.0 and simulation continues.",
+      "GetDXCoils: Coil:Cooling:DX:SingleSpeed=\"COIL COOLING DX SINGLE SPEED 7 7KBTU/HR 11.0EER\", invalid  ...Part Load Fraction Correlation Curve Name = DXCOOL-NECB2011-REF-COOLPLFFPLR 25 has out of range value.  ...Curve maximum must be <= 1.0, curve max at PLR = 0.99 is 1.015  ...Setting curve maximum to 1.0 and simulation continues.",
+      "GetDXCoils: Coil:Cooling:DX:SingleSpeed=\"COIL COOLING DX SINGLE SPEED 9 7KBTU/HR 11.0EER\", invalid  ...Part Load Fraction Correlation Curve Name = DXCOOL-NECB2011-REF-COOLPLFFPLR 27 has out of range value.  ...Curve maximum must be <= 1.0, curve max at PLR = 0.99 is 1.015  ...Setting curve maximum to 1.0 and simulation continues.",
+      "GetDXCoils: Coil:Cooling:DX:SingleSpeed=\"COIL COOLING DX SINGLE SPEED 8 10KBTU/HR 10.5EER\", invalid  ...Part Load Fraction Correlation Curve Name = DXCOOL-NECB2011-REF-COOLPLFFPLR 26 has out of range value.  ...Curve maximum must be <= 1.0, curve max at PLR = 0.99 is 1.015  ...Setting curve maximum to 1.0 and simulation continues.",
+      "GetDXCoils: Coil:Cooling:DX:SingleSpeed=\"COIL COOLING DX SINGLE SPEED 10 11KBTU/HR 10.3EER\", invalid  ...Part Load Fraction Correlation Curve Name = DXCOOL-NECB2011-REF-COOLPLFFPLR 1 has out of range value.  ...Curve maximum must be <= 1.0, curve max at PLR = 0.99 is 1.015  ...Setting curve maximum to 1.0 and simulation continues.",
+      "GetDXCoils: Coil:Cooling:DX:SingleSpeed=\"COIL COOLING DX SINGLE SPEED 15 11KBTU/HR 10.2EER\", invalid  ...Part Load Fraction Correlation Curve Name = DXCOOL-NECB2011-REF-COOLPLFFPLR 6 has out of range value.  ...Curve maximum must be <= 1.0, curve max at PLR = 0.99 is 1.015  ...Setting curve maximum to 1.0 and simulation continues.",
+      "GetDXCoils: Coil:Cooling:DX:SingleSpeed=\"COIL COOLING DX SINGLE SPEED 12 10KBTU/HR 10.4EER\", invalid  ...Part Load Fraction Correlation Curve Name = DXCOOL-NECB2011-REF-COOLPLFFPLR 3 has out of range value.  ...Curve maximum must be <= 1.0, curve max at PLR = 0.99 is 1.015  ...Setting curve maximum to 1.0 and simulation continues.",
+      "GetDXCoils: Coil:Cooling:DX:SingleSpeed=\"COIL COOLING DX SINGLE SPEED 13 10KBTU/HR 10.4EER\", invalid  ...Part Load Fraction Correlation Curve Name = DXCOOL-NECB2011-REF-COOLPLFFPLR 4 has out of range value.  ...Curve maximum must be <= 1.0, curve max at PLR = 0.99 is 1.015  ...Setting curve maximum to 1.0 and simulation continues.",
+      "GetDXCoils: Coil:Cooling:DX:SingleSpeed=\"COIL COOLING DX SINGLE SPEED 14 11KBTU/HR 10.2EER\", invalid  ...Part Load Fraction Correlation Curve Name = DXCOOL-NECB2011-REF-COOLPLFFPLR 5 has out of range value.  ...Curve maximum must be <= 1.0, curve max at PLR = 0.99 is 1.015  ...Setting curve maximum to 1.0 and simulation continues.",
+      "GetDXCoils: Coil:Cooling:DX:SingleSpeed=\"COIL COOLING DX SINGLE SPEED 11 11KBTU/HR 10.1EER\", invalid  ...Part Load Fraction Correlation Curve Name = DXCOOL-NECB2011-REF-COOLPLFFPLR 2 has out of range value.  ...Curve maximum must be <= 1.0, curve max at PLR = 0.99 is 1.015  ...Setting curve maximum to 1.0 and simulation continues.",
+      "GetDXCoils: Coil:Cooling:DX:SingleSpeed=\"COIL COOLING DX SINGLE SPEED 16 10KBTU/HR 10.4EER\", invalid  ...Part Load Fraction Correlation Curve Name = DXCOOL-NECB2011-REF-COOLPLFFPLR 7 has out of range value.  ...Curve maximum must be <= 1.0, curve max at PLR = 0.99 is 1.015  ...Setting curve maximum to 1.0 and simulation continues.",
+      "GetDXCoils: Coil:Cooling:DX:SingleSpeed=\"COIL COOLING DX SINGLE SPEED 19 10KBTU/HR 10.4EER\", invalid  ...Part Load Fraction Correlation Curve Name = DXCOOL-NECB2011-REF-COOLPLFFPLR 10 has out of range value.  ...Curve maximum must be <= 1.0, curve max at PLR = 0.99 is 1.015  ...Setting curve maximum to 1.0 and simulation continues.",
+      "GetDXCoils: Coil:Cooling:DX:SingleSpeed=\"COIL COOLING DX SINGLE SPEED 18 11KBTU/HR 10.1EER\", invalid  ...Part Load Fraction Correlation Curve Name = DXCOOL-NECB2011-REF-COOLPLFFPLR 9 has out of range value.  ...Curve maximum must be <= 1.0, curve max at PLR = 0.99 is 1.015  ...Setting curve maximum to 1.0 and simulation continues.",
+      "GetDXCoils: Coil:Cooling:DX:SingleSpeed=\"COIL COOLING DX SINGLE SPEED 17 13KBTU/HR 9.8EER\", invalid  ...Part Load Fraction Correlation Curve Name = DXCOOL-NECB2011-REF-COOLPLFFPLR 8 has out of range value.  ...Curve maximum must be <= 1.0, curve max at PLR = 0.99 is 1.015  ...Setting curve maximum to 1.0 and simulation continues.",
+      "GetDXCoils: Coil:Cooling:DX:SingleSpeed=\"COIL COOLING DX SINGLE SPEED 1 84KBTU/HR 9.7EER\", invalid  ...Part Load Fraction Correlation Curve Name = DXCOOL-NECB2011-REF-COOLPLFFPLR has out of range value.  ...Curve maximum must be <= 1.0, curve max at PLR = 0.99 is 1.015  ...Setting curve maximum to 1.0 and simulation continues.",
+      "GetDXCoils: Coil:Cooling:DX:SingleSpeed=\"COIL COOLING DX SINGLE SPEED 28 18KBTU/HR 14.0SEER\", invalid  ...Part Load Fraction Correlation Curve Name = DXCOOL-NECB2011-REF-COOLPLFFPLR 20 has out of range value.  ...Curve maximum must be <= 1.0, curve max at PLR = 0.99 is 1.015  ...Setting curve maximum to 1.0 and simulation continues.",
+      "The Standard Ratings is calculated for Coil:Cooling:DX:SingleSpeed = COIL COOLING DX SINGLE SPEED 24 6KBTU/HR 11.0EER but not at the AHRI test condition due to curve out of bound.   Review the Standard Ratings calculations in the Engineering Reference for this coil type. Also, use Output:Diagnostics, DisplayExtraWarnings for further guidance.",
+      "The Standard Ratings is calculated for Coil:Cooling:DX:SingleSpeed = COIL COOLING DX SINGLE SPEED 22 5KBTU/HR 11.0EER but not at the AHRI test condition due to curve out of bound.   Review the Standard Ratings calculations in the Engineering Reference for this coil type. Also, use Output:Diagnostics, DisplayExtraWarnings for further guidance.",
+      "The Standard Ratings is calculated for Coil:Cooling:DX:SingleSpeed = COIL COOLING DX SINGLE SPEED 21 5KBTU/HR 11.0EER but not at the AHRI test condition due to curve out of bound.   Review the Standard Ratings calculations in the Engineering Reference for this coil type. Also, use Output:Diagnostics, DisplayExtraWarnings for further guidance.",
+      "The Standard Ratings is calculated for Coil:Cooling:DX:SingleSpeed = COIL COOLING DX SINGLE SPEED 23 9KBTU/HR 10.6EER but not at the AHRI test condition due to curve out of bound.   Review the Standard Ratings calculations in the Engineering Reference for this coil type. Also, use Output:Diagnostics, DisplayExtraWarnings for further guidance.",
+      "The Standard Ratings is calculated for Coil:Cooling:DX:SingleSpeed = COIL COOLING DX SINGLE SPEED 20 8KBTU/HR 10.7EER but not at the AHRI test condition due to curve out of bound.   Review the Standard Ratings calculations in the Engineering Reference for this coil type. Also, use Output:Diagnostics, DisplayExtraWarnings for further guidance.",
+      "The Standard Ratings is calculated for Coil:Cooling:DX:SingleSpeed = COIL COOLING DX SINGLE SPEED 25 6KBTU/HR 11.0EER but not at the AHRI test condition due to curve out of bound.   Review the Standard Ratings calculations in the Engineering Reference for this coil type. Also, use Output:Diagnostics, DisplayExtraWarnings for further guidance.",
+      "The Standard Ratings is calculated for Coil:Cooling:DX:SingleSpeed = COIL COOLING DX SINGLE SPEED 26 6KBTU/HR 11.0EER but not at the AHRI test condition due to curve out of bound.   Review the Standard Ratings calculations in the Engineering Reference for this coil type. Also, use Output:Diagnostics, DisplayExtraWarnings for further guidance.",
+      "The Standard Ratings is calculated for Coil:Cooling:DX:SingleSpeed = COIL COOLING DX SINGLE SPEED 27 9KBTU/HR 10.6EER but not at the AHRI test condition due to curve out of bound.   Review the Standard Ratings calculations in the Engineering Reference for this coil type. Also, use Output:Diagnostics, DisplayExtraWarnings for further guidance.",
+      "The Standard Ratings is calculated for Coil:Cooling:DX:SingleSpeed = COIL COOLING DX SINGLE SPEED 6 6KBTU/HR 11.0EER but not at the AHRI test condition due to curve out of bound.   Review the Standard Ratings calculations in the Engineering Reference for this coil type. Also, use Output:Diagnostics, DisplayExtraWarnings for further guidance.",
+      "The Standard Ratings is calculated for Coil:Cooling:DX:SingleSpeed = COIL COOLING DX SINGLE SPEED 4 5KBTU/HR 11.0EER but not at the AHRI test condition due to curve out of bound.   Review the Standard Ratings calculations in the Engineering Reference for this coil type. Also, use Output:Diagnostics, DisplayExtraWarnings for further guidance.",
+      "The Standard Ratings is calculated for Coil:Cooling:DX:SingleSpeed = COIL COOLING DX SINGLE SPEED 3 5KBTU/HR 11.0EER but not at the AHRI test condition due to curve out of bound.   Review the Standard Ratings calculations in the Engineering Reference for this coil type. Also, use Output:Diagnostics, DisplayExtraWarnings for further guidance.",
+      "The Standard Ratings is calculated for Coil:Cooling:DX:SingleSpeed = COIL COOLING DX SINGLE SPEED 2 9KBTU/HR 10.5EER but not at the AHRI test condition due to curve out of bound.   Review the Standard Ratings calculations in the Engineering Reference for this coil type. Also, use Output:Diagnostics, DisplayExtraWarnings for further guidance.",
+      "The Standard Ratings is calculated for Coil:Cooling:DX:SingleSpeed = COIL COOLING DX SINGLE SPEED 5 9KBTU/HR 10.5EER but not at the AHRI test condition due to curve out of bound.   Review the Standard Ratings calculations in the Engineering Reference for this coil type. Also, use Output:Diagnostics, DisplayExtraWarnings for further guidance.",
+      "The Standard Ratings is calculated for Coil:Cooling:DX:SingleSpeed = COIL COOLING DX SINGLE SPEED 7 7KBTU/HR 11.0EER but not at the AHRI test condition due to curve out of bound.   Review the Standard Ratings calculations in the Engineering Reference for this coil type. Also, use Output:Diagnostics, DisplayExtraWarnings for further guidance.",
+      "The Standard Ratings is calculated for Coil:Cooling:DX:SingleSpeed = COIL COOLING DX SINGLE SPEED 9 7KBTU/HR 11.0EER but not at the AHRI test condition due to curve out of bound.   Review the Standard Ratings calculations in the Engineering Reference for this coil type. Also, use Output:Diagnostics, DisplayExtraWarnings for further guidance.",
+      "The Standard Ratings is calculated for Coil:Cooling:DX:SingleSpeed = COIL COOLING DX SINGLE SPEED 8 10KBTU/HR 10.5EER but not at the AHRI test condition due to curve out of bound.   Review the Standard Ratings calculations in the Engineering Reference for this coil type. Also, use Output:Diagnostics, DisplayExtraWarnings for further guidance.",
+      "The Standard Ratings is calculated for Coil:Cooling:DX:SingleSpeed = COIL COOLING DX SINGLE SPEED 10 11KBTU/HR 10.3EER but not at the AHRI test condition due to curve out of bound.   Review the Standard Ratings calculations in the Engineering Reference for this coil type. Also, use Output:Diagnostics, DisplayExtraWarnings for further guidance.",
+      "The Standard Ratings is calculated for Coil:Cooling:DX:SingleSpeed = COIL COOLING DX SINGLE SPEED 15 11KBTU/HR 10.2EER but not at the AHRI test condition due to curve out of bound.   Review the Standard Ratings calculations in the Engineering Reference for this coil type. Also, use Output:Diagnostics, DisplayExtraWarnings for further guidance.",
+      "The Standard Ratings is calculated for Coil:Cooling:DX:SingleSpeed = COIL COOLING DX SINGLE SPEED 12 10KBTU/HR 10.4EER but not at the AHRI test condition due to curve out of bound.   Review the Standard Ratings calculations in the Engineering Reference for this coil type. Also, use Output:Diagnostics, DisplayExtraWarnings for further guidance.",
+      "The Standard Ratings is calculated for Coil:Cooling:DX:SingleSpeed = COIL COOLING DX SINGLE SPEED 13 10KBTU/HR 10.4EER but not at the AHRI test condition due to curve out of bound.   Review the Standard Ratings calculations in the Engineering Reference for this coil type. Also, use Output:Diagnostics, DisplayExtraWarnings for further guidance.",
+      "The Standard Ratings is calculated for Coil:Cooling:DX:SingleSpeed = COIL COOLING DX SINGLE SPEED 14 11KBTU/HR 10.2EER but not at the AHRI test condition due to curve out of bound.   Review the Standard Ratings calculations in the Engineering Reference for this coil type. Also, use Output:Diagnostics, DisplayExtraWarnings for further guidance.",
+      "The Standard Ratings is calculated for Coil:Cooling:DX:SingleSpeed = COIL COOLING DX SINGLE SPEED 11 11KBTU/HR 10.1EER but not at the AHRI test condition due to curve out of bound.   Review the Standard Ratings calculations in the Engineering Reference for this coil type. Also, use Output:Diagnostics, DisplayExtraWarnings for further guidance.",
+      "The Standard Ratings is calculated for Coil:Cooling:DX:SingleSpeed = COIL COOLING DX SINGLE SPEED 16 10KBTU/HR 10.4EER but not at the AHRI test condition due to curve out of bound.   Review the Standard Ratings calculations in the Engineering Reference for this coil type. Also, use Output:Diagnostics, DisplayExtraWarnings for further guidance.",
+      "The Standard Ratings is calculated for Coil:Cooling:DX:SingleSpeed = COIL COOLING DX SINGLE SPEED 19 10KBTU/HR 10.4EER but not at the AHRI test condition due to curve out of bound.   Review the Standard Ratings calculations in the Engineering Reference for this coil type. Also, use Output:Diagnostics, DisplayExtraWarnings for further guidance.",
+      "The Standard Ratings is calculated for Coil:Cooling:DX:SingleSpeed = COIL COOLING DX SINGLE SPEED 18 11KBTU/HR 10.1EER but not at the AHRI test condition due to curve out of bound.   Review the Standard Ratings calculations in the Engineering Reference for this coil type. Also, use Output:Diagnostics, DisplayExtraWarnings for further guidance.",
+      "The Standard Ratings is calculated for Coil:Cooling:DX:SingleSpeed = COIL COOLING DX SINGLE SPEED 17 13KBTU/HR 9.8EER but not at the AHRI test condition due to curve out of bound.   Review the Standard Ratings calculations in the Engineering Reference for this coil type. Also, use Output:Diagnostics, DisplayExtraWarnings for further guidance.",
+      "The Standard Ratings is calculated for Coil:Cooling:DX:SingleSpeed = COIL COOLING DX SINGLE SPEED 1 84KBTU/HR 9.7EER but not at the AHRI test condition due to curve out of bound.   Review the Standard Ratings calculations in the Engineering Reference for this coil type. Also, use Output:Diagnostics, DisplayExtraWarnings for further guidance.",
+      "The Standard Ratings is calculated for Coil:Cooling:DX:SingleSpeed = COIL COOLING DX SINGLE SPEED 28 18KBTU/HR 14.0SEER but not at the AHRI test condition due to curve out of bound.   Review the Standard Ratings calculations in the Engineering Reference for this coil type. Also, use Output:Diagnostics, DisplayExtraWarnings for further guidance.",
+      "Output:Meter: invalid Name=\"GAS:FACILITY\" - not found.",
+      "Output:Meter: invalid Name=\"DISTRICTCOOLING:FACILITY\" - not found.",
+      "Output:Meter: invalid Name=\"DISTRICTHEATING:FACILITY\" - not found.",
+      "Output:Meter:MeterFileOnly: invalid Name=\"GAS:FACILITY\" - not found.",
+      "Output:Meter:MeterFileOnly: invalid Name=\"GAS:FACILITY\" - not found.",
+      "Output:Meter:MeterFileOnly requested for \"Electricity:Facility\" (TimeStep), already on \"Output:Meter\". Will report to both eplusout.eso and eplusout.mtr",
+      "CalcDoe2DXCoil: Coil:Cooling:DX:SingleSpeed \"COIL COOLING DX SINGLE SPEED 25 6KBTU/HR 11.0EER\" - Air-cooled condenser inlet dry-bulb temperature below 0 C. Outdoor dry-bulb temperature = -14.40   ... Occurrence info = RUN PERIOD 1, 01/01 10:50 - 10:55  ... Operation at low ambient temperatures may require special performance curves.",
+      "CalcDoe2DXCoil: Coil:Cooling:DX:SingleSpeed \"COIL COOLING DX SINGLE SPEED 25 6KBTU/HR 11.0EER\" - Full load outlet air dry-bulb temperature < 2C. This indicates the possibility of coil frost/freeze. Outlet temperature = -0.77 C.   ...Occurrence info = RUN PERIOD 1, 01/01 10:50 - 10:55  ... Possible reasons for low outlet air dry-bulb temperatures are: This DX coil     1) may have a low inlet air dry-bulb temperature. Inlet air temperature = 12.608 C.     2) may have a low air flow rate per watt of cooling capacity. Check inputs.     3) is used as part of a HX assisted cooling coil which uses a high sensible effectiveness. Check inputs.",
+      "CalcDoe2DXCoil: Coil:Cooling:DX:SingleSpeed \"COIL COOLING DX SINGLE SPEED 26 6KBTU/HR 11.0EER\" - Air-cooled condenser inlet dry-bulb temperature below 0 C. Outdoor dry-bulb temperature = -14.40   ... Occurrence info = RUN PERIOD 1, 01/01 10:50 - 10:55  ... Operation at low ambient temperatures may require special performance curves.",
+      "CalcDoe2DXCoil: Coil:Cooling:DX:SingleSpeed \"COIL COOLING DX SINGLE SPEED 26 6KBTU/HR 11.0EER\" - Full load outlet air dry-bulb temperature < 2C. This indicates the possibility of coil frost/freeze. Outlet temperature = -0.22 C.   ...Occurrence info = RUN PERIOD 1, 01/01 10:50 - 10:55  ... Possible reasons for low outlet air dry-bulb temperatures are: This DX coil     1) may have a low inlet air dry-bulb temperature. Inlet air temperature = 13.022 C.     2) may have a low air flow rate per watt of cooling capacity. Check inputs.     3) is used as part of a HX assisted cooling coil which uses a high sensible effectiveness. Check inputs.",
+      "CalcDoe2DXCoil: Coil:Cooling:DX:SingleSpeed \"COIL COOLING DX SINGLE SPEED 27 9KBTU/HR 10.6EER\" - Air-cooled condenser inlet dry-bulb temperature below 0 C. Outdoor dry-bulb temperature = -14.13   ... Occurrence info = RUN PERIOD 1, 01/01 11:05 - 11:10  ... Operation at low ambient temperatures may require special performance curves.",
+      "CalcDoe2DXCoil: Coil:Cooling:DX:SingleSpeed \"COIL COOLING DX SINGLE SPEED 7 7KBTU/HR 11.0EER\" - Air-cooled condenser inlet dry-bulb temperature below 0 C. Outdoor dry-bulb temperature = -13.85   ... Occurrence info = RUN PERIOD 1, 01/01 11:23 - 11:30  ... Operation at low ambient temperatures may require special performance curves.",
+      "CalcDoe2DXCoil: Coil:Cooling:DX:SingleSpeed \"COIL COOLING DX SINGLE SPEED 7 7KBTU/HR 11.0EER\" - Full load outlet air dry-bulb temperature < 2C. This indicates the possibility of coil frost/freeze. Outlet temperature = 1.01 C.   ...Occurrence info = RUN PERIOD 1, 01/01 11:23 - 11:30  ... Possible reasons for low outlet air dry-bulb temperatures are: This DX coil     1) may have a low inlet air dry-bulb temperature. Inlet air temperature = 14.104 C.     2) may have a low air flow rate per watt of cooling capacity. Check inputs.     3) is used as part of a HX assisted cooling coil which uses a high sensible effectiveness. Check inputs.",
+      "CalcDoe2DXCoil: Coil:Cooling:DX:SingleSpeed \"COIL COOLING DX SINGLE SPEED 9 7KBTU/HR 11.0EER\" - Air-cooled condenser inlet dry-bulb temperature below 0 C. Outdoor dry-bulb temperature = -13.85   ... Occurrence info = RUN PERIOD 1, 01/01 11:23 - 11:30  ... Operation at low ambient temperatures may require special performance curves.",
+      "CalcDoe2DXCoil: Coil:Cooling:DX:SingleSpeed \"COIL COOLING DX SINGLE SPEED 9 7KBTU/HR 11.0EER\" - Full load outlet air dry-bulb temperature < 2C. This indicates the possibility of coil frost/freeze. Outlet temperature = 1.25 C.   ...Occurrence info = RUN PERIOD 1, 01/01 11:23 - 11:30  ... Possible reasons for low outlet air dry-bulb temperatures are: This DX coil     1) may have a low inlet air dry-bulb temperature. Inlet air temperature = 14.293 C.     2) may have a low air flow rate per watt of cooling capacity. Check inputs.     3) is used as part of a HX assisted cooling coil which uses a high sensible effectiveness. Check inputs.",
+      "CalcDoe2DXCoil: Coil:Cooling:DX:SingleSpeed \"COIL COOLING DX SINGLE SPEED 8 10KBTU/HR 10.5EER\" - Air-cooled condenser inlet dry-bulb temperature below 0 C. Outdoor dry-bulb temperature = -13.58   ... Occurrence info = RUN PERIOD 1, 01/01 11:30 - 11:38  ... Operation at low ambient temperatures may require special performance curves.",
+      "CalcDoe2DXCoil: Coil:Cooling:DX:SingleSpeed \"COIL COOLING DX SINGLE SPEED 10 11KBTU/HR 10.3EER\" - Air-cooled condenser inlet dry-bulb temperature below 0 C. Outdoor dry-bulb temperature = -13.30   ... Occurrence info = RUN PERIOD 1, 01/01 11:45 - 11:52  ... Operation at low ambient temperatures may require special performance curves.",
+      "CalcDoe2DXCoil: Coil:Cooling:DX:SingleSpeed \"COIL COOLING DX SINGLE SPEED 16 10KBTU/HR 10.4EER\" - Air-cooled condenser inlet dry-bulb temperature below 0 C. Outdoor dry-bulb temperature = -13.30   ... Occurrence info = RUN PERIOD 1, 01/01 11:45 - 11:52  ... Operation at low ambient temperatures may require special performance curves.",
+      "CalcDoe2DXCoil: Coil:Cooling:DX:SingleSpeed \"COIL COOLING DX SINGLE SPEED 19 10KBTU/HR 10.4EER\" - Air-cooled condenser inlet dry-bulb temperature below 0 C. Outdoor dry-bulb temperature = -13.30   ... Occurrence info = RUN PERIOD 1, 01/01 11:45 - 11:52  ... Operation at low ambient temperatures may require special performance curves.",
+      "CalcDoe2DXCoil: Coil:Cooling:DX:SingleSpeed \"COIL COOLING DX SINGLE SPEED 18 11KBTU/HR 10.1EER\" - Air-cooled condenser inlet dry-bulb temperature below 0 C. Outdoor dry-bulb temperature = -13.18   ... Occurrence info = RUN PERIOD 1, 01/01 12:00 - 12:08  ... Operation at low ambient temperatures may require special performance curves.",
+      "CalcDoe2DXCoil: Coil:Cooling:DX:SingleSpeed \"COIL COOLING DX SINGLE SPEED 17 13KBTU/HR 9.8EER\" - Air-cooled condenser inlet dry-bulb temperature below 0 C. Outdoor dry-bulb temperature = -13.05   ... Occurrence info = RUN PERIOD 1, 01/01 12:23 - 12:30  ... Operation at low ambient temperatures may require special performance curves.",
+      "CalcDoe2DXCoil: Coil:Cooling:DX:SingleSpeed \"COIL COOLING DX SINGLE SPEED 28 18KBTU/HR 14.0SEER\" - Full load outlet air dry-bulb temperature < 2C. This indicates the possibility of coil frost/freeze. Outlet temperature = -5.08E-002 C.   ...Occurrence info = RUN PERIOD 1, 01/10 12:08 - 12:15  ... Possible reasons for low outlet air dry-bulb temperatures are: This DX coil     1) may have a low inlet air dry-bulb temperature. Inlet air temperature = 12.291 C.     2) may have a low air flow rate per watt of cooling capacity. Check inputs.     3) is used as part of a HX assisted cooling coil which uses a high sensible effectiveness. Check inputs.",
+      "CalcDoe2DXCoil: Coil:Cooling:DX:SingleSpeed \"COIL COOLING DX SINGLE SPEED 6 6KBTU/HR 11.0EER\" - Air-cooled condenser inlet dry-bulb temperature below 0 C. Outdoor dry-bulb temperature = -6.90   ... Occurrence info = RUN PERIOD 1, 02/09 14:45 - 15:00  ... Operation at low ambient temperatures may require special performance curves.",
+      "CalcDoe2DXCoil: Coil:Cooling:DX:SingleSpeed \"COIL COOLING DX SINGLE SPEED 24 6KBTU/HR 11.0EER\" - Air-cooled condenser inlet dry-bulb temperature below 0 C. Outdoor dry-bulb temperature = -5.30   ... Occurrence info = RUN PERIOD 1, 02/11 14:45 - 15:00  ... Operation at low ambient temperatures may require special performance curves.",
+      "CalcDoe2DXCoil: Coil:Cooling:DX:SingleSpeed \"COIL COOLING DX SINGLE SPEED 15 11KBTU/HR 10.2EER\" - Air-cooled condenser inlet dry-bulb temperature below 0 C. Outdoor dry-bulb temperature = -1.10   ... Occurrence info = RUN PERIOD 1, 03/11 12:45 - 13:00  ... Operation at low ambient temperatures may require special performance curves.",
+      "CalcDoe2DXCoil: Coil:Cooling:DX:SingleSpeed \"COIL COOLING DX SINGLE SPEED 11 11KBTU/HR 10.1EER\" - Air-cooled condenser inlet dry-bulb temperature below 0 C. Outdoor dry-bulb temperature = -0.43   ... Occurrence info = RUN PERIOD 1, 03/11 15:00 - 15:15  ... Operation at low ambient temperatures may require special performance curves.",
+      "CalcDoe2DXCoil: Coil:Cooling:DX:SingleSpeed \"COIL COOLING DX SINGLE SPEED 20 8KBTU/HR 10.7EER\" - Air-cooled condenser inlet dry-bulb temperature below 0 C. Outdoor dry-bulb temperature = -1.28   ... Occurrence info = RUN PERIOD 1, 03/11 15:30 - 15:38  ... Operation at low ambient temperatures may require special performance curves.",
+      "CalcDoe2DXCoil: Coil:Cooling:DX:SingleSpeed \"COIL COOLING DX SINGLE SPEED 5 9KBTU/HR 10.5EER\" - Air-cooled condenser inlet dry-bulb temperature below 0 C. Outdoor dry-bulb temperature = -1.98   ... Occurrence info = RUN PERIOD 1, 03/11 16:00 - 16:08  ... Operation at low ambient temperatures may require special performance curves.",
+      "CalcDoe2DXCoil: Coil:Cooling:DX:SingleSpeed \"COIL COOLING DX SINGLE SPEED 4 5KBTU/HR 11.0EER\" - Air-cooled condenser inlet dry-bulb temperature below 0 C. Outdoor dry-bulb temperature = -0.30   ... Occurrence info = RUN PERIOD 1, 04/12 19:15 - 19:30  ... Operation at low ambient temperatures may require special performance curves.",
+      "CalcDoe2DXCoil: Coil:Cooling:DX:SingleSpeed \"COIL COOLING DX SINGLE SPEED 3 5KBTU/HR 11.0EER\" - Air-cooled condenser inlet dry-bulb temperature below 0 C. Outdoor dry-bulb temperature = -0.65   ... Occurrence info = RUN PERIOD 1, 04/12 19:30 - 19:45  ... Operation at low ambient temperatures may require special performance curves.",
+      "CalcDoe2DXCoil: Coil:Cooling:DX:SingleSpeed \"COIL COOLING DX SINGLE SPEED 3 5KBTU/HR 11.0EER\" - Full load outlet air dry-bulb temperature < 2C. This indicates the possibility of coil frost/freeze. Outlet temperature = 1.92 C.   ...Occurrence info = RUN PERIOD 1, 04/24 23:30 - 23:45  ... Possible reasons for low outlet air dry-bulb temperatures are: This DX coil     1) may have a low inlet air dry-bulb temperature. Inlet air temperature = 15.159 C.     2) may have a low air flow rate per watt of cooling capacity. Check inputs.     3) is used as part of a HX assisted cooling coil which uses a high sensible effectiveness. Check inputs.",
+      "CalcDoe2DXCoil: Coil:Cooling:DX:SingleSpeed \"COIL COOLING DX SINGLE SPEED 21 5KBTU/HR 11.0EER\" - Full load outlet air dry-bulb temperature < 2C. This indicates the possibility of coil frost/freeze. Outlet temperature = 2.00 C.   ...Occurrence info = RUN PERIOD 1, 05/04 19:45 - 20:00  ... Possible reasons for low outlet air dry-bulb temperatures are: This DX coil     1) may have a low inlet air dry-bulb temperature. Inlet air temperature = 14.578 C.     2) may have a low air flow rate per watt of cooling capacity. Check inputs.     3) is used as part of a HX assisted cooling coil which uses a high sensible effectiveness. Check inputs.",
+      "CalcDoe2DXCoil: Coil:Cooling:DX:SingleSpeed \"COIL COOLING DX SINGLE SPEED 1 84KBTU/HR 9.7EER\" - Full load outlet air dry-bulb temperature < 2C. This indicates the possibility of coil frost/freeze. Outlet temperature = -2.99E-002 C.   ...Occurrence info = RUN PERIOD 1, 05/14 13:15 - 13:30  ... Possible reasons for low outlet air dry-bulb temperatures are: This DX coil     1) may have a low inlet air dry-bulb temperature. Inlet air temperature = 18.950 C.     2) may have a low air flow rate per watt of cooling capacity. Check inputs.     3) is used as part of a HX assisted cooling coil which uses a high sensible effectiveness. Check inputs.",
+      "CalcDoe2DXCoil: Coil:Cooling:DX:SingleSpeed=\"COIL COOLING DX SINGLE SPEED 25 6KBTU/HR 11.0EER\" - Low condenser dry-bulb temperature error continues...",
+      "CalcDoe2DXCoil: Coil:Cooling:DX:SingleSpeed=\"COIL COOLING DX SINGLE SPEED 25 6KBTU/HR 11.0EER\" - Full load outlet temperature indicates a possibility of frost/freeze error continues. Outlet air temperature statistics follow:",
+      "CalcDoe2DXCoil: Coil:Cooling:DX:SingleSpeed=\"COIL COOLING DX SINGLE SPEED 26 6KBTU/HR 11.0EER\" - Low condenser dry-bulb temperature error continues...",
+      "CalcDoe2DXCoil: Coil:Cooling:DX:SingleSpeed=\"COIL COOLING DX SINGLE SPEED 26 6KBTU/HR 11.0EER\" - Full load outlet temperature indicates a possibility of frost/freeze error continues. Outlet air temperature statistics follow:",
+      "CalcDoe2DXCoil: Coil:Cooling:DX:SingleSpeed=\"COIL COOLING DX SINGLE SPEED 27 9KBTU/HR 10.6EER\" - Low condenser dry-bulb temperature error continues...",
+      "CalcDoe2DXCoil: Coil:Cooling:DX:SingleSpeed=\"COIL COOLING DX SINGLE SPEED 7 7KBTU/HR 11.0EER\" - Low condenser dry-bulb temperature error continues...",
+      "CalcDoe2DXCoil: Coil:Cooling:DX:SingleSpeed=\"COIL COOLING DX SINGLE SPEED 7 7KBTU/HR 11.0EER\" - Full load outlet temperature indicates a possibility of frost/freeze error continues. Outlet air temperature statistics follow:",
+      "CalcDoe2DXCoil: Coil:Cooling:DX:SingleSpeed=\"COIL COOLING DX SINGLE SPEED 9 7KBTU/HR 11.0EER\" - Low condenser dry-bulb temperature error continues...",
+      "CalcDoe2DXCoil: Coil:Cooling:DX:SingleSpeed=\"COIL COOLING DX SINGLE SPEED 9 7KBTU/HR 11.0EER\" - Full load outlet temperature indicates a possibility of frost/freeze error continues. Outlet air temperature statistics follow:",
+      "CalcDoe2DXCoil: Coil:Cooling:DX:SingleSpeed=\"COIL COOLING DX SINGLE SPEED 8 10KBTU/HR 10.5EER\" - Low condenser dry-bulb temperature error continues...",
+      "CalcDoe2DXCoil: Coil:Cooling:DX:SingleSpeed=\"COIL COOLING DX SINGLE SPEED 10 11KBTU/HR 10.3EER\" - Low condenser dry-bulb temperature error continues...",
+      "CalcDoe2DXCoil: Coil:Cooling:DX:SingleSpeed=\"COIL COOLING DX SINGLE SPEED 16 10KBTU/HR 10.4EER\" - Low condenser dry-bulb temperature error continues...",
+      "CalcDoe2DXCoil: Coil:Cooling:DX:SingleSpeed=\"COIL COOLING DX SINGLE SPEED 19 10KBTU/HR 10.4EER\" - Low condenser dry-bulb temperature error continues...",
+      "CalcDoe2DXCoil: Coil:Cooling:DX:SingleSpeed=\"COIL COOLING DX SINGLE SPEED 18 11KBTU/HR 10.1EER\" - Low condenser dry-bulb temperature error continues...",
+      "CalcDoe2DXCoil: Coil:Cooling:DX:SingleSpeed=\"COIL COOLING DX SINGLE SPEED 17 13KBTU/HR 9.8EER\" - Low condenser dry-bulb temperature error continues...",
+      "CalcDoe2DXCoil: Coil:Cooling:DX:SingleSpeed=\"COIL COOLING DX SINGLE SPEED 28 18KBTU/HR 14.0SEER\" - Full load outlet temperature indicates a possibility of frost/freeze error continues. Outlet air temperature statistics follow:",
+      "CalcDoe2DXCoil: Coil:Cooling:DX:SingleSpeed=\"COIL COOLING DX SINGLE SPEED 6 6KBTU/HR 11.0EER\" - Low condenser dry-bulb temperature error continues...",
+      "CalcDoe2DXCoil: Coil:Cooling:DX:SingleSpeed=\"COIL COOLING DX SINGLE SPEED 24 6KBTU/HR 11.0EER\" - Low condenser dry-bulb temperature error continues...",
+      "CalcDoe2DXCoil: Coil:Cooling:DX:SingleSpeed=\"COIL COOLING DX SINGLE SPEED 15 11KBTU/HR 10.2EER\" - Low condenser dry-bulb temperature error continues...",
+      "CalcDoe2DXCoil: Coil:Cooling:DX:SingleSpeed=\"COIL COOLING DX SINGLE SPEED 11 11KBTU/HR 10.1EER\" - Low condenser dry-bulb temperature error continues...",
+      "CalcDoe2DXCoil: Coil:Cooling:DX:SingleSpeed=\"COIL COOLING DX SINGLE SPEED 20 8KBTU/HR 10.7EER\" - Low condenser dry-bulb temperature error continues...",
+      "CalcDoe2DXCoil: Coil:Cooling:DX:SingleSpeed=\"COIL COOLING DX SINGLE SPEED 5 9KBTU/HR 10.5EER\" - Low condenser dry-bulb temperature error continues...",
+      "CalcDoe2DXCoil: Coil:Cooling:DX:SingleSpeed=\"COIL COOLING DX SINGLE SPEED 4 5KBTU/HR 11.0EER\" - Low condenser dry-bulb temperature error continues...",
+      "CalcDoe2DXCoil: Coil:Cooling:DX:SingleSpeed=\"COIL COOLING DX SINGLE SPEED 3 5KBTU/HR 11.0EER\" - Low condenser dry-bulb temperature error continues...",
+      "CalcDoe2DXCoil: Coil:Cooling:DX:SingleSpeed=\"COIL COOLING DX SINGLE SPEED 3 5KBTU/HR 11.0EER\" - Full load outlet temperature indicates a possibility of frost/freeze error continues. Outlet air temperature statistics follow:",
+      "CalcDoe2DXCoil: Coil:Cooling:DX:SingleSpeed=\"COIL COOLING DX SINGLE SPEED 21 5KBTU/HR 11.0EER\" - Full load outlet temperature indicates a possibility of frost/freeze error continues. Outlet air temperature statistics follow:",
+      "CalcDoe2DXCoil: Coil:Cooling:DX:SingleSpeed=\"COIL COOLING DX SINGLE SPEED 1 84KBTU/HR 9.7EER\" - Full load outlet temperature indicates a possibility of frost/freeze error continues. Outlet air temperature statistics follow:"
+    ],
+    "fatal": [
+
+    ],
+    "severe": [
+
+    ]
+  },
+  "ruby_warnings": [
+    "Fan Constant Volume 1 does not exist in sql file WHERE ReportName='EquipmentSummary' AND ReportForString='Entire Facility' AND TableName='Fans' AND ColumnName='Max Air Flow Rate' AND Units='m3/s'",
+    "Fan Constant Volume 28 does not exist in sql file WHERE ReportName='EquipmentSummary' AND ReportForString='Entire Facility' AND TableName='Fans' AND ColumnName='Max Air Flow Rate' AND Units='m3/s'"
+  ],
+  "information": [
+    "[Info][TEST-PASS][Table 4.2.1.6]:[SPACE][M NE Apartment]-lighting_per_area result value:4.999953548 == expected value:5.0",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][M NE Apartment]-occupancy_per_area result value:0.016684068 == expected value:0.017",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][M NE Apartment]-occupancy_schedule result value:NECB-G-Occupancy == expected value:NECB-G-Occupancy",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][M NE Apartment]-electric_equipment_per_area result value:4.999953548 == expected value:5.0",
+    "[Info][TEST-PASS][Table 4.2.1.6]:[SPACE][T NW Apartment]-lighting_per_area result value:4.999953548 == expected value:5.0",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][T NW Apartment]-occupancy_per_area result value:0.016684068 == expected value:0.017",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][T NW Apartment]-occupancy_schedule result value:NECB-G-Occupancy == expected value:NECB-G-Occupancy",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][T NW Apartment]-electric_equipment_per_area result value:4.999953548 == expected value:5.0",
+    "[Info][TEST-PASS][Table 4.2.1.6]:[SPACE][T N1 Apartment]-lighting_per_area result value:4.999953548 == expected value:5.0",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][T N1 Apartment]-occupancy_per_area result value:0.016684068 == expected value:0.017",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][T N1 Apartment]-occupancy_schedule result value:NECB-G-Occupancy == expected value:NECB-G-Occupancy",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][T N1 Apartment]-electric_equipment_per_area result value:4.999953548 == expected value:5.0",
+    "[Info][TEST-PASS][Table 4.2.1.6]:[SPACE][G NW Apartment]-lighting_per_area result value:4.999953548 == expected value:5.0",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][G NW Apartment]-occupancy_per_area result value:0.016684068 == expected value:0.017",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][G NW Apartment]-occupancy_schedule result value:NECB-G-Occupancy == expected value:NECB-G-Occupancy",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][G NW Apartment]-electric_equipment_per_area result value:4.999953548 == expected value:5.0",
+    "[Info][TEST-PASS][Table 4.2.1.6]:[SPACE][M S1 Apartment]-lighting_per_area result value:4.999953548 == expected value:5.0",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][M S1 Apartment]-occupancy_per_area result value:0.016684068 == expected value:0.017",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][M S1 Apartment]-occupancy_schedule result value:NECB-G-Occupancy == expected value:NECB-G-Occupancy",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][M S1 Apartment]-electric_equipment_per_area result value:4.999953548 == expected value:5.0",
+    "[Info][TEST-PASS][Table 4.2.1.6]:[SPACE][T Corridor]-lighting_per_area result value:8.399921959 == expected value:8.4",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][T Corridor]-occupancy_per_area result value:0.010010441 == expected value:0.01",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][T Corridor]-occupancy_schedule result value:NECB-G-Occupancy == expected value:NECB-G-Occupancy",
+    "[Info][TEST-PASS][Table 4.2.1.6]:[SPACE][G S1 Apartment]-lighting_per_area result value:4.999953548 == expected value:5.0",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][G S1 Apartment]-occupancy_per_area result value:0.016684068 == expected value:0.017",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][G S1 Apartment]-occupancy_schedule result value:NECB-G-Occupancy == expected value:NECB-G-Occupancy",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][G S1 Apartment]-electric_equipment_per_area result value:4.999953548 == expected value:5.0",
+    "[Info][TEST-PASS][Table 4.2.1.6]:[SPACE][G N2 Apartment]-lighting_per_area result value:4.999953548 == expected value:5.0",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][G N2 Apartment]-occupancy_per_area result value:0.016684068 == expected value:0.017",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][G N2 Apartment]-occupancy_schedule result value:NECB-G-Occupancy == expected value:NECB-G-Occupancy",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][G N2 Apartment]-electric_equipment_per_area result value:4.999953548 == expected value:5.0",
+    "[Info][TEST-PASS][Table 4.2.1.6]:[SPACE][M SE Apartment]-lighting_per_area result value:4.999953548 == expected value:5.0",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][M SE Apartment]-occupancy_per_area result value:0.016684068 == expected value:0.017",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][M SE Apartment]-occupancy_schedule result value:NECB-G-Occupancy == expected value:NECB-G-Occupancy",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][M SE Apartment]-electric_equipment_per_area result value:4.999953548 == expected value:5.0",
+    "[Info][TEST-PASS][Table 4.2.1.6]:[SPACE][T S1 Apartment]-lighting_per_area result value:4.999953548 == expected value:5.0",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][T S1 Apartment]-occupancy_per_area result value:0.016684068 == expected value:0.017",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][T S1 Apartment]-occupancy_schedule result value:NECB-G-Occupancy == expected value:NECB-G-Occupancy",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][T S1 Apartment]-electric_equipment_per_area result value:4.999953548 == expected value:5.0",
+    "[Info][TEST-PASS][Table 4.2.1.6]:[SPACE][M N2 Apartment]-lighting_per_area result value:4.999953548 == expected value:5.0",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][M N2 Apartment]-occupancy_per_area result value:0.016684068 == expected value:0.017",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][M N2 Apartment]-occupancy_schedule result value:NECB-G-Occupancy == expected value:NECB-G-Occupancy",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][M N2 Apartment]-electric_equipment_per_area result value:4.999953548 == expected value:5.0",
+    "[Info][TEST-PASS][Table 4.2.1.6]:[SPACE][G N1 Apartment]-lighting_per_area result value:4.999953548 == expected value:5.0",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][G N1 Apartment]-occupancy_per_area result value:0.016684068 == expected value:0.017",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][G N1 Apartment]-occupancy_schedule result value:NECB-G-Occupancy == expected value:NECB-G-Occupancy",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][G N1 Apartment]-electric_equipment_per_area result value:4.999953548 == expected value:5.0",
+    "[Info][TEST-PASS][Table 4.2.1.6]:[SPACE][T SW Apartment]-lighting_per_area result value:4.999953548 == expected value:5.0",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][T SW Apartment]-occupancy_per_area result value:0.016684068 == expected value:0.017",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][T SW Apartment]-occupancy_schedule result value:NECB-G-Occupancy == expected value:NECB-G-Occupancy",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][T SW Apartment]-electric_equipment_per_area result value:4.999953548 == expected value:5.0",
+    "[Info][TEST-PASS][Table 4.2.1.6]:[SPACE][G NE Apartment]-lighting_per_area result value:4.999953548 == expected value:5.0",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][G NE Apartment]-occupancy_per_area result value:0.016684068 == expected value:0.017",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][G NE Apartment]-occupancy_schedule result value:NECB-G-Occupancy == expected value:NECB-G-Occupancy",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][G NE Apartment]-electric_equipment_per_area result value:4.999953548 == expected value:5.0",
+    "[Info][TEST-PASS][Table 4.2.1.6]:[SPACE][M S2 Apartment]-lighting_per_area result value:4.999953548 == expected value:5.0",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][M S2 Apartment]-occupancy_per_area result value:0.016684068 == expected value:0.017",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][M S2 Apartment]-occupancy_schedule result value:NECB-G-Occupancy == expected value:NECB-G-Occupancy",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][M S2 Apartment]-electric_equipment_per_area result value:4.999953548 == expected value:5.0",
+    "[Info][TEST-PASS][Table 4.2.1.6]:[SPACE][G S2 Apartment]-lighting_per_area result value:4.999953548 == expected value:5.0",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][G S2 Apartment]-occupancy_per_area result value:0.016684068 == expected value:0.017",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][G S2 Apartment]-occupancy_schedule result value:NECB-G-Occupancy == expected value:NECB-G-Occupancy",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][G S2 Apartment]-electric_equipment_per_area result value:4.999953548 == expected value:5.0",
+    "[Info][TEST-PASS][Table 4.2.1.6]:[SPACE][M SW Apartment]-lighting_per_area result value:4.999953548 == expected value:5.0",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][M SW Apartment]-occupancy_per_area result value:0.016684068 == expected value:0.017",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][M SW Apartment]-occupancy_schedule result value:NECB-G-Occupancy == expected value:NECB-G-Occupancy",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][M SW Apartment]-electric_equipment_per_area result value:4.999953548 == expected value:5.0",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][Office]-occupancy_per_area result value:0.199993542 == expected value:0.2",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][Office]-occupancy_schedule result value:NECB-C-Occupancy == expected value:NECB-C-Occupancy",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][Office]-electric_equipment_per_area result value:0.999990712 == expected value:1.0",
+    "[Info][TEST-PASS][Table 4.2.1.6]:[SPACE][T N2 Apartment]-lighting_per_area result value:4.999953548 == expected value:5.0",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][T N2 Apartment]-occupancy_per_area result value:0.016684068 == expected value:0.017",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][T N2 Apartment]-occupancy_schedule result value:NECB-G-Occupancy == expected value:NECB-G-Occupancy",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][T N2 Apartment]-electric_equipment_per_area result value:4.999953548 == expected value:5.0",
+    "[Info][TEST-PASS][Table 4.2.1.6]:[SPACE][G Corridor]-lighting_per_area result value:8.399921959 == expected value:8.4",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][G Corridor]-occupancy_per_area result value:0.010010441 == expected value:0.01",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][G Corridor]-occupancy_schedule result value:NECB-G-Occupancy == expected value:NECB-G-Occupancy",
+    "[Info][TEST-PASS][Table 4.2.1.6]:[SPACE][M N1 Apartment]-lighting_per_area result value:4.999953548 == expected value:5.0",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][M N1 Apartment]-occupancy_per_area result value:0.016684068 == expected value:0.017",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][M N1 Apartment]-occupancy_schedule result value:NECB-G-Occupancy == expected value:NECB-G-Occupancy",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][M N1 Apartment]-electric_equipment_per_area result value:4.999953548 == expected value:5.0",
+    "[Info][TEST-PASS][Table 4.2.1.6]:[SPACE][T SE Apartment]-lighting_per_area result value:4.999953548 == expected value:5.0",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][T SE Apartment]-occupancy_per_area result value:0.016684068 == expected value:0.017",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][T SE Apartment]-occupancy_schedule result value:NECB-G-Occupancy == expected value:NECB-G-Occupancy",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][T SE Apartment]-electric_equipment_per_area result value:4.999953548 == expected value:5.0",
+    "[Info][TEST-PASS][Table 4.2.1.6]:[SPACE][T S2 Apartment]-lighting_per_area result value:4.999953548 == expected value:5.0",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][T S2 Apartment]-occupancy_per_area result value:0.016684068 == expected value:0.017",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][T S2 Apartment]-occupancy_schedule result value:NECB-G-Occupancy == expected value:NECB-G-Occupancy",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][T S2 Apartment]-electric_equipment_per_area result value:4.999953548 == expected value:5.0",
+    "[Info][TEST-PASS][Table 4.2.1.6]:[SPACE][M NW Apartment]-lighting_per_area result value:4.999953548 == expected value:5.0",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][M NW Apartment]-occupancy_per_area result value:0.016684068 == expected value:0.017",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][M NW Apartment]-occupancy_schedule result value:NECB-G-Occupancy == expected value:NECB-G-Occupancy",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][M NW Apartment]-electric_equipment_per_area result value:4.999953548 == expected value:5.0",
+    "[Info][TEST-PASS][Table 4.2.1.6]:[SPACE][T NE Apartment]-lighting_per_area result value:4.999953548 == expected value:5.0",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][T NE Apartment]-occupancy_per_area result value:0.016684068 == expected value:0.017",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][T NE Apartment]-occupancy_schedule result value:NECB-G-Occupancy == expected value:NECB-G-Occupancy",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][T NE Apartment]-electric_equipment_per_area result value:4.999953548 == expected value:5.0",
+    "[Info][TEST-PASS][Table 4.2.1.6]:[SPACE][G SW Apartment]-lighting_per_area result value:4.999953548 == expected value:5.0",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][G SW Apartment]-occupancy_per_area result value:0.016684068 == expected value:0.017",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][G SW Apartment]-occupancy_schedule result value:NECB-G-Occupancy == expected value:NECB-G-Occupancy",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][G SW Apartment]-electric_equipment_per_area result value:4.999953548 == expected value:5.0",
+    "[Info][TEST-PASS][Table 4.2.1.6]:[SPACE][M Corridor]-lighting_per_area result value:8.399921959 == expected value:8.4",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][M Corridor]-occupancy_per_area result value:0.010010441 == expected value:0.01",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][M Corridor]-occupancy_schedule result value:NECB-G-Occupancy == expected value:NECB-G-Occupancy",
+    "[Info][TEST-PASS][NECB2011-Section 3.2.1.4]:[ENVELOPE]fenestration_to_door_and_window_percentage result value:35.31333333333333 >= expected value:20.0",
+    "[Info][TEST-PASS][NECB2011-Section 3.2.1.4]:[ENVELOPE]skylight_to_roof_percentage result value:5.0 >= expected value:0.0",
+    "[Info][TEST-PASS][NECB2011-Section 8.4.3.6]:[SPACE][M NE Apartment]-infiltration_method result value:Flow/ExteriorArea == expected value:Flow/ExteriorArea",
+    "[Info][TEST-PASS][NECB2011-Section 8.4.3.6]:[SPACE][M NE Apartment]-infiltration_flow_per_m2 result value:0.00025 == expected value:0.00025",
+    "[Info][TEST-PASS][NECB2011-Section 8.4.3.6]:[SPACE][T NW Apartment]-infiltration_method result value:Flow/ExteriorArea == expected value:Flow/ExteriorArea",
+    "[Info][TEST-PASS][NECB2011-Section 8.4.3.6]:[SPACE][T NW Apartment]-infiltration_flow_per_m2 result value:0.00025 == expected value:0.00025",
+    "[Info][TEST-PASS][NECB2011-Section 8.4.3.6]:[SPACE][T N1 Apartment]-infiltration_method result value:Flow/ExteriorArea == expected value:Flow/ExteriorArea",
+    "[Info][TEST-PASS][NECB2011-Section 8.4.3.6]:[SPACE][T N1 Apartment]-infiltration_flow_per_m2 result value:0.00025 == expected value:0.00025",
+    "[Info][TEST-PASS][NECB2011-Section 8.4.3.6]:[SPACE][G NW Apartment]-infiltration_method result value:Flow/ExteriorArea == expected value:Flow/ExteriorArea",
+    "[Info][TEST-PASS][NECB2011-Section 8.4.3.6]:[SPACE][G NW Apartment]-infiltration_flow_per_m2 result value:0.00025 == expected value:0.00025",
+    "[Info][TEST-PASS][NECB2011-Section 8.4.3.6]:[SPACE][M S1 Apartment]-infiltration_method result value:Flow/ExteriorArea == expected value:Flow/ExteriorArea",
+    "[Info][TEST-PASS][NECB2011-Section 8.4.3.6]:[SPACE][M S1 Apartment]-infiltration_flow_per_m2 result value:0.00025 == expected value:0.00025",
+    "[Info][TEST-PASS][NECB2011-Section 8.4.3.6]:[SPACE][T Corridor]-infiltration_method result value:Flow/ExteriorArea == expected value:Flow/ExteriorArea",
+    "[Info][TEST-PASS][NECB2011-Section 8.4.3.6]:[SPACE][T Corridor]-infiltration_flow_per_m2 result value:0.00025 == expected value:0.00025",
+    "[Info][TEST-PASS][NECB2011-Section 8.4.3.6]:[SPACE][G S1 Apartment]-infiltration_method result value:Flow/ExteriorArea == expected value:Flow/ExteriorArea",
+    "[Info][TEST-PASS][NECB2011-Section 8.4.3.6]:[SPACE][G S1 Apartment]-infiltration_flow_per_m2 result value:0.00025 == expected value:0.00025",
+    "[Info][TEST-PASS][NECB2011-Section 8.4.3.6]:[SPACE][G N2 Apartment]-infiltration_method result value:Flow/ExteriorArea == expected value:Flow/ExteriorArea",
+    "[Info][TEST-PASS][NECB2011-Section 8.4.3.6]:[SPACE][G N2 Apartment]-infiltration_flow_per_m2 result value:0.00025 == expected value:0.00025",
+    "[Info][TEST-PASS][NECB2011-Section 8.4.3.6]:[SPACE][M SE Apartment]-infiltration_method result value:Flow/ExteriorArea == expected value:Flow/ExteriorArea",
+    "[Info][TEST-PASS][NECB2011-Section 8.4.3.6]:[SPACE][M SE Apartment]-infiltration_flow_per_m2 result value:0.00025 == expected value:0.00025",
+    "[Info][TEST-PASS][NECB2011-Section 8.4.3.6]:[SPACE][T S1 Apartment]-infiltration_method result value:Flow/ExteriorArea == expected value:Flow/ExteriorArea",
+    "[Info][TEST-PASS][NECB2011-Section 8.4.3.6]:[SPACE][T S1 Apartment]-infiltration_flow_per_m2 result value:0.00025 == expected value:0.00025",
+    "[Info][TEST-PASS][NECB2011-Section 8.4.3.6]:[SPACE][M N2 Apartment]-infiltration_method result value:Flow/ExteriorArea == expected value:Flow/ExteriorArea",
+    "[Info][TEST-PASS][NECB2011-Section 8.4.3.6]:[SPACE][M N2 Apartment]-infiltration_flow_per_m2 result value:0.00025 == expected value:0.00025",
+    "[Info][TEST-PASS][NECB2011-Section 8.4.3.6]:[SPACE][G N1 Apartment]-infiltration_method result value:Flow/ExteriorArea == expected value:Flow/ExteriorArea",
+    "[Info][TEST-PASS][NECB2011-Section 8.4.3.6]:[SPACE][G N1 Apartment]-infiltration_flow_per_m2 result value:0.00025 == expected value:0.00025",
+    "[Info][TEST-PASS][NECB2011-Section 8.4.3.6]:[SPACE][T SW Apartment]-infiltration_method result value:Flow/ExteriorArea == expected value:Flow/ExteriorArea",
+    "[Info][TEST-PASS][NECB2011-Section 8.4.3.6]:[SPACE][T SW Apartment]-infiltration_flow_per_m2 result value:0.00025 == expected value:0.00025",
+    "[Info][TEST-PASS][NECB2011-Section 8.4.3.6]:[SPACE][G NE Apartment]-infiltration_method result value:Flow/ExteriorArea == expected value:Flow/ExteriorArea",
+    "[Info][TEST-PASS][NECB2011-Section 8.4.3.6]:[SPACE][G NE Apartment]-infiltration_flow_per_m2 result value:0.00025 == expected value:0.00025",
+    "[Info][TEST-PASS][NECB2011-Section 8.4.3.6]:[SPACE][M S2 Apartment]-infiltration_method result value:Flow/ExteriorArea == expected value:Flow/ExteriorArea",
+    "[Info][TEST-PASS][NECB2011-Section 8.4.3.6]:[SPACE][M S2 Apartment]-infiltration_flow_per_m2 result value:0.00025 == expected value:0.00025",
+    "[Info][TEST-PASS][NECB2011-Section 8.4.3.6]:[SPACE][G S2 Apartment]-infiltration_method result value:Flow/ExteriorArea == expected value:Flow/ExteriorArea",
+    "[Info][TEST-PASS][NECB2011-Section 8.4.3.6]:[SPACE][G S2 Apartment]-infiltration_flow_per_m2 result value:0.00025 == expected value:0.00025",
+    "[Info][TEST-PASS][NECB2011-Section 8.4.3.6]:[SPACE][M SW Apartment]-infiltration_method result value:Flow/ExteriorArea == expected value:Flow/ExteriorArea",
+    "[Info][TEST-PASS][NECB2011-Section 8.4.3.6]:[SPACE][M SW Apartment]-infiltration_flow_per_m2 result value:0.00025 == expected value:0.00025",
+    "[Info][TEST-PASS][NECB2011-Section 8.4.3.6]:[SPACE][Office]-infiltration_method result value:Flow/ExteriorArea == expected value:Flow/ExteriorArea",
+    "[Info][TEST-PASS][NECB2011-Section 8.4.3.6]:[SPACE][Office]-infiltration_flow_per_m2 result value:0.00025 == expected value:0.00025",
+    "[Info][TEST-PASS][NECB2011-Section 8.4.3.6]:[SPACE][T N2 Apartment]-infiltration_method result value:Flow/ExteriorArea == expected value:Flow/ExteriorArea",
+    "[Info][TEST-PASS][NECB2011-Section 8.4.3.6]:[SPACE][T N2 Apartment]-infiltration_flow_per_m2 result value:0.00025 == expected value:0.00025",
+    "[Info][TEST-PASS][NECB2011-Section 8.4.3.6]:[SPACE][G Corridor]-infiltration_method result value:Flow/ExteriorArea == expected value:Flow/ExteriorArea",
+    "[Info][TEST-PASS][NECB2011-Section 8.4.3.6]:[SPACE][G Corridor]-infiltration_flow_per_m2 result value:0.00025 == expected value:0.00025",
+    "[Info][TEST-PASS][NECB2011-Section 8.4.3.6]:[SPACE][M N1 Apartment]-infiltration_method result value:Flow/ExteriorArea == expected value:Flow/ExteriorArea",
+    "[Info][TEST-PASS][NECB2011-Section 8.4.3.6]:[SPACE][M N1 Apartment]-infiltration_flow_per_m2 result value:0.00025 == expected value:0.00025",
+    "[Info][TEST-PASS][NECB2011-Section 8.4.3.6]:[SPACE][T SE Apartment]-infiltration_method result value:Flow/ExteriorArea == expected value:Flow/ExteriorArea",
+    "[Info][TEST-PASS][NECB2011-Section 8.4.3.6]:[SPACE][T SE Apartment]-infiltration_flow_per_m2 result value:0.00025 == expected value:0.00025",
+    "[Info][TEST-PASS][NECB2011-Section 8.4.3.6]:[SPACE][T S2 Apartment]-infiltration_method result value:Flow/ExteriorArea == expected value:Flow/ExteriorArea",
+    "[Info][TEST-PASS][NECB2011-Section 8.4.3.6]:[SPACE][T S2 Apartment]-infiltration_flow_per_m2 result value:0.00025 == expected value:0.00025",
+    "[Info][TEST-PASS][NECB2011-Section 8.4.3.6]:[SPACE][M NW Apartment]-infiltration_method result value:Flow/ExteriorArea == expected value:Flow/ExteriorArea",
+    "[Info][TEST-PASS][NECB2011-Section 8.4.3.6]:[SPACE][M NW Apartment]-infiltration_flow_per_m2 result value:0.00025 == expected value:0.00025",
+    "[Info][TEST-PASS][NECB2011-Section 8.4.3.6]:[SPACE][T NE Apartment]-infiltration_method result value:Flow/ExteriorArea == expected value:Flow/ExteriorArea",
+    "[Info][TEST-PASS][NECB2011-Section 8.4.3.6]:[SPACE][T NE Apartment]-infiltration_flow_per_m2 result value:0.00025 == expected value:0.00025",
+    "[Info][TEST-PASS][NECB2011-Section 8.4.3.6]:[SPACE][G SW Apartment]-infiltration_method result value:Flow/ExteriorArea == expected value:Flow/ExteriorArea",
+    "[Info][TEST-PASS][NECB2011-Section 8.4.3.6]:[SPACE][G SW Apartment]-infiltration_flow_per_m2 result value:0.00025 == expected value:0.00025",
+    "[Info][TEST-PASS][NECB2011-Section 8.4.3.6]:[SPACE][M Corridor]-infiltration_method result value:Flow/ExteriorArea == expected value:Flow/ExteriorArea",
+    "[Info][TEST-PASS][NECB2011-Section 8.4.3.6]:[SPACE][M Corridor]-infiltration_flow_per_m2 result value:0.00025 == expected value:0.00025",
+    "[Info][TEST-PASS][NECB2011-Section 3.2.2.2]:[ENVELOPE]ext_wall_conductances result value:0.247 == expected value:0.247",
+    "[Info][TEST-PASS][NECB2011-Section 3.2.2.2]:[ENVELOPE]ext_roof_conductances result value:0.183 == expected value:0.183",
+    "[Info][TEST-PASS][NECB2011-Section 3.2.2.3]:[ENVELOPE]ext_window_conductances result value:2.2 == expected value:2.2",
+    "[Info][TEST-PASS][NECB2011-Section 3.2.3.1]:[ENVELOPE]ground_floor_conductances result value:0.757 == expected value:0.757",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-M N2 Apartment Sys-1 Flr-1 Sch-G HPlcmt-north ZN] heating_sizing_factor result value:1.3 == expected value:1.3",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-M N2 Apartment Sys-1 Flr-1 Sch-G HPlcmt-north ZN] cooling_sizing_factor result value:1.1 == expected value:1.1",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-M N2 Apartment Sys-1 Flr-1 Sch-G HPlcmt-north ZN] heating_design_supply_air_temp result value:43.0 == expected value:43.0",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-M N2 Apartment Sys-1 Flr-1 Sch-G HPlcmt-north ZN] cooling_design_supply_temp result value:13.0 == expected value:13.0",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-G S2 Apartment Sys-1 Flr-3 Sch-G HPlcmt-south ZN] heating_sizing_factor result value:1.3 == expected value:1.3",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-G S2 Apartment Sys-1 Flr-3 Sch-G HPlcmt-south ZN] cooling_sizing_factor result value:1.1 == expected value:1.1",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-G S2 Apartment Sys-1 Flr-3 Sch-G HPlcmt-south ZN] heating_design_supply_air_temp result value:43.0 == expected value:43.0",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-G S2 Apartment Sys-1 Flr-3 Sch-G HPlcmt-south ZN] cooling_design_supply_temp result value:13.0 == expected value:13.0",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-T S2 Apartment Sys-1 Flr-2 Sch-G HPlcmt-south ZN] heating_sizing_factor result value:1.3 == expected value:1.3",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-T S2 Apartment Sys-1 Flr-2 Sch-G HPlcmt-south ZN] cooling_sizing_factor result value:1.1 == expected value:1.1",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-T S2 Apartment Sys-1 Flr-2 Sch-G HPlcmt-south ZN] heating_design_supply_air_temp result value:43.0 == expected value:43.0",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-T S2 Apartment Sys-1 Flr-2 Sch-G HPlcmt-south ZN] cooling_design_supply_temp result value:13.0 == expected value:13.0",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-G N1 Apartment Sys-1 Flr-3 Sch-G HPlcmt-north ZN] heating_sizing_factor result value:1.3 == expected value:1.3",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-G N1 Apartment Sys-1 Flr-3 Sch-G HPlcmt-north ZN] cooling_sizing_factor result value:1.1 == expected value:1.1",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-G N1 Apartment Sys-1 Flr-3 Sch-G HPlcmt-north ZN] heating_design_supply_air_temp result value:43.0 == expected value:43.0",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-G N1 Apartment Sys-1 Flr-3 Sch-G HPlcmt-north ZN] cooling_design_supply_temp result value:13.0 == expected value:13.0",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-M Corridor Sys-1 Flr-1 Sch-G HPlcmt-east ZN] heating_sizing_factor result value:1.3 == expected value:1.3",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-M Corridor Sys-1 Flr-1 Sch-G HPlcmt-east ZN] cooling_sizing_factor result value:1.1 == expected value:1.1",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-M Corridor Sys-1 Flr-1 Sch-G HPlcmt-east ZN] heating_design_supply_air_temp result value:43.0 == expected value:43.0",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-M Corridor Sys-1 Flr-1 Sch-G HPlcmt-east ZN] cooling_design_supply_temp result value:13.0 == expected value:13.0",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-M S2 Apartment Sys-1 Flr-1 Sch-G HPlcmt-south ZN] heating_sizing_factor result value:1.3 == expected value:1.3",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-M S2 Apartment Sys-1 Flr-1 Sch-G HPlcmt-south ZN] cooling_sizing_factor result value:1.1 == expected value:1.1",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-M S2 Apartment Sys-1 Flr-1 Sch-G HPlcmt-south ZN] heating_design_supply_air_temp result value:43.0 == expected value:43.0",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-M S2 Apartment Sys-1 Flr-1 Sch-G HPlcmt-south ZN] cooling_design_supply_temp result value:13.0 == expected value:13.0",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-T SW Apartment Sys-1 Flr-2 Sch-G HPlcmt-south ZN] heating_sizing_factor result value:1.3 == expected value:1.3",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-T SW Apartment Sys-1 Flr-2 Sch-G HPlcmt-south ZN] cooling_sizing_factor result value:1.1 == expected value:1.1",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-T SW Apartment Sys-1 Flr-2 Sch-G HPlcmt-south ZN] heating_design_supply_air_temp result value:43.0 == expected value:43.0",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-T SW Apartment Sys-1 Flr-2 Sch-G HPlcmt-south ZN] cooling_design_supply_temp result value:13.0 == expected value:13.0",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-M NW Apartment Sys-1 Flr-1 Sch-G HPlcmt-north ZN] heating_sizing_factor result value:1.3 == expected value:1.3",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-M NW Apartment Sys-1 Flr-1 Sch-G HPlcmt-north ZN] cooling_sizing_factor result value:1.1 == expected value:1.1",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-M NW Apartment Sys-1 Flr-1 Sch-G HPlcmt-north ZN] heating_design_supply_air_temp result value:43.0 == expected value:43.0",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-M NW Apartment Sys-1 Flr-1 Sch-G HPlcmt-north ZN] cooling_design_supply_temp result value:13.0 == expected value:13.0",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-T SE Apartment Sys-1 Flr-2 Sch-G HPlcmt-south ZN] heating_sizing_factor result value:1.3 == expected value:1.3",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-T SE Apartment Sys-1 Flr-2 Sch-G HPlcmt-south ZN] cooling_sizing_factor result value:1.1 == expected value:1.1",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-T SE Apartment Sys-1 Flr-2 Sch-G HPlcmt-south ZN] heating_design_supply_air_temp result value:43.0 == expected value:43.0",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-T SE Apartment Sys-1 Flr-2 Sch-G HPlcmt-south ZN] cooling_design_supply_temp result value:13.0 == expected value:13.0",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-T NE Apartment Sys-1 Flr-2 Sch-G HPlcmt-north ZN] heating_sizing_factor result value:1.3 == expected value:1.3",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-T NE Apartment Sys-1 Flr-2 Sch-G HPlcmt-north ZN] cooling_sizing_factor result value:1.1 == expected value:1.1",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-T NE Apartment Sys-1 Flr-2 Sch-G HPlcmt-north ZN] heating_design_supply_air_temp result value:43.0 == expected value:43.0",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-T NE Apartment Sys-1 Flr-2 Sch-G HPlcmt-north ZN] cooling_design_supply_temp result value:13.0 == expected value:13.0",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-Office Sys-3 Flr-3 Sch-C HPlcmt-south ZN] heating_sizing_factor result value:1.3 == expected value:1.3",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-Office Sys-3 Flr-3 Sch-C HPlcmt-south ZN] cooling_sizing_factor result value:1.1 == expected value:1.1",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-Office Sys-3 Flr-3 Sch-C HPlcmt-south ZN] heating_design_supply_air_temp result value:43.0 == expected value:43.0",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-Office Sys-3 Flr-3 Sch-C HPlcmt-south ZN] cooling_design_supply_temp result value:13.0 == expected value:13.0",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-M SE Apartment Sys-1 Flr-1 Sch-G HPlcmt-south ZN] heating_sizing_factor result value:1.3 == expected value:1.3",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-M SE Apartment Sys-1 Flr-1 Sch-G HPlcmt-south ZN] cooling_sizing_factor result value:1.1 == expected value:1.1",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-M SE Apartment Sys-1 Flr-1 Sch-G HPlcmt-south ZN] heating_design_supply_air_temp result value:43.0 == expected value:43.0",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-M SE Apartment Sys-1 Flr-1 Sch-G HPlcmt-south ZN] cooling_design_supply_temp result value:13.0 == expected value:13.0",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-G S1 Apartment Sys-1 Flr-3 Sch-G HPlcmt-south ZN] heating_sizing_factor result value:1.3 == expected value:1.3",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-G S1 Apartment Sys-1 Flr-3 Sch-G HPlcmt-south ZN] cooling_sizing_factor result value:1.1 == expected value:1.1",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-G S1 Apartment Sys-1 Flr-3 Sch-G HPlcmt-south ZN] heating_design_supply_air_temp result value:43.0 == expected value:43.0",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-G S1 Apartment Sys-1 Flr-3 Sch-G HPlcmt-south ZN] cooling_design_supply_temp result value:13.0 == expected value:13.0",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-M N1 Apartment Sys-1 Flr-1 Sch-G HPlcmt-north ZN] heating_sizing_factor result value:1.3 == expected value:1.3",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-M N1 Apartment Sys-1 Flr-1 Sch-G HPlcmt-north ZN] cooling_sizing_factor result value:1.1 == expected value:1.1",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-M N1 Apartment Sys-1 Flr-1 Sch-G HPlcmt-north ZN] heating_design_supply_air_temp result value:43.0 == expected value:43.0",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-M N1 Apartment Sys-1 Flr-1 Sch-G HPlcmt-north ZN] cooling_design_supply_temp result value:13.0 == expected value:13.0",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-G NE Apartment Sys-1 Flr-3 Sch-G HPlcmt-north ZN] heating_sizing_factor result value:1.3 == expected value:1.3",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-G NE Apartment Sys-1 Flr-3 Sch-G HPlcmt-north ZN] cooling_sizing_factor result value:1.1 == expected value:1.1",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-G NE Apartment Sys-1 Flr-3 Sch-G HPlcmt-north ZN] heating_design_supply_air_temp result value:43.0 == expected value:43.0",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-G NE Apartment Sys-1 Flr-3 Sch-G HPlcmt-north ZN] cooling_design_supply_temp result value:13.0 == expected value:13.0",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-G NW Apartment Sys-1 Flr-3 Sch-G HPlcmt-north ZN] heating_sizing_factor result value:1.3 == expected value:1.3",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-G NW Apartment Sys-1 Flr-3 Sch-G HPlcmt-north ZN] cooling_sizing_factor result value:1.1 == expected value:1.1",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-G NW Apartment Sys-1 Flr-3 Sch-G HPlcmt-north ZN] heating_design_supply_air_temp result value:43.0 == expected value:43.0",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-G NW Apartment Sys-1 Flr-3 Sch-G HPlcmt-north ZN] cooling_design_supply_temp result value:13.0 == expected value:13.0",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-T Corridor Sys-1 Flr-2 Sch-G HPlcmt-west ZN] heating_sizing_factor result value:1.3 == expected value:1.3",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-T Corridor Sys-1 Flr-2 Sch-G HPlcmt-west ZN] cooling_sizing_factor result value:1.1 == expected value:1.1",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-T Corridor Sys-1 Flr-2 Sch-G HPlcmt-west ZN] heating_design_supply_air_temp result value:43.0 == expected value:43.0",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-T Corridor Sys-1 Flr-2 Sch-G HPlcmt-west ZN] cooling_design_supply_temp result value:13.0 == expected value:13.0",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-T S1 Apartment Sys-1 Flr-2 Sch-G HPlcmt-south ZN] heating_sizing_factor result value:1.3 == expected value:1.3",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-T S1 Apartment Sys-1 Flr-2 Sch-G HPlcmt-south ZN] cooling_sizing_factor result value:1.1 == expected value:1.1",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-T S1 Apartment Sys-1 Flr-2 Sch-G HPlcmt-south ZN] heating_design_supply_air_temp result value:43.0 == expected value:43.0",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-T S1 Apartment Sys-1 Flr-2 Sch-G HPlcmt-south ZN] cooling_design_supply_temp result value:13.0 == expected value:13.0",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-M S1 Apartment Sys-1 Flr-1 Sch-G HPlcmt-south ZN] heating_sizing_factor result value:1.3 == expected value:1.3",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-M S1 Apartment Sys-1 Flr-1 Sch-G HPlcmt-south ZN] cooling_sizing_factor result value:1.1 == expected value:1.1",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-M S1 Apartment Sys-1 Flr-1 Sch-G HPlcmt-south ZN] heating_design_supply_air_temp result value:43.0 == expected value:43.0",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-M S1 Apartment Sys-1 Flr-1 Sch-G HPlcmt-south ZN] cooling_design_supply_temp result value:13.0 == expected value:13.0",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-G Corridor Sys-1 Flr-3 Sch-G HPlcmt-east ZN] heating_sizing_factor result value:1.3 == expected value:1.3",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-G Corridor Sys-1 Flr-3 Sch-G HPlcmt-east ZN] cooling_sizing_factor result value:1.1 == expected value:1.1",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-G Corridor Sys-1 Flr-3 Sch-G HPlcmt-east ZN] heating_design_supply_air_temp result value:43.0 == expected value:43.0",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-G Corridor Sys-1 Flr-3 Sch-G HPlcmt-east ZN] cooling_design_supply_temp result value:13.0 == expected value:13.0",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-M SW Apartment Sys-1 Flr-1 Sch-G HPlcmt-south ZN] heating_sizing_factor result value:1.3 == expected value:1.3",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-M SW Apartment Sys-1 Flr-1 Sch-G HPlcmt-south ZN] cooling_sizing_factor result value:1.1 == expected value:1.1",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-M SW Apartment Sys-1 Flr-1 Sch-G HPlcmt-south ZN] heating_design_supply_air_temp result value:43.0 == expected value:43.0",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-M SW Apartment Sys-1 Flr-1 Sch-G HPlcmt-south ZN] cooling_design_supply_temp result value:13.0 == expected value:13.0",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-T N2 Apartment Sys-1 Flr-2 Sch-G HPlcmt-north ZN] heating_sizing_factor result value:1.3 == expected value:1.3",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-T N2 Apartment Sys-1 Flr-2 Sch-G HPlcmt-north ZN] cooling_sizing_factor result value:1.1 == expected value:1.1",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-T N2 Apartment Sys-1 Flr-2 Sch-G HPlcmt-north ZN] heating_design_supply_air_temp result value:43.0 == expected value:43.0",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-T N2 Apartment Sys-1 Flr-2 Sch-G HPlcmt-north ZN] cooling_design_supply_temp result value:13.0 == expected value:13.0",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-G SW Apartment Sys-1 Flr-3 Sch-G HPlcmt-south ZN] heating_sizing_factor result value:1.3 == expected value:1.3",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-G SW Apartment Sys-1 Flr-3 Sch-G HPlcmt-south ZN] cooling_sizing_factor result value:1.1 == expected value:1.1",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-G SW Apartment Sys-1 Flr-3 Sch-G HPlcmt-south ZN] heating_design_supply_air_temp result value:43.0 == expected value:43.0",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-G SW Apartment Sys-1 Flr-3 Sch-G HPlcmt-south ZN] cooling_design_supply_temp result value:13.0 == expected value:13.0",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-G N2 Apartment Sys-1 Flr-3 Sch-G HPlcmt-north ZN] heating_sizing_factor result value:1.3 == expected value:1.3",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-G N2 Apartment Sys-1 Flr-3 Sch-G HPlcmt-north ZN] cooling_sizing_factor result value:1.1 == expected value:1.1",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-G N2 Apartment Sys-1 Flr-3 Sch-G HPlcmt-north ZN] heating_design_supply_air_temp result value:43.0 == expected value:43.0",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-G N2 Apartment Sys-1 Flr-3 Sch-G HPlcmt-north ZN] cooling_design_supply_temp result value:13.0 == expected value:13.0",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-M NE Apartment Sys-1 Flr-1 Sch-G HPlcmt-north ZN] heating_sizing_factor result value:1.3 == expected value:1.3",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-M NE Apartment Sys-1 Flr-1 Sch-G HPlcmt-north ZN] cooling_sizing_factor result value:1.1 == expected value:1.1",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-M NE Apartment Sys-1 Flr-1 Sch-G HPlcmt-north ZN] heating_design_supply_air_temp result value:43.0 == expected value:43.0",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-M NE Apartment Sys-1 Flr-1 Sch-G HPlcmt-north ZN] cooling_design_supply_temp result value:13.0 == expected value:13.0",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-T N1 Apartment Sys-1 Flr-2 Sch-G HPlcmt-north ZN] heating_sizing_factor result value:1.3 == expected value:1.3",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-T N1 Apartment Sys-1 Flr-2 Sch-G HPlcmt-north ZN] cooling_sizing_factor result value:1.1 == expected value:1.1",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-T N1 Apartment Sys-1 Flr-2 Sch-G HPlcmt-north ZN] heating_design_supply_air_temp result value:43.0 == expected value:43.0",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-T N1 Apartment Sys-1 Flr-2 Sch-G HPlcmt-north ZN] cooling_design_supply_temp result value:13.0 == expected value:13.0",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-T NW Apartment Sys-1 Flr-2 Sch-G HPlcmt-north ZN] heating_sizing_factor result value:1.3 == expected value:1.3",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-T NW Apartment Sys-1 Flr-2 Sch-G HPlcmt-north ZN] cooling_sizing_factor result value:1.1 == expected value:1.1",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-T NW Apartment Sys-1 Flr-2 Sch-G HPlcmt-north ZN] heating_design_supply_air_temp result value:43.0 == expected value:43.0",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-T NW Apartment Sys-1 Flr-2 Sch-G HPlcmt-north ZN] cooling_design_supply_temp result value:13.0 == expected value:13.0"
+  ],
+  "warnings": [
+
+  ],
+  "errors": [
+    "[ERROR][TEST-FAIL][Table 4.2.1.6]:[SPACE][Office]-lighting_per_area expected value:11.88 == result value:13.19987737"
+  ],
+  "unique_errors": [
+    "[ERROR][TEST-FAIL][Table 4.2.1.6]:[SPACE][Office]-lighting_per_area expected value:11.88 == result value:13.19987737"
+  ],
+  "sanity_check": {
+    "fail": [
+
+    ],
+    "pass": [
+      "[TEST-PASS][SANITY_CHECK-PASS] for [SPACE][G Corridor] and [THERMAL ZONE] [Sp-G Corridor Sys-1 Flr-3 Sch-G HPlcmt-east ZN] where isConditioned is supposed to be [Yes] and found as Yes",
+      "[TEST-PASS][SANITY_CHECK-PASS] for [SPACE][G N1 Apartment] and [THERMAL ZONE] [Sp-G N1 Apartment Sys-1 Flr-3 Sch-G HPlcmt-north ZN] where isConditioned is supposed to be [Yes] and found as Yes",
+      "[TEST-PASS][SANITY_CHECK-PASS] for [SPACE][G N2 Apartment] and [THERMAL ZONE] [Sp-G N2 Apartment Sys-1 Flr-3 Sch-G HPlcmt-north ZN] where isConditioned is supposed to be [Yes] and found as Yes",
+      "[TEST-PASS][SANITY_CHECK-PASS] for [SPACE][G NE Apartment] and [THERMAL ZONE] [Sp-G NE Apartment Sys-1 Flr-3 Sch-G HPlcmt-north ZN] where isConditioned is supposed to be [Yes] and found as Yes",
+      "[TEST-PASS][SANITY_CHECK-PASS] for [SPACE][G NW Apartment] and [THERMAL ZONE] [Sp-G NW Apartment Sys-1 Flr-3 Sch-G HPlcmt-north ZN] where isConditioned is supposed to be [Yes] and found as Yes",
+      "[TEST-PASS][SANITY_CHECK-PASS] for [SPACE][G S1 Apartment] and [THERMAL ZONE] [Sp-G S1 Apartment Sys-1 Flr-3 Sch-G HPlcmt-south ZN] where isConditioned is supposed to be [Yes] and found as Yes",
+      "[TEST-PASS][SANITY_CHECK-PASS] for [SPACE][G S2 Apartment] and [THERMAL ZONE] [Sp-G S2 Apartment Sys-1 Flr-3 Sch-G HPlcmt-south ZN] where isConditioned is supposed to be [Yes] and found as Yes",
+      "[TEST-PASS][SANITY_CHECK-PASS] for [SPACE][G SW Apartment] and [THERMAL ZONE] [Sp-G SW Apartment Sys-1 Flr-3 Sch-G HPlcmt-south ZN] where isConditioned is supposed to be [Yes] and found as Yes",
+      "[TEST-PASS][SANITY_CHECK-PASS] for [SPACE][M Corridor] and [THERMAL ZONE] [Sp-M Corridor Sys-1 Flr-1 Sch-G HPlcmt-east ZN] where isConditioned is supposed to be [Yes] and found as Yes",
+      "[TEST-PASS][SANITY_CHECK-PASS] for [SPACE][M N1 Apartment] and [THERMAL ZONE] [Sp-M N1 Apartment Sys-1 Flr-1 Sch-G HPlcmt-north ZN] where isConditioned is supposed to be [Yes] and found as Yes",
+      "[TEST-PASS][SANITY_CHECK-PASS] for [SPACE][M N2 Apartment] and [THERMAL ZONE] [Sp-M N2 Apartment Sys-1 Flr-1 Sch-G HPlcmt-north ZN] where isConditioned is supposed to be [Yes] and found as Yes",
+      "[TEST-PASS][SANITY_CHECK-PASS] for [SPACE][M NE Apartment] and [THERMAL ZONE] [Sp-M NE Apartment Sys-1 Flr-1 Sch-G HPlcmt-north ZN] where isConditioned is supposed to be [Yes] and found as Yes",
+      "[TEST-PASS][SANITY_CHECK-PASS] for [SPACE][M NW Apartment] and [THERMAL ZONE] [Sp-M NW Apartment Sys-1 Flr-1 Sch-G HPlcmt-north ZN] where isConditioned is supposed to be [Yes] and found as Yes",
+      "[TEST-PASS][SANITY_CHECK-PASS] for [SPACE][M S1 Apartment] and [THERMAL ZONE] [Sp-M S1 Apartment Sys-1 Flr-1 Sch-G HPlcmt-south ZN] where isConditioned is supposed to be [Yes] and found as Yes",
+      "[TEST-PASS][SANITY_CHECK-PASS] for [SPACE][M S2 Apartment] and [THERMAL ZONE] [Sp-M S2 Apartment Sys-1 Flr-1 Sch-G HPlcmt-south ZN] where isConditioned is supposed to be [Yes] and found as Yes",
+      "[TEST-PASS][SANITY_CHECK-PASS] for [SPACE][M SE Apartment] and [THERMAL ZONE] [Sp-M SE Apartment Sys-1 Flr-1 Sch-G HPlcmt-south ZN] where isConditioned is supposed to be [Yes] and found as Yes",
+      "[TEST-PASS][SANITY_CHECK-PASS] for [SPACE][M SW Apartment] and [THERMAL ZONE] [Sp-M SW Apartment Sys-1 Flr-1 Sch-G HPlcmt-south ZN] where isConditioned is supposed to be [Yes] and found as Yes",
+      "[TEST-PASS][SANITY_CHECK-PASS] for [SPACE][Office] and [THERMAL ZONE] [Sp-Office Sys-3 Flr-3 Sch-C HPlcmt-south ZN] where isConditioned is supposed to be [Yes] and found as Yes",
+      "[TEST-PASS][SANITY_CHECK-PASS] for [SPACE][T Corridor] and [THERMAL ZONE] [Sp-T Corridor Sys-1 Flr-2 Sch-G HPlcmt-west ZN] where isConditioned is supposed to be [Yes] and found as Yes",
+      "[TEST-PASS][SANITY_CHECK-PASS] for [SPACE][T N1 Apartment] and [THERMAL ZONE] [Sp-T N1 Apartment Sys-1 Flr-2 Sch-G HPlcmt-north ZN] where isConditioned is supposed to be [Yes] and found as Yes",
+      "[TEST-PASS][SANITY_CHECK-PASS] for [SPACE][T N2 Apartment] and [THERMAL ZONE] [Sp-T N2 Apartment Sys-1 Flr-2 Sch-G HPlcmt-north ZN] where isConditioned is supposed to be [Yes] and found as Yes",
+      "[TEST-PASS][SANITY_CHECK-PASS] for [SPACE][T NE Apartment] and [THERMAL ZONE] [Sp-T NE Apartment Sys-1 Flr-2 Sch-G HPlcmt-north ZN] where isConditioned is supposed to be [Yes] and found as Yes",
+      "[TEST-PASS][SANITY_CHECK-PASS] for [SPACE][T NW Apartment] and [THERMAL ZONE] [Sp-T NW Apartment Sys-1 Flr-2 Sch-G HPlcmt-north ZN] where isConditioned is supposed to be [Yes] and found as Yes",
+      "[TEST-PASS][SANITY_CHECK-PASS] for [SPACE][T S1 Apartment] and [THERMAL ZONE] [Sp-T S1 Apartment Sys-1 Flr-2 Sch-G HPlcmt-south ZN] where isConditioned is supposed to be [Yes] and found as Yes",
+      "[TEST-PASS][SANITY_CHECK-PASS] for [SPACE][T S2 Apartment] and [THERMAL ZONE] [Sp-T S2 Apartment Sys-1 Flr-2 Sch-G HPlcmt-south ZN] where isConditioned is supposed to be [Yes] and found as Yes",
+      "[TEST-PASS][SANITY_CHECK-PASS] for [SPACE][T SE Apartment] and [THERMAL ZONE] [Sp-T SE Apartment Sys-1 Flr-2 Sch-G HPlcmt-south ZN] where isConditioned is supposed to be [Yes] and found as Yes",
+      "[TEST-PASS][SANITY_CHECK-PASS] for [SPACE][T SW Apartment] and [THERMAL ZONE] [Sp-T SW Apartment Sys-1 Flr-2 Sch-G HPlcmt-south ZN] where isConditioned is supposed to be [Yes] and found as Yes"
+    ]
+  }
+}

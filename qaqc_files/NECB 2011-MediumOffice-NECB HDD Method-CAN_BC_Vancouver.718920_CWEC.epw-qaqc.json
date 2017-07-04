@@ -1,0 +1,1645 @@
+{
+  "os_standards_revision": "c771d41",
+  "os_standards_version": "0.1.14",
+  "openstudio_version": "2.1.0.ae0b9e616a",
+  "energyplus_version": "8.7.0",
+  "date": "2017-06-30 14:18:31 +0000",
+  "building": {
+    "name": "NECB 2011-MediumOffice-NECB HDD Method-CAN_BC_Vancouver.718920_CWEC.epw created: 2017-06-30 14:15:45 +0000",
+    "conditioned_floor_area_m2": 4982.1858954,
+    "exterior_area_m2": 3638.3973409200007,
+    "volume": 19741.413391932947,
+    "number_of_stories": 3
+  },
+  "geography": {
+    "hdd": 2932.0,
+    "cdd": 41.0,
+    "climate_zone": "4",
+    "city": "Vancouver Int'l",
+    "state_province_region": "BC",
+    "country": "CAN",
+    "latitude": 49.18,
+    "longitude": -123.17
+  },
+  "spacetype_area_breakdown": {
+    "space_function_-_undefined_-": 0,
+    "space_function_office_-_open_plan": 4982.185895400002
+  },
+  "economics": {
+    "electricity_cost": 0.0,
+    "electricity_cost_per_m2": 0.0,
+    "natural_gas_cost": 0.0,
+    "natural_gas_cost_per_m2": 0.0,
+    "additional_cost": 0.0,
+    "additional_cost_per_m2": 0.0,
+    "total_cost": 0.0,
+    "total_cost_per_m2": 0.0
+  },
+  "end_uses": {
+    "heating_gj": 206.3,
+    "cooling_gj": 97.91,
+    "interior_lighting_gj": 578.86,
+    "exterior_lighting_gj": 0,
+    "interior_equipment_gj": 497.99,
+    "exterior_equipment_gj": 0,
+    "fans_gj": 231.57,
+    "pumps_gj": 54.31,
+    "heat_rejection_gj": 3.61,
+    "heat_rejection_water_m3": 45185.09,
+    "humidification_gj": 0,
+    "heat_recovery_gj": 0,
+    "water_systems_gj": 274.51,
+    "water_systems_water_m3": 1076.31,
+    "refrigeration_gj": 0,
+    "generators_gj": 0,
+    "total_end_uses_gj": 1945.03,
+    "total_end_uses_water_m3": 46261.4
+  },
+  "end_uses_eui": {
+    "heating_gj_per_m2": 0.04140752760559871,
+    "cooling_gj_per_m2": 0.019652016615919386,
+    "interior_lighting_gj_per_m2": 0.11618594973231637,
+    "exterior_lighting_gj_per_m2": 0,
+    "interior_equipment_gj_per_m2": 0.09995411862487688,
+    "exterior_equipment_gj_per_m2": 0,
+    "fans_gj_per_m2": 0.04647959848583855,
+    "pumps_gj_per_m2": 0.01090083773271966,
+    "heat_rejection_gj_per_m2": 0.0007245815543199774,
+    "heat_rejection_water_m3_per_m2": 9.069330400079796,
+    "humidification_gj_per_m2": 0,
+    "heat_recovery_gj_per_m2": 0,
+    "water_systems_gj_per_m2": 0.05509830539511828,
+    "water_systems_water_m3_per_m2": 0.21603168219671323,
+    "refrigeration_gj_per_m2": 0,
+    "generators_gj_per_m2": 0,
+    "total_end_uses_gj_per_m2": 0.39039691429334783,
+    "total_end_uses_water_m3_per_m2": 9.28536208227651
+  },
+  "meter_peaks": {
+    "electric_w": 178939.18,
+    "natural_gas_w": 184666.41
+  },
+  "unmet_hours": {
+    "cooling": 35.5,
+    "heating": 38.83
+  },
+  "service_water_heating": {
+    "total_nominal_occupancy": 249.35885885885884,
+    "electricity_per_year": 0.0,
+    "electricity_per_day": 0.0,
+    "electricity_per_day_per_occupant": 0.0,
+    "natural_gas_per_year": 274.51,
+    "additional_fuel_per_year": 0.0,
+    "water_m3_per_year": 1076.31,
+    "water_m3_per_day": 2.9447606019151844,
+    "water_m3_per_day_per_occupant": 0.011809328192273958
+  },
+  "envelope": {
+    "outdoor_walls_average_conductance_w_per_m2_k": 0.315,
+    "outdoor_roofs_average_conductance_w_per_m2_k": 0.227,
+    "ground_floors_average_conductance_w_per_m2_k": 0.757,
+    "windows_average_conductance_w_per_m2_k": 2.4,
+    "fdwr": 33.0,
+    "srr": 0.0,
+    "constructions": {
+      "exterior_fenestration": [
+        {
+          "name": "Customized Fenestration: cond=0.240 tvis=0.220 tsol=0.232",
+          "net_area_m2": 652.83,
+          "thermal_conductance_m2_w_per_k": 2.4,
+          "solar_transmittance": 0.6,
+          "visible_tranmittance": 0.21
+        }
+      ],
+      "exterior_opaque": [
+        {
+          "name": "Customized opaque construction {2bc44728-04d5-475c-a80d-704f9cd7aa20} to conductance of 0.227",
+          "net_area_m2": 1660.73,
+          "thermal_conductance_m2_w_per_k": 0.227,
+          "solar_absorptance": 0.7
+        },
+        {
+          "name": "Customized opaque construction {80513cd4-5580-4432-89a3-a7e0ae5a9110} to conductance of 0.315",
+          "net_area_m2": 1324.84,
+          "thermal_conductance_m2_w_per_k": 0.315,
+          "solar_absorptance": 0.92
+        }
+      ],
+      "ground": [
+        {
+          "name": "Customized opaque construction {8738cb05-b639-444c-85a8-6e07b66a474f} to conductance of 0.757",
+          "net_area_m2": 1660.73,
+          "thermal_conductance_m2_w_per_k": 0.757,
+          "solar_absorptance": 0.7
+        }
+      ]
+    }
+  },
+  "spaces": [
+    {
+      "name": "Core_bottom",
+      "multiplier": 1,
+      "volume": 2698.037523816624,
+      "exterior_wall_area": 0.0,
+      "space_type_name": "Space Function Office - open plan",
+      "thermal_zone": "Sp-Core_bottom Sys-6 Flr-2 Sch-A HPlcmt-core ZN",
+      "breathing_zone_outdoor_airflow_vbz": 0.4247,
+      "infiltration_method": "N/A",
+      "infiltration_flow_per_m2": -1.0,
+      "occupancy_schedule": "NECB-A-Occupancy",
+      "occ_per_m2": 0.05,
+      "lighting_w_per_m2": 11.0,
+      "electric_w_per_m2": 7.5,
+      "shw_m3_per_s": 0.0,
+      "waterUseEquipment": [
+        {
+          "peak_flow_rate": 2.38082560431289e-05,
+          "peak_flow_rate_per_area": 2.420678267110348e-08,
+          "shw_watts_per_person": 89.97275866309992
+        }
+      ]
+    },
+    {
+      "name": "Perimeter_bot_ZN_4",
+      "multiplier": 1,
+      "volume": 360.054831409344,
+      "exterior_wall_area": 91.27668816,
+      "space_type_name": "Space Function Office - open plan",
+      "thermal_zone": "Sp-Perimeter_bot_ZN_4 Sys-6 Flr-2 Sch-A HPlcmt-west ZN",
+      "breathing_zone_outdoor_airflow_vbz": 0.0567,
+      "infiltration_method": "Flow/ExteriorArea",
+      "infiltration_flow_per_m2": 0.00025,
+      "occupancy_schedule": "NECB-A-Occupancy",
+      "occ_per_m2": 0.05,
+      "lighting_w_per_m2": 11.0,
+      "electric_w_per_m2": 7.5,
+      "shw_m3_per_s": 0.0,
+      "waterUseEquipment": [
+        {
+          "peak_flow_rate": 3.17722698075489e-06,
+          "peak_flow_rate_per_area": 2.4206782671103535e-08,
+          "shw_watts_per_person": 89.97275866310012
+        }
+      ]
+    },
+    {
+      "name": "Core_mid",
+      "multiplier": 1,
+      "volume": 2698.0375238166234,
+      "exterior_wall_area": 0.0,
+      "space_type_name": "Space Function Office - open plan",
+      "thermal_zone": "Sp-Core_mid Sys-6 Flr-3 Sch-A HPlcmt-core ZN",
+      "breathing_zone_outdoor_airflow_vbz": 0.4247,
+      "infiltration_method": "N/A",
+      "infiltration_flow_per_m2": -1.0,
+      "occupancy_schedule": "NECB-A-Occupancy",
+      "occ_per_m2": 0.05,
+      "lighting_w_per_m2": 11.0,
+      "electric_w_per_m2": 7.5,
+      "shw_m3_per_s": 0.0,
+      "waterUseEquipment": [
+        {
+          "peak_flow_rate": 2.38082560431289e-05,
+          "peak_flow_rate_per_area": 2.420678267110348e-08,
+          "shw_watts_per_person": 89.97275866309992
+        }
+      ]
+    },
+    {
+      "name": "Perimeter_top_ZN_1",
+      "multiplier": 1,
+      "volume": 568.7699883363358,
+      "exterior_wall_area": 136.91585519999995,
+      "space_type_name": "Space Function Office - open plan",
+      "thermal_zone": "Sp-Perimeter_top_ZN_1 Sys-6 Flr-1 Sch-A HPlcmt-south ZN",
+      "breathing_zone_outdoor_airflow_vbz": 0.0895,
+      "infiltration_method": "Flow/ExteriorArea",
+      "infiltration_flow_per_m2": 0.00025,
+      "occupancy_schedule": "NECB-A-Occupancy",
+      "occ_per_m2": 0.05,
+      "lighting_w_per_m2": 11.0,
+      "electric_w_per_m2": 7.5,
+      "shw_m3_per_s": 0.0,
+      "waterUseEquipment": [
+        {
+          "peak_flow_rate": 5.01898931813348e-06,
+          "peak_flow_rate_per_area": 2.420678267110351e-08,
+          "shw_watts_per_person": 89.97275866310004
+        }
+      ]
+    },
+    {
+      "name": "Perimeter_top_ZN_3",
+      "multiplier": 1,
+      "volume": 568.7699883363358,
+      "exterior_wall_area": 136.91585519999995,
+      "space_type_name": "Space Function Office - open plan",
+      "thermal_zone": "Sp-Perimeter_top_ZN_3 Sys-6 Flr-1 Sch-A HPlcmt-north ZN",
+      "breathing_zone_outdoor_airflow_vbz": 0.0895,
+      "infiltration_method": "Flow/ExteriorArea",
+      "infiltration_flow_per_m2": 0.00025,
+      "occupancy_schedule": "NECB-A-Occupancy",
+      "occ_per_m2": 0.05,
+      "lighting_w_per_m2": 11.0,
+      "electric_w_per_m2": 7.5,
+      "shw_m3_per_s": 0.0,
+      "waterUseEquipment": [
+        {
+          "peak_flow_rate": 5.01898931813348e-06,
+          "peak_flow_rate_per_area": 2.420678267110351e-08,
+          "shw_watts_per_person": 89.97275866310004
+        }
+      ]
+    },
+    {
+      "name": "Perimeter_mid_ZN_2",
+      "multiplier": 1,
+      "volume": 360.0784508551202,
+      "exterior_wall_area": 91.27668815999998,
+      "space_type_name": "Space Function Office - open plan",
+      "thermal_zone": "Sp-Perimeter_mid_ZN_2 Sys-6 Flr-3 Sch-A HPlcmt-east ZN",
+      "breathing_zone_outdoor_airflow_vbz": 0.0567,
+      "infiltration_method": "Flow/ExteriorArea",
+      "infiltration_flow_per_m2": 0.00025,
+      "occupancy_schedule": "NECB-A-Occupancy",
+      "occ_per_m2": 0.05,
+      "lighting_w_per_m2": 11.0,
+      "electric_w_per_m2": 7.5,
+      "shw_m3_per_s": 0.0,
+      "waterUseEquipment": [
+        {
+          "peak_flow_rate": 3.17743540551091e-06,
+          "peak_flow_rate_per_area": 2.4206782671103525e-08,
+          "shw_watts_per_person": 89.9727586631001
+        }
+      ]
+    },
+    {
+      "name": "MidFloor_Plenum",
+      "multiplier": 1,
+      "volume": 2024.7603478905614,
+      "exterior_wall_area": 202.83781632000014,
+      "space_type_name": "Space Function - undefined -",
+      "thermal_zone": "Sp-MidFloor_Plenum Sys-0 Flr-3 Sch-- undefined - HPlcmt-north ZN",
+      "breathing_zone_outdoor_airflow_vbz": -1,
+      "infiltration_method": "Flow/ExteriorArea",
+      "infiltration_flow_per_m2": 0.00025,
+      "occupancy_schedule": null,
+      "waterUseEquipment": [
+
+      ]
+    },
+    {
+      "name": "Perimeter_bot_ZN_2",
+      "multiplier": 1,
+      "volume": 360.07845085512025,
+      "exterior_wall_area": 91.27668816,
+      "space_type_name": "Space Function Office - open plan",
+      "thermal_zone": "Sp-Perimeter_bot_ZN_2 Sys-6 Flr-2 Sch-A HPlcmt-east ZN",
+      "breathing_zone_outdoor_airflow_vbz": 0.0567,
+      "infiltration_method": "Flow/ExteriorArea",
+      "infiltration_flow_per_m2": 0.00025,
+      "occupancy_schedule": "NECB-A-Occupancy",
+      "occ_per_m2": 0.05,
+      "lighting_w_per_m2": 11.0,
+      "electric_w_per_m2": 7.5,
+      "shw_m3_per_s": 0.0,
+      "waterUseEquipment": [
+        {
+          "peak_flow_rate": 3.17743540551091e-06,
+          "peak_flow_rate_per_area": 2.4206782671103525e-08,
+          "shw_watts_per_person": 89.9727586631001
+        }
+      ]
+    },
+    {
+      "name": "Perimeter_top_ZN_4",
+      "multiplier": 1,
+      "volume": 360.0548314093439,
+      "exterior_wall_area": 91.27668815999996,
+      "space_type_name": "Space Function Office - open plan",
+      "thermal_zone": "Sp-Perimeter_top_ZN_4 Sys-6 Flr-1 Sch-A HPlcmt-west ZN",
+      "breathing_zone_outdoor_airflow_vbz": 0.0567,
+      "infiltration_method": "Flow/ExteriorArea",
+      "infiltration_flow_per_m2": 0.00025,
+      "occupancy_schedule": "NECB-A-Occupancy",
+      "occ_per_m2": 0.05,
+      "lighting_w_per_m2": 11.0,
+      "electric_w_per_m2": 7.5,
+      "shw_m3_per_s": 0.0,
+      "waterUseEquipment": [
+        {
+          "peak_flow_rate": 3.17722698075489e-06,
+          "peak_flow_rate_per_area": 2.4206782671103535e-08,
+          "shw_watts_per_person": 89.97275866310012
+        }
+      ]
+    },
+    {
+      "name": "TopFloor_Plenum",
+      "multiplier": 1,
+      "volume": 2024.7603478905555,
+      "exterior_wall_area": 202.83781632000014,
+      "space_type_name": "Space Function - undefined -",
+      "thermal_zone": "Sp-TopFloor_Plenum Sys-0 Flr-1 Sch-- undefined - HPlcmt-north ZN",
+      "breathing_zone_outdoor_airflow_vbz": -1,
+      "infiltration_method": "Flow/ExteriorArea",
+      "infiltration_flow_per_m2": 0.00025,
+      "occupancy_schedule": null,
+      "waterUseEquipment": [
+
+      ]
+    },
+    {
+      "name": "FirstFloor_Plenum",
+      "multiplier": 1,
+      "volume": 2024.7603478905605,
+      "exterior_wall_area": 202.83781632000006,
+      "space_type_name": "Space Function - undefined -",
+      "thermal_zone": "Sp-FirstFloor_Plenum Sys-0 Flr-2 Sch-- undefined - HPlcmt-north ZN",
+      "breathing_zone_outdoor_airflow_vbz": -1,
+      "infiltration_method": "Flow/ExteriorArea",
+      "infiltration_flow_per_m2": 0.00025,
+      "occupancy_schedule": null,
+      "waterUseEquipment": [
+
+      ]
+    },
+    {
+      "name": "Core_top",
+      "multiplier": 1,
+      "volume": 2698.037523816623,
+      "exterior_wall_area": 0.0,
+      "space_type_name": "Space Function Office - open plan",
+      "thermal_zone": "Sp-Core_top Sys-6 Flr-1 Sch-A HPlcmt-core ZN",
+      "breathing_zone_outdoor_airflow_vbz": 0.4247,
+      "infiltration_method": "N/A",
+      "infiltration_flow_per_m2": -1.0,
+      "occupancy_schedule": "NECB-A-Occupancy",
+      "occ_per_m2": 0.05,
+      "lighting_w_per_m2": 11.0,
+      "electric_w_per_m2": 7.5,
+      "shw_m3_per_s": 0.0,
+      "waterUseEquipment": [
+        {
+          "peak_flow_rate": 2.38082560431289e-05,
+          "peak_flow_rate_per_area": 2.420678267110348e-08,
+          "shw_watts_per_person": 89.97275866309992
+        }
+      ]
+    },
+    {
+      "name": "Perimeter_mid_ZN_1",
+      "multiplier": 1,
+      "volume": 568.7699883363358,
+      "exterior_wall_area": 136.91585519999998,
+      "space_type_name": "Space Function Office - open plan",
+      "thermal_zone": "Sp-Perimeter_mid_ZN_1 Sys-6 Flr-3 Sch-A HPlcmt-south ZN",
+      "breathing_zone_outdoor_airflow_vbz": 0.0895,
+      "infiltration_method": "Flow/ExteriorArea",
+      "infiltration_flow_per_m2": 0.00025,
+      "occupancy_schedule": "NECB-A-Occupancy",
+      "occ_per_m2": 0.05,
+      "lighting_w_per_m2": 11.0,
+      "electric_w_per_m2": 7.5,
+      "shw_m3_per_s": 0.0,
+      "waterUseEquipment": [
+        {
+          "peak_flow_rate": 5.01898931813348e-06,
+          "peak_flow_rate_per_area": 2.420678267110351e-08,
+          "shw_watts_per_person": 89.97275866310004
+        }
+      ]
+    },
+    {
+      "name": "Perimeter_bot_ZN_3",
+      "multiplier": 1,
+      "volume": 568.7699883363359,
+      "exterior_wall_area": 136.9158552,
+      "space_type_name": "Space Function Office - open plan",
+      "thermal_zone": "Sp-Perimeter_bot_ZN_3 Sys-6 Flr-2 Sch-A HPlcmt-north ZN",
+      "breathing_zone_outdoor_airflow_vbz": 0.0895,
+      "infiltration_method": "Flow/ExteriorArea",
+      "infiltration_flow_per_m2": 0.00025,
+      "occupancy_schedule": "NECB-A-Occupancy",
+      "occ_per_m2": 0.05,
+      "lighting_w_per_m2": 11.0,
+      "electric_w_per_m2": 7.5,
+      "shw_m3_per_s": 0.0,
+      "waterUseEquipment": [
+        {
+          "peak_flow_rate": 5.01898931813348e-06,
+          "peak_flow_rate_per_area": 2.420678267110351e-08,
+          "shw_watts_per_person": 89.97275866310004
+        }
+      ]
+    },
+    {
+      "name": "Perimeter_bot_ZN_1",
+      "multiplier": 1,
+      "volume": 568.7699883363359,
+      "exterior_wall_area": 136.9158552,
+      "space_type_name": "Space Function Office - open plan",
+      "thermal_zone": "Sp-Perimeter_bot_ZN_1 Sys-6 Flr-2 Sch-A HPlcmt-south ZN",
+      "breathing_zone_outdoor_airflow_vbz": 0.0895,
+      "infiltration_method": "Flow/ExteriorArea",
+      "infiltration_flow_per_m2": 0.00025,
+      "occupancy_schedule": "NECB-A-Occupancy",
+      "occ_per_m2": 0.05,
+      "lighting_w_per_m2": 11.0,
+      "electric_w_per_m2": 7.5,
+      "shw_m3_per_s": 0.0,
+      "waterUseEquipment": [
+        {
+          "peak_flow_rate": 5.01898931813348e-06,
+          "peak_flow_rate_per_area": 2.420678267110351e-08,
+          "shw_watts_per_person": 89.97275866310004
+        }
+      ]
+    },
+    {
+      "name": "Perimeter_top_ZN_2",
+      "multiplier": 1,
+      "volume": 360.07845085512014,
+      "exterior_wall_area": 91.27668815999996,
+      "space_type_name": "Space Function Office - open plan",
+      "thermal_zone": "Sp-Perimeter_top_ZN_2 Sys-6 Flr-1 Sch-A HPlcmt-east ZN",
+      "breathing_zone_outdoor_airflow_vbz": 0.0567,
+      "infiltration_method": "Flow/ExteriorArea",
+      "infiltration_flow_per_m2": 0.00025,
+      "occupancy_schedule": "NECB-A-Occupancy",
+      "occ_per_m2": 0.05,
+      "lighting_w_per_m2": 11.0,
+      "electric_w_per_m2": 7.5,
+      "shw_m3_per_s": 0.0,
+      "waterUseEquipment": [
+        {
+          "peak_flow_rate": 3.17743540551091e-06,
+          "peak_flow_rate_per_area": 2.4206782671103525e-08,
+          "shw_watts_per_person": 89.9727586631001
+        }
+      ]
+    },
+    {
+      "name": "Perimeter_mid_ZN_3",
+      "multiplier": 1,
+      "volume": 568.7699883363358,
+      "exterior_wall_area": 136.91585519999998,
+      "space_type_name": "Space Function Office - open plan",
+      "thermal_zone": "Sp-Perimeter_mid_ZN_3 Sys-6 Flr-3 Sch-A HPlcmt-north ZN",
+      "breathing_zone_outdoor_airflow_vbz": 0.0895,
+      "infiltration_method": "Flow/ExteriorArea",
+      "infiltration_flow_per_m2": 0.00025,
+      "occupancy_schedule": "NECB-A-Occupancy",
+      "occ_per_m2": 0.05,
+      "lighting_w_per_m2": 11.0,
+      "electric_w_per_m2": 7.5,
+      "shw_m3_per_s": 0.0,
+      "waterUseEquipment": [
+        {
+          "peak_flow_rate": 5.01898931813348e-06,
+          "peak_flow_rate_per_area": 2.420678267110351e-08,
+          "shw_watts_per_person": 89.97275866310004
+        }
+      ]
+    },
+    {
+      "name": "Perimeter_mid_ZN_4",
+      "multiplier": 1,
+      "volume": 360.05483140934393,
+      "exterior_wall_area": 91.27668815999998,
+      "space_type_name": "Space Function Office - open plan",
+      "thermal_zone": "Sp-Perimeter_mid_ZN_4 Sys-6 Flr-3 Sch-A HPlcmt-west ZN",
+      "breathing_zone_outdoor_airflow_vbz": 0.0567,
+      "infiltration_method": "Flow/ExteriorArea",
+      "infiltration_flow_per_m2": 0.00025,
+      "occupancy_schedule": "NECB-A-Occupancy",
+      "occ_per_m2": 0.05,
+      "lighting_w_per_m2": 11.0,
+      "electric_w_per_m2": 7.5,
+      "shw_m3_per_s": 0.0,
+      "waterUseEquipment": [
+        {
+          "peak_flow_rate": 3.17722698075489e-06,
+          "peak_flow_rate_per_area": 2.4206782671103535e-08,
+          "shw_watts_per_person": 89.97275866310012
+        }
+      ]
+    }
+  ],
+  "thermal_zones": [
+    {
+      "name": "Sp-Core_bottom Sys-6 Flr-2 Sch-A HPlcmt-core ZN",
+      "floor_area": 983.5365718200001,
+      "multiplier": 1,
+      "is_conditioned": "Yes",
+      "is_ideal_air_loads": false,
+      "heating_sizing_factor": 1.3,
+      "cooling_sizing_factor": 1.1,
+      "zone_heating_design_supply_air_temperature": 43.0,
+      "zone_cooling_design_supply_air_temperature": 13.0,
+      "spaces": [
+        {
+          "name": "Core_bottom",
+          "type": "Space Function Office - open plan"
+        }
+      ],
+      "equipment": [
+        {
+          "name": "Air Terminal Single Duct VAV Reheat 3",
+          "type": "StraightComponent"
+        },
+        {
+          "name": "Zone HVAC Baseboard Convective Water 3",
+          "type": "ZoneHVACComponent"
+        }
+      ]
+    },
+    {
+      "name": "Sp-Perimeter_top_ZN_3 Sys-6 Flr-1 Sch-A HPlcmt-north ZN",
+      "floor_area": 207.33814098,
+      "multiplier": 1,
+      "is_conditioned": "Yes",
+      "is_ideal_air_loads": false,
+      "heating_sizing_factor": 1.3,
+      "cooling_sizing_factor": 1.1,
+      "zone_heating_design_supply_air_temperature": 43.0,
+      "zone_cooling_design_supply_air_temperature": 13.0,
+      "spaces": [
+        {
+          "name": "Perimeter_top_ZN_3",
+          "type": "Space Function Office - open plan"
+        }
+      ],
+      "equipment": [
+        {
+          "name": "Air Terminal Single Duct VAV Reheat 14",
+          "type": "StraightComponent"
+        },
+        {
+          "name": "Zone HVAC Baseboard Convective Water 14",
+          "type": "ZoneHVACComponent"
+        }
+      ]
+    },
+    {
+      "name": "Sp-Core_top Sys-6 Flr-1 Sch-A HPlcmt-core ZN",
+      "floor_area": 983.5365718200001,
+      "multiplier": 1,
+      "is_conditioned": "Yes",
+      "is_ideal_air_loads": false,
+      "heating_sizing_factor": 1.3,
+      "cooling_sizing_factor": 1.1,
+      "zone_heating_design_supply_air_temperature": 43.0,
+      "zone_cooling_design_supply_air_temperature": 13.0,
+      "spaces": [
+        {
+          "name": "Core_top",
+          "type": "Space Function Office - open plan"
+        }
+      ],
+      "equipment": [
+        {
+          "name": "Air Terminal Single Duct VAV Reheat 11",
+          "type": "StraightComponent"
+        },
+        {
+          "name": "Zone HVAC Baseboard Convective Water 11",
+          "type": "ZoneHVACComponent"
+        }
+      ]
+    },
+    {
+      "name": "Sp-Perimeter_mid_ZN_3 Sys-6 Flr-3 Sch-A HPlcmt-north ZN",
+      "floor_area": 207.33814098,
+      "multiplier": 1,
+      "is_conditioned": "Yes",
+      "is_ideal_air_loads": false,
+      "heating_sizing_factor": 1.3,
+      "cooling_sizing_factor": 1.1,
+      "zone_heating_design_supply_air_temperature": 43.0,
+      "zone_cooling_design_supply_air_temperature": 13.0,
+      "spaces": [
+        {
+          "name": "Perimeter_mid_ZN_3",
+          "type": "Space Function Office - open plan"
+        }
+      ],
+      "equipment": [
+        {
+          "name": "Air Terminal Single Duct VAV Reheat 7",
+          "type": "StraightComponent"
+        },
+        {
+          "name": "Zone HVAC Baseboard Convective Water 7",
+          "type": "ZoneHVACComponent"
+        }
+      ]
+    },
+    {
+      "name": "Sp-Perimeter_mid_ZN_1 Sys-6 Flr-3 Sch-A HPlcmt-south ZN",
+      "floor_area": 207.33814098,
+      "multiplier": 1,
+      "is_conditioned": "Yes",
+      "is_ideal_air_loads": false,
+      "heating_sizing_factor": 1.3,
+      "cooling_sizing_factor": 1.1,
+      "zone_heating_design_supply_air_temperature": 43.0,
+      "zone_cooling_design_supply_air_temperature": 13.0,
+      "spaces": [
+        {
+          "name": "Perimeter_mid_ZN_1",
+          "type": "Space Function Office - open plan"
+        }
+      ],
+      "equipment": [
+        {
+          "name": "Air Terminal Single Duct VAV Reheat 8",
+          "type": "StraightComponent"
+        },
+        {
+          "name": "Zone HVAC Baseboard Convective Water 8",
+          "type": "ZoneHVACComponent"
+        }
+      ]
+    },
+    {
+      "name": "Sp-FirstFloor_Plenum Sys-0 Flr-2 Sch-- undefined - HPlcmt-north ZN",
+      "floor_area": 1660.7286318000001,
+      "multiplier": 1,
+      "is_conditioned": "No",
+      "is_ideal_air_loads": false,
+      "heating_sizing_factor": -1.0,
+      "cooling_sizing_factor": -1.0,
+      "zone_heating_design_supply_air_temperature": 40.0,
+      "zone_cooling_design_supply_air_temperature": 14.0,
+      "spaces": [
+        {
+          "name": "FirstFloor_Plenum",
+          "type": "Space Function - undefined -"
+        }
+      ],
+      "equipment": [
+
+      ]
+    },
+    {
+      "name": "Sp-TopFloor_Plenum Sys-0 Flr-1 Sch-- undefined - HPlcmt-north ZN",
+      "floor_area": 1660.7286318000001,
+      "multiplier": 1,
+      "is_conditioned": "No",
+      "is_ideal_air_loads": false,
+      "heating_sizing_factor": -1.0,
+      "cooling_sizing_factor": -1.0,
+      "zone_heating_design_supply_air_temperature": 40.0,
+      "zone_cooling_design_supply_air_temperature": 14.0,
+      "spaces": [
+        {
+          "name": "TopFloor_Plenum",
+          "type": "Space Function - undefined -"
+        }
+      ],
+      "equipment": [
+
+      ]
+    },
+    {
+      "name": "Sp-Perimeter_bot_ZN_1 Sys-6 Flr-2 Sch-A HPlcmt-south ZN",
+      "floor_area": 207.33814098,
+      "multiplier": 1,
+      "is_conditioned": "Yes",
+      "is_ideal_air_loads": false,
+      "heating_sizing_factor": 1.3,
+      "cooling_sizing_factor": 1.1,
+      "zone_heating_design_supply_air_temperature": 43.0,
+      "zone_cooling_design_supply_air_temperature": 13.0,
+      "spaces": [
+        {
+          "name": "Perimeter_bot_ZN_1",
+          "type": "Space Function Office - open plan"
+        }
+      ],
+      "equipment": [
+        {
+          "name": "Air Terminal Single Duct VAV Reheat 1",
+          "type": "StraightComponent"
+        },
+        {
+          "name": "Zone HVAC Baseboard Convective Water 1",
+          "type": "ZoneHVACComponent"
+        }
+      ]
+    },
+    {
+      "name": "Sp-Perimeter_top_ZN_1 Sys-6 Flr-1 Sch-A HPlcmt-south ZN",
+      "floor_area": 207.33814098,
+      "multiplier": 1,
+      "is_conditioned": "Yes",
+      "is_ideal_air_loads": false,
+      "heating_sizing_factor": 1.3,
+      "cooling_sizing_factor": 1.1,
+      "zone_heating_design_supply_air_temperature": 43.0,
+      "zone_cooling_design_supply_air_temperature": 13.0,
+      "spaces": [
+        {
+          "name": "Perimeter_top_ZN_1",
+          "type": "Space Function Office - open plan"
+        }
+      ],
+      "equipment": [
+        {
+          "name": "Air Terminal Single Duct VAV Reheat 13",
+          "type": "StraightComponent"
+        },
+        {
+          "name": "Zone HVAC Baseboard Convective Water 13",
+          "type": "ZoneHVACComponent"
+        }
+      ]
+    },
+    {
+      "name": "Sp-Core_mid Sys-6 Flr-3 Sch-A HPlcmt-core ZN",
+      "floor_area": 983.5365718200001,
+      "multiplier": 1,
+      "is_conditioned": "Yes",
+      "is_ideal_air_loads": false,
+      "heating_sizing_factor": 1.3,
+      "cooling_sizing_factor": 1.1,
+      "zone_heating_design_supply_air_temperature": 43.0,
+      "zone_cooling_design_supply_air_temperature": 13.0,
+      "spaces": [
+        {
+          "name": "Core_mid",
+          "type": "Space Function Office - open plan"
+        }
+      ],
+      "equipment": [
+        {
+          "name": "Air Terminal Single Duct VAV Reheat 6",
+          "type": "StraightComponent"
+        },
+        {
+          "name": "Zone HVAC Baseboard Convective Water 6",
+          "type": "ZoneHVACComponent"
+        }
+      ]
+    },
+    {
+      "name": "Sp-Perimeter_bot_ZN_4 Sys-6 Flr-2 Sch-A HPlcmt-west ZN",
+      "floor_area": 131.25358392,
+      "multiplier": 1,
+      "is_conditioned": "Yes",
+      "is_ideal_air_loads": false,
+      "heating_sizing_factor": 1.3,
+      "cooling_sizing_factor": 1.1,
+      "zone_heating_design_supply_air_temperature": 43.0,
+      "zone_cooling_design_supply_air_temperature": 13.0,
+      "spaces": [
+        {
+          "name": "Perimeter_bot_ZN_4",
+          "type": "Space Function Office - open plan"
+        }
+      ],
+      "equipment": [
+        {
+          "name": "Air Terminal Single Duct VAV Reheat 5",
+          "type": "StraightComponent"
+        },
+        {
+          "name": "Zone HVAC Baseboard Convective Water 5",
+          "type": "ZoneHVACComponent"
+        }
+      ]
+    },
+    {
+      "name": "Sp-Perimeter_top_ZN_2 Sys-6 Flr-1 Sch-A HPlcmt-east ZN",
+      "floor_area": 131.2621941000001,
+      "multiplier": 1,
+      "is_conditioned": "Yes",
+      "is_ideal_air_loads": false,
+      "heating_sizing_factor": 1.3,
+      "cooling_sizing_factor": 1.1,
+      "zone_heating_design_supply_air_temperature": 43.0,
+      "zone_cooling_design_supply_air_temperature": 13.0,
+      "spaces": [
+        {
+          "name": "Perimeter_top_ZN_2",
+          "type": "Space Function Office - open plan"
+        }
+      ],
+      "equipment": [
+        {
+          "name": "Air Terminal Single Duct VAV Reheat 12",
+          "type": "StraightComponent"
+        },
+        {
+          "name": "Zone HVAC Baseboard Convective Water 12",
+          "type": "ZoneHVACComponent"
+        }
+      ]
+    },
+    {
+      "name": "Sp-Perimeter_mid_ZN_2 Sys-6 Flr-3 Sch-A HPlcmt-east ZN",
+      "floor_area": 131.2621941000001,
+      "multiplier": 1,
+      "is_conditioned": "Yes",
+      "is_ideal_air_loads": false,
+      "heating_sizing_factor": 1.3,
+      "cooling_sizing_factor": 1.1,
+      "zone_heating_design_supply_air_temperature": 43.0,
+      "zone_cooling_design_supply_air_temperature": 13.0,
+      "spaces": [
+        {
+          "name": "Perimeter_mid_ZN_2",
+          "type": "Space Function Office - open plan"
+        }
+      ],
+      "equipment": [
+        {
+          "name": "Air Terminal Single Duct VAV Reheat 9",
+          "type": "StraightComponent"
+        },
+        {
+          "name": "Zone HVAC Baseboard Convective Water 9",
+          "type": "ZoneHVACComponent"
+        }
+      ]
+    },
+    {
+      "name": "Sp-Perimeter_bot_ZN_2 Sys-6 Flr-2 Sch-A HPlcmt-east ZN",
+      "floor_area": 131.2621941000001,
+      "multiplier": 1,
+      "is_conditioned": "Yes",
+      "is_ideal_air_loads": false,
+      "heating_sizing_factor": 1.3,
+      "cooling_sizing_factor": 1.1,
+      "zone_heating_design_supply_air_temperature": 43.0,
+      "zone_cooling_design_supply_air_temperature": 13.0,
+      "spaces": [
+        {
+          "name": "Perimeter_bot_ZN_2",
+          "type": "Space Function Office - open plan"
+        }
+      ],
+      "equipment": [
+        {
+          "name": "Air Terminal Single Duct VAV Reheat 4",
+          "type": "StraightComponent"
+        },
+        {
+          "name": "Zone HVAC Baseboard Convective Water 4",
+          "type": "ZoneHVACComponent"
+        }
+      ]
+    },
+    {
+      "name": "Sp-Perimeter_bot_ZN_3 Sys-6 Flr-2 Sch-A HPlcmt-north ZN",
+      "floor_area": 207.33814098,
+      "multiplier": 1,
+      "is_conditioned": "Yes",
+      "is_ideal_air_loads": false,
+      "heating_sizing_factor": 1.3,
+      "cooling_sizing_factor": 1.1,
+      "zone_heating_design_supply_air_temperature": 43.0,
+      "zone_cooling_design_supply_air_temperature": 13.0,
+      "spaces": [
+        {
+          "name": "Perimeter_bot_ZN_3",
+          "type": "Space Function Office - open plan"
+        }
+      ],
+      "equipment": [
+        {
+          "name": "Air Terminal Single Duct VAV Reheat 2",
+          "type": "StraightComponent"
+        },
+        {
+          "name": "Zone HVAC Baseboard Convective Water 2",
+          "type": "ZoneHVACComponent"
+        }
+      ]
+    },
+    {
+      "name": "Sp-Perimeter_top_ZN_4 Sys-6 Flr-1 Sch-A HPlcmt-west ZN",
+      "floor_area": 131.25358392,
+      "multiplier": 1,
+      "is_conditioned": "Yes",
+      "is_ideal_air_loads": false,
+      "heating_sizing_factor": 1.3,
+      "cooling_sizing_factor": 1.1,
+      "zone_heating_design_supply_air_temperature": 43.0,
+      "zone_cooling_design_supply_air_temperature": 13.0,
+      "spaces": [
+        {
+          "name": "Perimeter_top_ZN_4",
+          "type": "Space Function Office - open plan"
+        }
+      ],
+      "equipment": [
+        {
+          "name": "Air Terminal Single Duct VAV Reheat 15",
+          "type": "StraightComponent"
+        },
+        {
+          "name": "Zone HVAC Baseboard Convective Water 15",
+          "type": "ZoneHVACComponent"
+        }
+      ]
+    },
+    {
+      "name": "Sp-Perimeter_mid_ZN_4 Sys-6 Flr-3 Sch-A HPlcmt-west ZN",
+      "floor_area": 131.25358392,
+      "multiplier": 1,
+      "is_conditioned": "Yes",
+      "is_ideal_air_loads": false,
+      "heating_sizing_factor": 1.3,
+      "cooling_sizing_factor": 1.1,
+      "zone_heating_design_supply_air_temperature": 43.0,
+      "zone_cooling_design_supply_air_temperature": 13.0,
+      "spaces": [
+        {
+          "name": "Perimeter_mid_ZN_4",
+          "type": "Space Function Office - open plan"
+        }
+      ],
+      "equipment": [
+        {
+          "name": "Air Terminal Single Duct VAV Reheat 10",
+          "type": "StraightComponent"
+        },
+        {
+          "name": "Zone HVAC Baseboard Convective Water 10",
+          "type": "ZoneHVACComponent"
+        }
+      ]
+    },
+    {
+      "name": "Sp-MidFloor_Plenum Sys-0 Flr-3 Sch-- undefined - HPlcmt-north ZN",
+      "floor_area": 1660.7286318000001,
+      "multiplier": 1,
+      "is_conditioned": "No",
+      "is_ideal_air_loads": false,
+      "heating_sizing_factor": -1.0,
+      "cooling_sizing_factor": -1.0,
+      "zone_heating_design_supply_air_temperature": 40.0,
+      "zone_cooling_design_supply_air_temperature": 14.0,
+      "spaces": [
+        {
+          "name": "MidFloor_Plenum",
+          "type": "Space Function - undefined -"
+        }
+      ],
+      "equipment": [
+
+      ]
+    }
+  ],
+  "air_loops": [
+    {
+      "name": "VAV with Reheat 1",
+      "thermal_zones": [
+        "Sp-Core_mid Sys-6 Flr-3 Sch-A HPlcmt-core ZN",
+        "Sp-Perimeter_mid_ZN_3 Sys-6 Flr-3 Sch-A HPlcmt-north ZN",
+        "Sp-Perimeter_mid_ZN_1 Sys-6 Flr-3 Sch-A HPlcmt-south ZN",
+        "Sp-Perimeter_mid_ZN_2 Sys-6 Flr-3 Sch-A HPlcmt-east ZN",
+        "Sp-Perimeter_mid_ZN_4 Sys-6 Flr-3 Sch-A HPlcmt-west ZN"
+      ],
+      "total_floor_area_served": 1660.7286318000001,
+      "supply_fan": {
+        "type": "VV",
+        "name": "Fan Variable Volume 2",
+        "fan_efficiency": 0.549965,
+        "motor_efficiency": 0.8461,
+        "pressure_rise": 1458.33,
+        "max_air_flow_rate": -1.0
+      },
+      "economizer": {
+        "name": "Controller Outdoor Air 2",
+        "control_type": "DifferentialEnthalpy"
+      },
+      "cooling_coils": {
+        "dx_single_speed": [
+
+        ],
+        "dx_two_speed": [
+
+        ]
+      },
+      "heating_coils": {
+        "coil_heating_gas": [
+
+        ],
+        "coil_heating_electric": [
+
+        ],
+        "coil_heating_water": [
+          {
+            "name": "Coil Heating Water 7",
+            "type": "Water"
+          }
+        ]
+      }
+    },
+    {
+      "name": "VAV with Reheat",
+      "thermal_zones": [
+        "Sp-Perimeter_bot_ZN_1 Sys-6 Flr-2 Sch-A HPlcmt-south ZN",
+        "Sp-Perimeter_bot_ZN_3 Sys-6 Flr-2 Sch-A HPlcmt-north ZN",
+        "Sp-Core_bottom Sys-6 Flr-2 Sch-A HPlcmt-core ZN",
+        "Sp-Perimeter_bot_ZN_2 Sys-6 Flr-2 Sch-A HPlcmt-east ZN",
+        "Sp-Perimeter_bot_ZN_4 Sys-6 Flr-2 Sch-A HPlcmt-west ZN"
+      ],
+      "total_floor_area_served": 1660.7286318000001,
+      "supply_fan": {
+        "type": "VV",
+        "name": "Fan Variable Volume 1",
+        "fan_efficiency": 0.549965,
+        "motor_efficiency": 0.8461,
+        "pressure_rise": 1458.33,
+        "max_air_flow_rate": -1.0
+      },
+      "economizer": {
+        "name": "Controller Outdoor Air 1",
+        "control_type": "DifferentialEnthalpy"
+      },
+      "cooling_coils": {
+        "dx_single_speed": [
+
+        ],
+        "dx_two_speed": [
+
+        ]
+      },
+      "heating_coils": {
+        "coil_heating_gas": [
+
+        ],
+        "coil_heating_electric": [
+
+        ],
+        "coil_heating_water": [
+          {
+            "name": "Coil Heating Water 1",
+            "type": "Water"
+          }
+        ]
+      }
+    },
+    {
+      "name": "VAV with Reheat 2",
+      "thermal_zones": [
+        "Sp-Core_top Sys-6 Flr-1 Sch-A HPlcmt-core ZN",
+        "Sp-Perimeter_top_ZN_2 Sys-6 Flr-1 Sch-A HPlcmt-east ZN",
+        "Sp-Perimeter_top_ZN_1 Sys-6 Flr-1 Sch-A HPlcmt-south ZN",
+        "Sp-Perimeter_top_ZN_3 Sys-6 Flr-1 Sch-A HPlcmt-north ZN",
+        "Sp-Perimeter_top_ZN_4 Sys-6 Flr-1 Sch-A HPlcmt-west ZN"
+      ],
+      "total_floor_area_served": 1660.7286318000001,
+      "supply_fan": {
+        "type": "VV",
+        "name": "Fan Variable Volume 3",
+        "fan_efficiency": 0.549965,
+        "motor_efficiency": 0.8461,
+        "pressure_rise": 1458.33,
+        "max_air_flow_rate": -1.0
+      },
+      "economizer": {
+        "name": "Controller Outdoor Air 3",
+        "control_type": "DifferentialEnthalpy"
+      },
+      "cooling_coils": {
+        "dx_single_speed": [
+
+        ],
+        "dx_two_speed": [
+
+        ]
+      },
+      "heating_coils": {
+        "coil_heating_gas": [
+
+        ],
+        "coil_heating_electric": [
+
+        ],
+        "coil_heating_water": [
+          {
+            "name": "Coil Heating Water 13",
+            "type": "Water"
+          }
+        ]
+      }
+    }
+  ],
+  "plant_loops": [
+    {
+      "name": "Main Service Water Loop",
+      "design_loop_exit_temperature": 60.0000000000001,
+      "loop_design_temperature_difference": 5.0,
+      "pumps": [
+        {
+          "name": "Service Water Loop Pump",
+          "type": "Pump:ConstantSpeed",
+          "head_pa": 29891.0,
+          "water_flow_m3_per_s": 0.000121,
+          "electric_power_w": 6.6,
+          "motor_efficency": 0.7
+        }
+      ],
+      "boilers": [
+
+      ],
+      "chiller_electric_eir": [
+
+      ],
+      "cooling_tower_single_speed": [
+
+      ],
+      "water_heater_mixed": [
+        {
+          "name": "100.0gal NaturalGas Water Heater - 100kBtu/hr 0.81 Therm Eff",
+          "type": "WaterHeater:Mixed",
+          "heater_thermal_efficiency": 0.8098,
+          "heater_fuel_type": "NaturalGas"
+        }
+      ]
+    },
+    {
+      "name": "Hot Water Loop",
+      "design_loop_exit_temperature": 82.0,
+      "loop_design_temperature_difference": 16.0,
+      "pumps": [
+        {
+          "name": "Pump Variable Speed 1",
+          "type": "Pump:VariableSpeed",
+          "head_pa": 179352.0,
+          "water_flow_m3_per_s": 0.003914,
+          "electric_power_w": 1040.42,
+          "motor_efficency": 0.865
+        }
+      ],
+      "boilers": [
+        {
+          "name": "Primary Boiler 442kBtu/hr 0.83 Thermal Eff",
+          "type": "Boiler:HotWater",
+          "fueltype": "NaturalGas",
+          "nominal_capacity": 129579.357778895
+        },
+        {
+          "name": "Secondary Boiler 442kBtu/hr 0.83 Thermal Eff",
+          "type": "Boiler:HotWater",
+          "fueltype": "NaturalGas",
+          "nominal_capacity": 129579.357778895
+        }
+      ],
+      "chiller_electric_eir": [
+
+      ],
+      "cooling_tower_single_speed": [
+
+      ],
+      "water_heater_mixed": [
+
+      ]
+    },
+    {
+      "name": "Chilled Water Loop",
+      "design_loop_exit_temperature": 7.0,
+      "loop_design_temperature_difference": 6.0,
+      "pumps": [
+        {
+          "name": "Pump Constant Speed 1",
+          "type": "Pump:ConstantSpeed",
+          "head_pa": 179352.0,
+          "water_flow_m3_per_s": 0.01083,
+          "electric_power_w": 2782.47,
+          "motor_efficency": 0.895
+        }
+      ],
+      "boilers": [
+
+      ],
+      "chiller_electric_eir": [
+        {
+          "name": "Primary Chiller WaterCooled Scroll 73tons 0.8kW/ton",
+          "type": "Chiller:Electric:EIR",
+          "reference_capacity": 257800.002003085,
+          "reference_leaving_chilled_water_temperature": 6.67
+        },
+        {
+          "name": "Secondary Chiller WaterCooled Scroll 0tons 0.8kW/ton",
+          "type": "Chiller:Electric:EIR",
+          "reference_capacity": 0.001,
+          "reference_leaving_chilled_water_temperature": 6.67
+        }
+      ],
+      "cooling_tower_single_speed": [
+
+      ],
+      "water_heater_mixed": [
+
+      ]
+    },
+    {
+      "name": "Condenser Water Loop",
+      "design_loop_exit_temperature": 29.0,
+      "loop_design_temperature_difference": 6.0,
+      "pumps": [
+        {
+          "name": "Pump Constant Speed 2",
+          "type": "Pump:ConstantSpeed",
+          "head_pa": 179352.0,
+          "water_flow_m3_per_s": 0.012563,
+          "electric_power_w": 3150.28,
+          "motor_efficency": 0.917
+        }
+      ],
+      "boilers": [
+
+      ],
+      "chiller_electric_eir": [
+
+      ],
+      "cooling_tower_single_speed": [
+        {
+          "name": "Cooling Tower Single Speed 1",
+          "type": "CoolingTower:SingleSpeed",
+          "fan_power_at_design_air_flow_rate": 4725.72252747764
+        }
+      ],
+      "water_heater_mixed": [
+
+      ]
+    }
+  ],
+  "eplusout_err": {
+    "warnings": [
+      " ** Warning ** IP: IDF line~201 Alpha Argument length exceeds maximum, will be truncated=  NECB 2011-MediumOffice-NECB HDD Method-CAN_BC_Vancouver.718920_CWEC.epw created: 2017-06-30 14:15:45 +000   **   ~~~   ** Will be processed as Alpha=NECB 2011-MEDIUMOFFICE-NECB HDD METHOD-CAN_BC_VANCOUVER.718920_CWEC.EPW CREATED: 2017-06-30 14:15:45 +0000",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"ECONOMIZER MAX OA FRACTION 100 PCT DEFAULT\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 1\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 10\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 11\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 12\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 13\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 14\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 15\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 16\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 17\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 18\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 19\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 2\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 20\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 21\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 22\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 23\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 24\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 25\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 26\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 27\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 28\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 29\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 30\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 31\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 32\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 33\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 34\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 35\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 36\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 37\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 38\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 39\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 40\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 41\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 42\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 43\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 44\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 45\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 46\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 47\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 48\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 49\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 50\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 51\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 52\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 53\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 54\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 55\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 56\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 57\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 7\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 8\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Day:Interval=\"SCHEDULE DAY 9\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"ECONOMIZER MAX OA FRACTION 100 PCT\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 10\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 11\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 12\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 13\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 14\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 15\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 16\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 17\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 18\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 19\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 20\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 21\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 22\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 23\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 24\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 25\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 26\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 27\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 28\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 29\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 3\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 30\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 31\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 32\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 33\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 34\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 35\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 36\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 37\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 38\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 39\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 4\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 40\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 41\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 42\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 43\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 44\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 45\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 46\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 47\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 5\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 6\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 7\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 8\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Year=\"SCHEDULE RULESET 9\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Constant=\"ALWAYS OFF DISCRETE\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "ProcessScheduleInput: Schedule:Constant=\"ALWAYS ON CONTINUOUS\", Blank Schedule Type Limits Name input -- will not be validated.",
+      "CheckUsedConstructions: There are 24 nominally unused constructions in input.  For explicit details on each unused construction, use Output:Diagnostics,DisplayExtraWarnings;",
+      "Since Zone Minimum Air Flow Input Method = CONSTANT, input for Fixed Minimum Air Flow Rate will be ignored.  Occurs in AirTerminal:SingleDuct:VAV:Reheat = AIR TERMINAL SINGLE DUCT VAV REHEAT 3",
+      "Since Zone Minimum Air Flow Input Method = CONSTANT, input for Fixed Minimum Air Flow Rate will be ignored.  Occurs in AirTerminal:SingleDuct:VAV:Reheat = AIR TERMINAL SINGLE DUCT VAV REHEAT 6",
+      "Since Zone Minimum Air Flow Input Method = CONSTANT, input for Fixed Minimum Air Flow Rate will be ignored.  Occurs in AirTerminal:SingleDuct:VAV:Reheat = AIR TERMINAL SINGLE DUCT VAV REHEAT 11",
+      "Since Zone Minimum Air Flow Input Method = CONSTANT, input for Fixed Minimum Air Flow Rate will be ignored.  Occurs in AirTerminal:SingleDuct:VAV:Reheat = AIR TERMINAL SINGLE DUCT VAV REHEAT 1",
+      "Since Zone Minimum Air Flow Input Method = CONSTANT, input for Fixed Minimum Air Flow Rate will be ignored.  Occurs in AirTerminal:SingleDuct:VAV:Reheat = AIR TERMINAL SINGLE DUCT VAV REHEAT 4",
+      "Since Zone Minimum Air Flow Input Method = CONSTANT, input for Fixed Minimum Air Flow Rate will be ignored.  Occurs in AirTerminal:SingleDuct:VAV:Reheat = AIR TERMINAL SINGLE DUCT VAV REHEAT 2",
+      "Since Zone Minimum Air Flow Input Method = CONSTANT, input for Fixed Minimum Air Flow Rate will be ignored.  Occurs in AirTerminal:SingleDuct:VAV:Reheat = AIR TERMINAL SINGLE DUCT VAV REHEAT 5",
+      "Since Zone Minimum Air Flow Input Method = CONSTANT, input for Fixed Minimum Air Flow Rate will be ignored.  Occurs in AirTerminal:SingleDuct:VAV:Reheat = AIR TERMINAL SINGLE DUCT VAV REHEAT 8",
+      "Since Zone Minimum Air Flow Input Method = CONSTANT, input for Fixed Minimum Air Flow Rate will be ignored.  Occurs in AirTerminal:SingleDuct:VAV:Reheat = AIR TERMINAL SINGLE DUCT VAV REHEAT 9",
+      "Since Zone Minimum Air Flow Input Method = CONSTANT, input for Fixed Minimum Air Flow Rate will be ignored.  Occurs in AirTerminal:SingleDuct:VAV:Reheat = AIR TERMINAL SINGLE DUCT VAV REHEAT 7",
+      "Since Zone Minimum Air Flow Input Method = CONSTANT, input for Fixed Minimum Air Flow Rate will be ignored.  Occurs in AirTerminal:SingleDuct:VAV:Reheat = AIR TERMINAL SINGLE DUCT VAV REHEAT 10",
+      "Since Zone Minimum Air Flow Input Method = CONSTANT, input for Fixed Minimum Air Flow Rate will be ignored.  Occurs in AirTerminal:SingleDuct:VAV:Reheat = AIR TERMINAL SINGLE DUCT VAV REHEAT 13",
+      "Since Zone Minimum Air Flow Input Method = CONSTANT, input for Fixed Minimum Air Flow Rate will be ignored.  Occurs in AirTerminal:SingleDuct:VAV:Reheat = AIR TERMINAL SINGLE DUCT VAV REHEAT 12",
+      "Since Zone Minimum Air Flow Input Method = CONSTANT, input for Fixed Minimum Air Flow Rate will be ignored.  Occurs in AirTerminal:SingleDuct:VAV:Reheat = AIR TERMINAL SINGLE DUCT VAV REHEAT 14",
+      "Since Zone Minimum Air Flow Input Method = CONSTANT, input for Fixed Minimum Air Flow Rate will be ignored.  Occurs in AirTerminal:SingleDuct:VAV:Reheat = AIR TERMINAL SINGLE DUCT VAV REHEAT 15",
+      "Missing temperature setpoint for LeavingSetpointModulated mode chiller named PRIMARY CHILLER WATERCOOLED SCROLL 73TONS 0.8KW/TON    A temperature setpoint is needed at the outlet node of a chiller in variable flow mode, use a SetpointManager    The overall loop setpoint will be assumed for chiller. The simulation continues ... ",
+      "Missing temperature setpoint for LeavingSetpointModulated mode chiller named SECONDARY CHILLER WATERCOOLED SCROLL 0TONS 0.8KW/TON    A temperature setpoint is needed at the outlet node of a chiller in variable flow mode, use a SetpointManager    The overall loop setpoint will be assumed for chiller. The simulation continues ... ",
+      "Output:Meter: invalid Name=\"DISTRICTCOOLING:FACILITY\" - not found.",
+      "Output:Meter: invalid Name=\"DISTRICTHEATING:FACILITY\" - not found.",
+      "Output:Meter:MeterFileOnly requested for \"Electricity:Facility\" (TimeStep), already on \"Output:Meter\". Will report to both eplusout.eso and eplusout.mtr"
+    ],
+    "fatal": [
+
+    ],
+    "severe": [
+
+    ]
+  },
+  "ruby_warnings": [
+    "space.spaceInfiltrationDesignFlowRates[0] is empty for Core_bottom",
+    "space.spaceInfiltrationDesignFlowRates[0].designFlowRateCalculationMethod is empty for Core_bottom",
+    "space.spaceInfiltrationDesignFlowRates[0].flowperExteriorSurfaceArea is empty for Core_bottom",
+    "space.spaceInfiltrationDesignFlowRates[0] is empty for Core_mid",
+    "space.spaceInfiltrationDesignFlowRates[0].designFlowRateCalculationMethod is empty for Core_mid",
+    "space.spaceInfiltrationDesignFlowRates[0].flowperExteriorSurfaceArea is empty for Core_mid",
+    "space.spaceType.get.defaultScheduleSet.get.numberofPeopleSchedule is empty for MidFloor_Plenum",
+    "space.spaceType.get.defaultScheduleSet.get.numberofPeopleSchedule is empty for TopFloor_Plenum",
+    "space.spaceType.get.defaultScheduleSet.get.numberofPeopleSchedule is empty for FirstFloor_Plenum",
+    "space.spaceInfiltrationDesignFlowRates[0] is empty for Core_top",
+    "space.spaceInfiltrationDesignFlowRates[0].designFlowRateCalculationMethod is empty for Core_top",
+    "space.spaceInfiltrationDesignFlowRates[0].flowperExteriorSurfaceArea is empty for Core_top",
+    "zone.sizingZone.zoneHeatingSizingFactor is empty for Sp-FirstFloor_Plenum Sys-0 Flr-2 Sch-- undefined - HPlcmt-north ZN",
+    "zone.sizingZone.zoneCoolingSizingFactor is empty for Sp-FirstFloor_Plenum Sys-0 Flr-2 Sch-- undefined - HPlcmt-north ZN",
+    "zone.sizingZone.zoneHeatingSizingFactor is empty for Sp-TopFloor_Plenum Sys-0 Flr-1 Sch-- undefined - HPlcmt-north ZN",
+    "zone.sizingZone.zoneCoolingSizingFactor is empty for Sp-TopFloor_Plenum Sys-0 Flr-1 Sch-- undefined - HPlcmt-north ZN",
+    "zone.sizingZone.zoneHeatingSizingFactor is empty for Sp-MidFloor_Plenum Sys-0 Flr-3 Sch-- undefined - HPlcmt-north ZN",
+    "zone.sizingZone.zoneCoolingSizingFactor is empty for Sp-MidFloor_Plenum Sys-0 Flr-3 Sch-- undefined - HPlcmt-north ZN",
+    "Fan Variable Volume 2 does not exist in sql file WHERE ReportName='EquipmentSummary' AND ReportForString='Entire Facility' AND TableName='Fans' AND ColumnName='Max Air Flow Rate' AND Units='m3/s'",
+    "Fan Variable Volume 1 does not exist in sql file WHERE ReportName='EquipmentSummary' AND ReportForString='Entire Facility' AND TableName='Fans' AND ColumnName='Max Air Flow Rate' AND Units='m3/s'",
+    "Fan Variable Volume 3 does not exist in sql file WHERE ReportName='EquipmentSummary' AND ReportForString='Entire Facility' AND TableName='Fans' AND ColumnName='Max Air Flow Rate' AND Units='m3/s'"
+  ],
+  "information": [
+    "[Info][TEST-PASS][Table 4.2.1.6]:[SPACE][Core_bottom]-lighting_per_area result value:10.99989781 == expected value:11.0",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][Core_bottom]-occupancy_per_area result value:0.050052205 == expected value:0.05",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][Core_bottom]-occupancy_schedule result value:NECB-A-Occupancy == expected value:NECB-A-Occupancy",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][Core_bottom]-electric_equipment_per_area result value:7.499930322 == expected value:7.5",
+    "[Info][TEST-PASS][Table 4.2.1.6]:[SPACE][Perimeter_bot_ZN_4]-lighting_per_area result value:10.99989781 == expected value:11.0",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][Perimeter_bot_ZN_4]-occupancy_per_area result value:0.050052205 == expected value:0.05",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][Perimeter_bot_ZN_4]-occupancy_schedule result value:NECB-A-Occupancy == expected value:NECB-A-Occupancy",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][Perimeter_bot_ZN_4]-electric_equipment_per_area result value:7.499930322 == expected value:7.5",
+    "[Info][TEST-PASS][Table 4.2.1.6]:[SPACE][Core_mid]-lighting_per_area result value:10.99989781 == expected value:11.0",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][Core_mid]-occupancy_per_area result value:0.050052205 == expected value:0.05",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][Core_mid]-occupancy_schedule result value:NECB-A-Occupancy == expected value:NECB-A-Occupancy",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][Core_mid]-electric_equipment_per_area result value:7.499930322 == expected value:7.5",
+    "[Info][TEST-PASS][Table 4.2.1.6]:[SPACE][Perimeter_top_ZN_1]-lighting_per_area result value:10.99989781 == expected value:11.0",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][Perimeter_top_ZN_1]-occupancy_per_area result value:0.050052205 == expected value:0.05",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][Perimeter_top_ZN_1]-occupancy_schedule result value:NECB-A-Occupancy == expected value:NECB-A-Occupancy",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][Perimeter_top_ZN_1]-electric_equipment_per_area result value:7.499930322 == expected value:7.5",
+    "[Info][TEST-PASS][Table 4.2.1.6]:[SPACE][Perimeter_top_ZN_3]-lighting_per_area result value:10.99989781 == expected value:11.0",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][Perimeter_top_ZN_3]-occupancy_per_area result value:0.050052205 == expected value:0.05",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][Perimeter_top_ZN_3]-occupancy_schedule result value:NECB-A-Occupancy == expected value:NECB-A-Occupancy",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][Perimeter_top_ZN_3]-electric_equipment_per_area result value:7.499930322 == expected value:7.5",
+    "[Info][TEST-PASS][Table 4.2.1.6]:[SPACE][Perimeter_mid_ZN_2]-lighting_per_area result value:10.99989781 == expected value:11.0",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][Perimeter_mid_ZN_2]-occupancy_per_area result value:0.050052205 == expected value:0.05",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][Perimeter_mid_ZN_2]-occupancy_schedule result value:NECB-A-Occupancy == expected value:NECB-A-Occupancy",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][Perimeter_mid_ZN_2]-electric_equipment_per_area result value:7.499930322 == expected value:7.5",
+    "[Info][TEST-PASS][Table 4.2.1.6]:[SPACE][Perimeter_bot_ZN_2]-lighting_per_area result value:10.99989781 == expected value:11.0",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][Perimeter_bot_ZN_2]-occupancy_per_area result value:0.050052205 == expected value:0.05",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][Perimeter_bot_ZN_2]-occupancy_schedule result value:NECB-A-Occupancy == expected value:NECB-A-Occupancy",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][Perimeter_bot_ZN_2]-electric_equipment_per_area result value:7.499930322 == expected value:7.5",
+    "[Info][TEST-PASS][Table 4.2.1.6]:[SPACE][Perimeter_top_ZN_4]-lighting_per_area result value:10.99989781 == expected value:11.0",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][Perimeter_top_ZN_4]-occupancy_per_area result value:0.050052205 == expected value:0.05",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][Perimeter_top_ZN_4]-occupancy_schedule result value:NECB-A-Occupancy == expected value:NECB-A-Occupancy",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][Perimeter_top_ZN_4]-electric_equipment_per_area result value:7.499930322 == expected value:7.5",
+    "[Info][TEST-PASS][Table 4.2.1.6]:[SPACE][Core_top]-lighting_per_area result value:10.99989781 == expected value:11.0",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][Core_top]-occupancy_per_area result value:0.050052205 == expected value:0.05",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][Core_top]-occupancy_schedule result value:NECB-A-Occupancy == expected value:NECB-A-Occupancy",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][Core_top]-electric_equipment_per_area result value:7.499930322 == expected value:7.5",
+    "[Info][TEST-PASS][Table 4.2.1.6]:[SPACE][Perimeter_mid_ZN_1]-lighting_per_area result value:10.99989781 == expected value:11.0",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][Perimeter_mid_ZN_1]-occupancy_per_area result value:0.050052205 == expected value:0.05",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][Perimeter_mid_ZN_1]-occupancy_schedule result value:NECB-A-Occupancy == expected value:NECB-A-Occupancy",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][Perimeter_mid_ZN_1]-electric_equipment_per_area result value:7.499930322 == expected value:7.5",
+    "[Info][TEST-PASS][Table 4.2.1.6]:[SPACE][Perimeter_bot_ZN_3]-lighting_per_area result value:10.99989781 == expected value:11.0",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][Perimeter_bot_ZN_3]-occupancy_per_area result value:0.050052205 == expected value:0.05",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][Perimeter_bot_ZN_3]-occupancy_schedule result value:NECB-A-Occupancy == expected value:NECB-A-Occupancy",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][Perimeter_bot_ZN_3]-electric_equipment_per_area result value:7.499930322 == expected value:7.5",
+    "[Info][TEST-PASS][Table 4.2.1.6]:[SPACE][Perimeter_bot_ZN_1]-lighting_per_area result value:10.99989781 == expected value:11.0",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][Perimeter_bot_ZN_1]-occupancy_per_area result value:0.050052205 == expected value:0.05",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][Perimeter_bot_ZN_1]-occupancy_schedule result value:NECB-A-Occupancy == expected value:NECB-A-Occupancy",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][Perimeter_bot_ZN_1]-electric_equipment_per_area result value:7.499930322 == expected value:7.5",
+    "[Info][TEST-PASS][Table 4.2.1.6]:[SPACE][Perimeter_top_ZN_2]-lighting_per_area result value:10.99989781 == expected value:11.0",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][Perimeter_top_ZN_2]-occupancy_per_area result value:0.050052205 == expected value:0.05",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][Perimeter_top_ZN_2]-occupancy_schedule result value:NECB-A-Occupancy == expected value:NECB-A-Occupancy",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][Perimeter_top_ZN_2]-electric_equipment_per_area result value:7.499930322 == expected value:7.5",
+    "[Info][TEST-PASS][Table 4.2.1.6]:[SPACE][Perimeter_mid_ZN_3]-lighting_per_area result value:10.99989781 == expected value:11.0",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][Perimeter_mid_ZN_3]-occupancy_per_area result value:0.050052205 == expected value:0.05",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][Perimeter_mid_ZN_3]-occupancy_schedule result value:NECB-A-Occupancy == expected value:NECB-A-Occupancy",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][Perimeter_mid_ZN_3]-electric_equipment_per_area result value:7.499930322 == expected value:7.5",
+    "[Info][TEST-PASS][Table 4.2.1.6]:[SPACE][Perimeter_mid_ZN_4]-lighting_per_area result value:10.99989781 == expected value:11.0",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][Perimeter_mid_ZN_4]-occupancy_per_area result value:0.050052205 == expected value:0.05",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][Perimeter_mid_ZN_4]-occupancy_schedule result value:NECB-A-Occupancy == expected value:NECB-A-Occupancy",
+    "[Info][TEST-PASS][Table A-8.4.3.3.1]:[SPACE][Perimeter_mid_ZN_4]-electric_equipment_per_area result value:7.499930322 == expected value:7.5",
+    "[Info][TEST-PASS][NECB2011-Section 3.2.1.4]:[ENVELOPE]fenestration_to_door_and_window_percentage result value:40.0 >= expected value:33.0",
+    "[Info][TEST-PASS][NECB2011-Section 3.2.1.4]:[ENVELOPE]skylight_to_roof_percentage result value:5.0 >= expected value:0.0",
+    "[Info][TEST-PASS][NECB2011-Section 8.4.3.6]:[SPACE][Perimeter_bot_ZN_4]-infiltration_method result value:Flow/ExteriorArea == expected value:Flow/ExteriorArea",
+    "[Info][TEST-PASS][NECB2011-Section 8.4.3.6]:[SPACE][Perimeter_bot_ZN_4]-infiltration_flow_per_m2 result value:0.00025 == expected value:0.00025",
+    "[Info][TEST-PASS][NECB2011-Section 8.4.3.6]:[SPACE][Perimeter_top_ZN_1]-infiltration_method result value:Flow/ExteriorArea == expected value:Flow/ExteriorArea",
+    "[Info][TEST-PASS][NECB2011-Section 8.4.3.6]:[SPACE][Perimeter_top_ZN_1]-infiltration_flow_per_m2 result value:0.00025 == expected value:0.00025",
+    "[Info][TEST-PASS][NECB2011-Section 8.4.3.6]:[SPACE][Perimeter_top_ZN_3]-infiltration_method result value:Flow/ExteriorArea == expected value:Flow/ExteriorArea",
+    "[Info][TEST-PASS][NECB2011-Section 8.4.3.6]:[SPACE][Perimeter_top_ZN_3]-infiltration_flow_per_m2 result value:0.00025 == expected value:0.00025",
+    "[Info][TEST-PASS][NECB2011-Section 8.4.3.6]:[SPACE][Perimeter_mid_ZN_2]-infiltration_method result value:Flow/ExteriorArea == expected value:Flow/ExteriorArea",
+    "[Info][TEST-PASS][NECB2011-Section 8.4.3.6]:[SPACE][Perimeter_mid_ZN_2]-infiltration_flow_per_m2 result value:0.00025 == expected value:0.00025",
+    "[Info][TEST-PASS][NECB2011-Section 8.4.3.6]:[SPACE][MidFloor_Plenum]-infiltration_method result value:Flow/ExteriorArea == expected value:Flow/ExteriorArea",
+    "[Info][TEST-PASS][NECB2011-Section 8.4.3.6]:[SPACE][MidFloor_Plenum]-infiltration_flow_per_m2 result value:0.00025 == expected value:0.00025",
+    "[Info][TEST-PASS][NECB2011-Section 8.4.3.6]:[SPACE][Perimeter_bot_ZN_2]-infiltration_method result value:Flow/ExteriorArea == expected value:Flow/ExteriorArea",
+    "[Info][TEST-PASS][NECB2011-Section 8.4.3.6]:[SPACE][Perimeter_bot_ZN_2]-infiltration_flow_per_m2 result value:0.00025 == expected value:0.00025",
+    "[Info][TEST-PASS][NECB2011-Section 8.4.3.6]:[SPACE][Perimeter_top_ZN_4]-infiltration_method result value:Flow/ExteriorArea == expected value:Flow/ExteriorArea",
+    "[Info][TEST-PASS][NECB2011-Section 8.4.3.6]:[SPACE][Perimeter_top_ZN_4]-infiltration_flow_per_m2 result value:0.00025 == expected value:0.00025",
+    "[Info][TEST-PASS][NECB2011-Section 8.4.3.6]:[SPACE][TopFloor_Plenum]-infiltration_method result value:Flow/ExteriorArea == expected value:Flow/ExteriorArea",
+    "[Info][TEST-PASS][NECB2011-Section 8.4.3.6]:[SPACE][TopFloor_Plenum]-infiltration_flow_per_m2 result value:0.00025 == expected value:0.00025",
+    "[Info][TEST-PASS][NECB2011-Section 8.4.3.6]:[SPACE][FirstFloor_Plenum]-infiltration_method result value:Flow/ExteriorArea == expected value:Flow/ExteriorArea",
+    "[Info][TEST-PASS][NECB2011-Section 8.4.3.6]:[SPACE][FirstFloor_Plenum]-infiltration_flow_per_m2 result value:0.00025 == expected value:0.00025",
+    "[Info][TEST-PASS][NECB2011-Section 8.4.3.6]:[SPACE][Perimeter_mid_ZN_1]-infiltration_method result value:Flow/ExteriorArea == expected value:Flow/ExteriorArea",
+    "[Info][TEST-PASS][NECB2011-Section 8.4.3.6]:[SPACE][Perimeter_mid_ZN_1]-infiltration_flow_per_m2 result value:0.00025 == expected value:0.00025",
+    "[Info][TEST-PASS][NECB2011-Section 8.4.3.6]:[SPACE][Perimeter_bot_ZN_3]-infiltration_method result value:Flow/ExteriorArea == expected value:Flow/ExteriorArea",
+    "[Info][TEST-PASS][NECB2011-Section 8.4.3.6]:[SPACE][Perimeter_bot_ZN_3]-infiltration_flow_per_m2 result value:0.00025 == expected value:0.00025",
+    "[Info][TEST-PASS][NECB2011-Section 8.4.3.6]:[SPACE][Perimeter_bot_ZN_1]-infiltration_method result value:Flow/ExteriorArea == expected value:Flow/ExteriorArea",
+    "[Info][TEST-PASS][NECB2011-Section 8.4.3.6]:[SPACE][Perimeter_bot_ZN_1]-infiltration_flow_per_m2 result value:0.00025 == expected value:0.00025",
+    "[Info][TEST-PASS][NECB2011-Section 8.4.3.6]:[SPACE][Perimeter_top_ZN_2]-infiltration_method result value:Flow/ExteriorArea == expected value:Flow/ExteriorArea",
+    "[Info][TEST-PASS][NECB2011-Section 8.4.3.6]:[SPACE][Perimeter_top_ZN_2]-infiltration_flow_per_m2 result value:0.00025 == expected value:0.00025",
+    "[Info][TEST-PASS][NECB2011-Section 8.4.3.6]:[SPACE][Perimeter_mid_ZN_3]-infiltration_method result value:Flow/ExteriorArea == expected value:Flow/ExteriorArea",
+    "[Info][TEST-PASS][NECB2011-Section 8.4.3.6]:[SPACE][Perimeter_mid_ZN_3]-infiltration_flow_per_m2 result value:0.00025 == expected value:0.00025",
+    "[Info][TEST-PASS][NECB2011-Section 8.4.3.6]:[SPACE][Perimeter_mid_ZN_4]-infiltration_method result value:Flow/ExteriorArea == expected value:Flow/ExteriorArea",
+    "[Info][TEST-PASS][NECB2011-Section 8.4.3.6]:[SPACE][Perimeter_mid_ZN_4]-infiltration_flow_per_m2 result value:0.00025 == expected value:0.00025",
+    "[Info][TEST-PASS][NECB2011-Section 3.2.2.2]:[ENVELOPE]ext_wall_conductances result value:0.315 == expected value:0.315",
+    "[Info][TEST-PASS][NECB2011-Section 3.2.2.2]:[ENVELOPE]ext_roof_conductances result value:0.227 == expected value:0.227",
+    "[Info][TEST-PASS][NECB2011-Section 3.2.2.3]:[ENVELOPE]ext_window_conductances result value:2.4 == expected value:2.4",
+    "[Info][TEST-PASS][NECB2011-Section 3.2.3.1]:[ENVELOPE]ground_floor_conductances result value:0.757 == expected value:0.757",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-Core_bottom Sys-6 Flr-2 Sch-A HPlcmt-core ZN] heating_sizing_factor result value:1.3 == expected value:1.3",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-Core_bottom Sys-6 Flr-2 Sch-A HPlcmt-core ZN] cooling_sizing_factor result value:1.1 == expected value:1.1",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-Core_bottom Sys-6 Flr-2 Sch-A HPlcmt-core ZN] heating_design_supply_air_temp result value:43.0 == expected value:43.0",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-Core_bottom Sys-6 Flr-2 Sch-A HPlcmt-core ZN] cooling_design_supply_temp result value:13.0 == expected value:13.0",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-Perimeter_top_ZN_3 Sys-6 Flr-1 Sch-A HPlcmt-north ZN] heating_sizing_factor result value:1.3 == expected value:1.3",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-Perimeter_top_ZN_3 Sys-6 Flr-1 Sch-A HPlcmt-north ZN] cooling_sizing_factor result value:1.1 == expected value:1.1",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-Perimeter_top_ZN_3 Sys-6 Flr-1 Sch-A HPlcmt-north ZN] heating_design_supply_air_temp result value:43.0 == expected value:43.0",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-Perimeter_top_ZN_3 Sys-6 Flr-1 Sch-A HPlcmt-north ZN] cooling_design_supply_temp result value:13.0 == expected value:13.0",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-Core_top Sys-6 Flr-1 Sch-A HPlcmt-core ZN] heating_sizing_factor result value:1.3 == expected value:1.3",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-Core_top Sys-6 Flr-1 Sch-A HPlcmt-core ZN] cooling_sizing_factor result value:1.1 == expected value:1.1",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-Core_top Sys-6 Flr-1 Sch-A HPlcmt-core ZN] heating_design_supply_air_temp result value:43.0 == expected value:43.0",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-Core_top Sys-6 Flr-1 Sch-A HPlcmt-core ZN] cooling_design_supply_temp result value:13.0 == expected value:13.0",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-Perimeter_mid_ZN_3 Sys-6 Flr-3 Sch-A HPlcmt-north ZN] heating_sizing_factor result value:1.3 == expected value:1.3",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-Perimeter_mid_ZN_3 Sys-6 Flr-3 Sch-A HPlcmt-north ZN] cooling_sizing_factor result value:1.1 == expected value:1.1",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-Perimeter_mid_ZN_3 Sys-6 Flr-3 Sch-A HPlcmt-north ZN] heating_design_supply_air_temp result value:43.0 == expected value:43.0",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-Perimeter_mid_ZN_3 Sys-6 Flr-3 Sch-A HPlcmt-north ZN] cooling_design_supply_temp result value:13.0 == expected value:13.0",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-Perimeter_mid_ZN_1 Sys-6 Flr-3 Sch-A HPlcmt-south ZN] heating_sizing_factor result value:1.3 == expected value:1.3",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-Perimeter_mid_ZN_1 Sys-6 Flr-3 Sch-A HPlcmt-south ZN] cooling_sizing_factor result value:1.1 == expected value:1.1",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-Perimeter_mid_ZN_1 Sys-6 Flr-3 Sch-A HPlcmt-south ZN] heating_design_supply_air_temp result value:43.0 == expected value:43.0",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-Perimeter_mid_ZN_1 Sys-6 Flr-3 Sch-A HPlcmt-south ZN] cooling_design_supply_temp result value:13.0 == expected value:13.0",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-Perimeter_bot_ZN_1 Sys-6 Flr-2 Sch-A HPlcmt-south ZN] heating_sizing_factor result value:1.3 == expected value:1.3",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-Perimeter_bot_ZN_1 Sys-6 Flr-2 Sch-A HPlcmt-south ZN] cooling_sizing_factor result value:1.1 == expected value:1.1",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-Perimeter_bot_ZN_1 Sys-6 Flr-2 Sch-A HPlcmt-south ZN] heating_design_supply_air_temp result value:43.0 == expected value:43.0",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-Perimeter_bot_ZN_1 Sys-6 Flr-2 Sch-A HPlcmt-south ZN] cooling_design_supply_temp result value:13.0 == expected value:13.0",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-Perimeter_top_ZN_1 Sys-6 Flr-1 Sch-A HPlcmt-south ZN] heating_sizing_factor result value:1.3 == expected value:1.3",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-Perimeter_top_ZN_1 Sys-6 Flr-1 Sch-A HPlcmt-south ZN] cooling_sizing_factor result value:1.1 == expected value:1.1",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-Perimeter_top_ZN_1 Sys-6 Flr-1 Sch-A HPlcmt-south ZN] heating_design_supply_air_temp result value:43.0 == expected value:43.0",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-Perimeter_top_ZN_1 Sys-6 Flr-1 Sch-A HPlcmt-south ZN] cooling_design_supply_temp result value:13.0 == expected value:13.0",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-Core_mid Sys-6 Flr-3 Sch-A HPlcmt-core ZN] heating_sizing_factor result value:1.3 == expected value:1.3",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-Core_mid Sys-6 Flr-3 Sch-A HPlcmt-core ZN] cooling_sizing_factor result value:1.1 == expected value:1.1",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-Core_mid Sys-6 Flr-3 Sch-A HPlcmt-core ZN] heating_design_supply_air_temp result value:43.0 == expected value:43.0",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-Core_mid Sys-6 Flr-3 Sch-A HPlcmt-core ZN] cooling_design_supply_temp result value:13.0 == expected value:13.0",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-Perimeter_bot_ZN_4 Sys-6 Flr-2 Sch-A HPlcmt-west ZN] heating_sizing_factor result value:1.3 == expected value:1.3",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-Perimeter_bot_ZN_4 Sys-6 Flr-2 Sch-A HPlcmt-west ZN] cooling_sizing_factor result value:1.1 == expected value:1.1",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-Perimeter_bot_ZN_4 Sys-6 Flr-2 Sch-A HPlcmt-west ZN] heating_design_supply_air_temp result value:43.0 == expected value:43.0",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-Perimeter_bot_ZN_4 Sys-6 Flr-2 Sch-A HPlcmt-west ZN] cooling_design_supply_temp result value:13.0 == expected value:13.0",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-Perimeter_top_ZN_2 Sys-6 Flr-1 Sch-A HPlcmt-east ZN] heating_sizing_factor result value:1.3 == expected value:1.3",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-Perimeter_top_ZN_2 Sys-6 Flr-1 Sch-A HPlcmt-east ZN] cooling_sizing_factor result value:1.1 == expected value:1.1",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-Perimeter_top_ZN_2 Sys-6 Flr-1 Sch-A HPlcmt-east ZN] heating_design_supply_air_temp result value:43.0 == expected value:43.0",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-Perimeter_top_ZN_2 Sys-6 Flr-1 Sch-A HPlcmt-east ZN] cooling_design_supply_temp result value:13.0 == expected value:13.0",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-Perimeter_mid_ZN_2 Sys-6 Flr-3 Sch-A HPlcmt-east ZN] heating_sizing_factor result value:1.3 == expected value:1.3",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-Perimeter_mid_ZN_2 Sys-6 Flr-3 Sch-A HPlcmt-east ZN] cooling_sizing_factor result value:1.1 == expected value:1.1",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-Perimeter_mid_ZN_2 Sys-6 Flr-3 Sch-A HPlcmt-east ZN] heating_design_supply_air_temp result value:43.0 == expected value:43.0",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-Perimeter_mid_ZN_2 Sys-6 Flr-3 Sch-A HPlcmt-east ZN] cooling_design_supply_temp result value:13.0 == expected value:13.0",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-Perimeter_bot_ZN_2 Sys-6 Flr-2 Sch-A HPlcmt-east ZN] heating_sizing_factor result value:1.3 == expected value:1.3",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-Perimeter_bot_ZN_2 Sys-6 Flr-2 Sch-A HPlcmt-east ZN] cooling_sizing_factor result value:1.1 == expected value:1.1",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-Perimeter_bot_ZN_2 Sys-6 Flr-2 Sch-A HPlcmt-east ZN] heating_design_supply_air_temp result value:43.0 == expected value:43.0",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-Perimeter_bot_ZN_2 Sys-6 Flr-2 Sch-A HPlcmt-east ZN] cooling_design_supply_temp result value:13.0 == expected value:13.0",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-Perimeter_bot_ZN_3 Sys-6 Flr-2 Sch-A HPlcmt-north ZN] heating_sizing_factor result value:1.3 == expected value:1.3",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-Perimeter_bot_ZN_3 Sys-6 Flr-2 Sch-A HPlcmt-north ZN] cooling_sizing_factor result value:1.1 == expected value:1.1",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-Perimeter_bot_ZN_3 Sys-6 Flr-2 Sch-A HPlcmt-north ZN] heating_design_supply_air_temp result value:43.0 == expected value:43.0",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-Perimeter_bot_ZN_3 Sys-6 Flr-2 Sch-A HPlcmt-north ZN] cooling_design_supply_temp result value:13.0 == expected value:13.0",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-Perimeter_top_ZN_4 Sys-6 Flr-1 Sch-A HPlcmt-west ZN] heating_sizing_factor result value:1.3 == expected value:1.3",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-Perimeter_top_ZN_4 Sys-6 Flr-1 Sch-A HPlcmt-west ZN] cooling_sizing_factor result value:1.1 == expected value:1.1",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-Perimeter_top_ZN_4 Sys-6 Flr-1 Sch-A HPlcmt-west ZN] heating_design_supply_air_temp result value:43.0 == expected value:43.0",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-Perimeter_top_ZN_4 Sys-6 Flr-1 Sch-A HPlcmt-west ZN] cooling_design_supply_temp result value:13.0 == expected value:13.0",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-Perimeter_mid_ZN_4 Sys-6 Flr-3 Sch-A HPlcmt-west ZN] heating_sizing_factor result value:1.3 == expected value:1.3",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-Perimeter_mid_ZN_4 Sys-6 Flr-3 Sch-A HPlcmt-west ZN] cooling_sizing_factor result value:1.1 == expected value:1.1",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-Perimeter_mid_ZN_4 Sys-6 Flr-3 Sch-A HPlcmt-west ZN] heating_design_supply_air_temp result value:43.0 == expected value:43.0",
+    "[Info][TEST-PASS][NECB2011-?]:[ZONE][Sp-Perimeter_mid_ZN_4 Sys-6 Flr-3 Sch-A HPlcmt-west ZN] cooling_design_supply_temp result value:13.0 == expected value:13.0"
+  ],
+  "warnings": [
+
+  ],
+  "errors": [
+    "[ERROR][TEST-FAIL][NECB2011-Section 8.4.3.6]:[SPACE][Core_bottom]-infiltration_method expected value:N/A == result value:Flow/ExteriorArea",
+    "[ERROR][TEST-FAIL][NECB2011-Section 8.4.3.6]:[SPACE][Core_bottom]-infiltration_flow_per_m2 expected value:-1.0 == result value:0.00025",
+    "[ERROR][TEST-FAIL][NECB2011-Section 8.4.3.6]:[SPACE][Core_mid]-infiltration_method expected value:N/A == result value:Flow/ExteriorArea",
+    "[ERROR][TEST-FAIL][NECB2011-Section 8.4.3.6]:[SPACE][Core_mid]-infiltration_flow_per_m2 expected value:-1.0 == result value:0.00025",
+    "[ERROR][TEST-FAIL][NECB2011-Section 8.4.3.6]:[SPACE][Core_top]-infiltration_method expected value:N/A == result value:Flow/ExteriorArea",
+    "[ERROR][TEST-FAIL][NECB2011-Section 8.4.3.6]:[SPACE][Core_top]-infiltration_flow_per_m2 expected value:-1.0 == result value:0.00025",
+    "[ERROR][TEST-FAIL][NECB2011-?]:[ZONE][Sp-FirstFloor_Plenum Sys-0 Flr-2 Sch-- undefined - HPlcmt-north ZN] heating_sizing_factor expected value:-1.0 == result value:1.3",
+    "[ERROR][TEST-FAIL][NECB2011-?]:[ZONE][Sp-FirstFloor_Plenum Sys-0 Flr-2 Sch-- undefined - HPlcmt-north ZN] cooling_sizing_factor expected value:-1.0 == result value:1.1",
+    "[ERROR][TEST-FAIL][NECB2011-?]:[ZONE][Sp-FirstFloor_Plenum Sys-0 Flr-2 Sch-- undefined - HPlcmt-north ZN] heating_design_supply_air_temp expected value:40.0 == result value:43.0",
+    "[ERROR][TEST-FAIL][NECB2011-?]:[ZONE][Sp-FirstFloor_Plenum Sys-0 Flr-2 Sch-- undefined - HPlcmt-north ZN] cooling_design_supply_temp expected value:14.0 == result value:13.0",
+    "[ERROR][TEST-FAIL][NECB2011-?]:[ZONE][Sp-TopFloor_Plenum Sys-0 Flr-1 Sch-- undefined - HPlcmt-north ZN] heating_sizing_factor expected value:-1.0 == result value:1.3",
+    "[ERROR][TEST-FAIL][NECB2011-?]:[ZONE][Sp-TopFloor_Plenum Sys-0 Flr-1 Sch-- undefined - HPlcmt-north ZN] cooling_sizing_factor expected value:-1.0 == result value:1.1",
+    "[ERROR][TEST-FAIL][NECB2011-?]:[ZONE][Sp-TopFloor_Plenum Sys-0 Flr-1 Sch-- undefined - HPlcmt-north ZN] heating_design_supply_air_temp expected value:40.0 == result value:43.0",
+    "[ERROR][TEST-FAIL][NECB2011-?]:[ZONE][Sp-TopFloor_Plenum Sys-0 Flr-1 Sch-- undefined - HPlcmt-north ZN] cooling_design_supply_temp expected value:14.0 == result value:13.0",
+    "[ERROR][TEST-FAIL][NECB2011-?]:[ZONE][Sp-MidFloor_Plenum Sys-0 Flr-3 Sch-- undefined - HPlcmt-north ZN] heating_sizing_factor expected value:-1.0 == result value:1.3",
+    "[ERROR][TEST-FAIL][NECB2011-?]:[ZONE][Sp-MidFloor_Plenum Sys-0 Flr-3 Sch-- undefined - HPlcmt-north ZN] cooling_sizing_factor expected value:-1.0 == result value:1.1",
+    "[ERROR][TEST-FAIL][NECB2011-?]:[ZONE][Sp-MidFloor_Plenum Sys-0 Flr-3 Sch-- undefined - HPlcmt-north ZN] heating_design_supply_air_temp expected value:40.0 == result value:43.0",
+    "[ERROR][TEST-FAIL][NECB2011-?]:[ZONE][Sp-MidFloor_Plenum Sys-0 Flr-3 Sch-- undefined - HPlcmt-north ZN] cooling_design_supply_temp expected value:14.0 == result value:13.0"
+  ],
+  "unique_errors": [
+    "[ERROR][TEST-FAIL][NECB2011-?]:[ZONE][Sp-FirstFloor_Plenum Sys-0 Flr-2 Sch-- undefined - HPlcmt-north ZN] heating_design_supply_air_temp expected value:40.0 == result value:43.0",
+    "[ERROR][TEST-FAIL][NECB2011-?]:[ZONE][Sp-FirstFloor_Plenum Sys-0 Flr-2 Sch-- undefined - HPlcmt-north ZN] cooling_design_supply_temp expected value:14.0 == result value:13.0",
+    "[ERROR][TEST-FAIL][NECB2011-?]:[ZONE][Sp-TopFloor_Plenum Sys-0 Flr-1 Sch-- undefined - HPlcmt-north ZN] heating_design_supply_air_temp expected value:40.0 == result value:43.0",
+    "[ERROR][TEST-FAIL][NECB2011-?]:[ZONE][Sp-TopFloor_Plenum Sys-0 Flr-1 Sch-- undefined - HPlcmt-north ZN] cooling_design_supply_temp expected value:14.0 == result value:13.0",
+    "[ERROR][TEST-FAIL][NECB2011-?]:[ZONE][Sp-MidFloor_Plenum Sys-0 Flr-3 Sch-- undefined - HPlcmt-north ZN] heating_design_supply_air_temp expected value:40.0 == result value:43.0",
+    "[ERROR][TEST-FAIL][NECB2011-?]:[ZONE][Sp-MidFloor_Plenum Sys-0 Flr-3 Sch-- undefined - HPlcmt-north ZN] cooling_design_supply_temp expected value:14.0 == result value:13.0"
+  ],
+  "sanity_check": {
+    "fail": [
+      "[ERROR][SANITY_CHECK-FAIL] for [SPACE][FirstFloor_Plenum] and [THERMAL ZONE] [Sp-FirstFloor_Plenum Sys-0 Flr-2 Sch-- undefined - HPlcmt-north ZN] where isConditioned is supposed to be [Yes] but found as No",
+      "[ERROR][SANITY_CHECK-FAIL] for [SPACE][MidFloor_Plenum] and [THERMAL ZONE] [Sp-MidFloor_Plenum Sys-0 Flr-3 Sch-- undefined - HPlcmt-north ZN] where isConditioned is supposed to be [Yes] but found as No",
+      "[ERROR][SANITY_CHECK-FAIL] for [SPACE][TopFloor_Plenum] and [THERMAL ZONE] [Sp-TopFloor_Plenum Sys-0 Flr-1 Sch-- undefined - HPlcmt-north ZN] where isConditioned is supposed to be [Yes] but found as No"
+    ],
+    "pass": [
+      "[TEST-PASS][SANITY_CHECK-PASS] for [SPACE][Core_bottom] and [THERMAL ZONE] [Sp-Core_bottom Sys-6 Flr-2 Sch-A HPlcmt-core ZN] where isConditioned is supposed to be [Yes] and found as Yes",
+      "[TEST-PASS][SANITY_CHECK-PASS] for [SPACE][Core_mid] and [THERMAL ZONE] [Sp-Core_mid Sys-6 Flr-3 Sch-A HPlcmt-core ZN] where isConditioned is supposed to be [Yes] and found as Yes",
+      "[TEST-PASS][SANITY_CHECK-PASS] for [SPACE][Core_top] and [THERMAL ZONE] [Sp-Core_top Sys-6 Flr-1 Sch-A HPlcmt-core ZN] where isConditioned is supposed to be [Yes] and found as Yes",
+      "[TEST-PASS][SANITY_CHECK-PASS] for [SPACE][Perimeter_bot_ZN_1] and [THERMAL ZONE] [Sp-Perimeter_bot_ZN_1 Sys-6 Flr-2 Sch-A HPlcmt-south ZN] where isConditioned is supposed to be [Yes] and found as Yes",
+      "[TEST-PASS][SANITY_CHECK-PASS] for [SPACE][Perimeter_bot_ZN_2] and [THERMAL ZONE] [Sp-Perimeter_bot_ZN_2 Sys-6 Flr-2 Sch-A HPlcmt-east ZN] where isConditioned is supposed to be [Yes] and found as Yes",
+      "[TEST-PASS][SANITY_CHECK-PASS] for [SPACE][Perimeter_bot_ZN_3] and [THERMAL ZONE] [Sp-Perimeter_bot_ZN_3 Sys-6 Flr-2 Sch-A HPlcmt-north ZN] where isConditioned is supposed to be [Yes] and found as Yes",
+      "[TEST-PASS][SANITY_CHECK-PASS] for [SPACE][Perimeter_bot_ZN_4] and [THERMAL ZONE] [Sp-Perimeter_bot_ZN_4 Sys-6 Flr-2 Sch-A HPlcmt-west ZN] where isConditioned is supposed to be [Yes] and found as Yes",
+      "[TEST-PASS][SANITY_CHECK-PASS] for [SPACE][Perimeter_mid_ZN_1] and [THERMAL ZONE] [Sp-Perimeter_mid_ZN_1 Sys-6 Flr-3 Sch-A HPlcmt-south ZN] where isConditioned is supposed to be [Yes] and found as Yes",
+      "[TEST-PASS][SANITY_CHECK-PASS] for [SPACE][Perimeter_mid_ZN_2] and [THERMAL ZONE] [Sp-Perimeter_mid_ZN_2 Sys-6 Flr-3 Sch-A HPlcmt-east ZN] where isConditioned is supposed to be [Yes] and found as Yes",
+      "[TEST-PASS][SANITY_CHECK-PASS] for [SPACE][Perimeter_mid_ZN_3] and [THERMAL ZONE] [Sp-Perimeter_mid_ZN_3 Sys-6 Flr-3 Sch-A HPlcmt-north ZN] where isConditioned is supposed to be [Yes] and found as Yes",
+      "[TEST-PASS][SANITY_CHECK-PASS] for [SPACE][Perimeter_mid_ZN_4] and [THERMAL ZONE] [Sp-Perimeter_mid_ZN_4 Sys-6 Flr-3 Sch-A HPlcmt-west ZN] where isConditioned is supposed to be [Yes] and found as Yes",
+      "[TEST-PASS][SANITY_CHECK-PASS] for [SPACE][Perimeter_top_ZN_1] and [THERMAL ZONE] [Sp-Perimeter_top_ZN_1 Sys-6 Flr-1 Sch-A HPlcmt-south ZN] where isConditioned is supposed to be [Yes] and found as Yes",
+      "[TEST-PASS][SANITY_CHECK-PASS] for [SPACE][Perimeter_top_ZN_2] and [THERMAL ZONE] [Sp-Perimeter_top_ZN_2 Sys-6 Flr-1 Sch-A HPlcmt-east ZN] where isConditioned is supposed to be [Yes] and found as Yes",
+      "[TEST-PASS][SANITY_CHECK-PASS] for [SPACE][Perimeter_top_ZN_3] and [THERMAL ZONE] [Sp-Perimeter_top_ZN_3 Sys-6 Flr-1 Sch-A HPlcmt-north ZN] where isConditioned is supposed to be [Yes] and found as Yes",
+      "[TEST-PASS][SANITY_CHECK-PASS] for [SPACE][Perimeter_top_ZN_4] and [THERMAL ZONE] [Sp-Perimeter_top_ZN_4 Sys-6 Flr-1 Sch-A HPlcmt-west ZN] where isConditioned is supposed to be [Yes] and found as Yes"
+    ]
+  }
+}
