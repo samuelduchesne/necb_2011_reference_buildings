@@ -19,9 +19,13 @@ git clone https://github.com/canmet-energy/necb_2011_reference_buildings.git
 
 ## Folder Structure
 
-`3d_files`: Contains the 3d model as an html file.
-`OS_results`: Contains an overview of annual/monthly energy uses data, load summary, HVAC profiles, etc.
-`osm_files`: Contains the OpenStudio model of an archetype
-`qaqc_files`: Contains general information about space, thermal zones, HVAC equipment list, plant loops and Quality Assurance Quality Control (QAQC) data.
-`weather_files`: Contains weather files which was used to run the simulation.
+**`3d_files`**: Contains the 3d model as an html file.
+
+**`OS_results`**: Contains an overview of annual/monthly energy uses data, load summary, HVAC profiles, etc.
+
+**`osm_files`**: Contains the OpenStudio model of an archetype
+
+**`qaqc_files`**: Contains general information about space, thermal zones, HVAC equipment list, plant loops and Quality Assurance Quality Control (QAQC) data.
+
+**`weather_files`**: Contains weather files which was used to run the simulation.
 
